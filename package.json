@@ -1,0 +1,13 @@
+{
+  "name": "lifeclo.cc",
+  "version": "0.0.1",
+  "description": "The static landing page for the lifeclo.cc site.",
+  "private": true,
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
