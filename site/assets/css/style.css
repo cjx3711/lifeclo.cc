@@ -1280,7 +1280,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 /* --------------- Feature Sub ------------ */
 
 .product .feature-sub {
-	background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(146, 127, 84, 0.99)), url(../images/feature-bg.jpg);
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(146, 127, 84, 0.99)), url(../images/feature-bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -2110,7 +2110,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 	}
 
 	.features .features-list {
-		padding: 100px 0 0 0;
+		padding: 30px 0 0 0;
 		text-align: left;
 	}
 
