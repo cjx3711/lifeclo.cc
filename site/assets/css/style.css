@@ -408,7 +408,7 @@ p {
 }
 
 .hero-content {
-	padding: 100px 0 100px 0;
+	padding: 40px 0 40px 0;
 	overflow: hidden;
 }
 
@@ -631,7 +631,7 @@ font-family: Arial;
 }
 
 .signup .hero-content {
-	padding: 50px 0 100px 0;
+	padding: 50px 0 50px 0;
 }
 
 .signup .hero-content h1 {
@@ -2079,7 +2079,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 	}
 
 	.product .hero-content {
-		padding: 150px 0 100px 0;
+		padding: 40px 0 40px 0;
 		text-align: left;
 	}
 
@@ -2201,6 +2201,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
+	
 	.features .features-list {
 		padding: 80px 0 0 0;
 	}
@@ -2213,6 +2214,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 
 
 @media screen and (min-width: 400px) and (max-width: 600px) {
+
 
  .formee input {
    padding: 0 30px 0 20px;
@@ -2271,8 +2273,14 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 
  }
 
- @media only screen and (min-width: 991px) and (max-width: 1201px) {
+ @media only screen and (min-width: 991px) and (max-width: 1200px) {
 
+	 .img-responsive.wow {
+			padding: 50px 0 0 0;
+		}
+
+ }
+ @media only screen and (min-width: 991px) and (max-width: 1201px) {
 	 .app-features .features-left, .app-features .features-right {
 	 	padding: 0 0 0 0;
 	 }
