@@ -1,7 +1,101 @@
+.pricing p {
+  margin-bottom: 15px;
+}
+
+
 /*  --------------------------------------------------
-------------- Pricing Section Styling ----------------
+------------- About Section Styling ----------------
 -----------------------------------------------------*/
 
+.about {
+	padding: 50px 0 100px 0;
+}
+
+.about-content {
+	padding: 60px 0 0 0;
+	text-align: left;
+}
+
+.about h1 {
+	font-size: 28px;
+	font-weight: 400;
+	letter-spacing: -1px;
+	line-height: 1.2;
+}
+
+.about h4 {
+	font-size: 14px;
+	font-weight: 400;
+	color: #A1A1A1;
+	margin: 10px 0 20px 0;
+}
+
+.about p {
+	font-family: 'Poppins';
+	font-size: 14px;
+	font-weight: 400;
+	color: #444444;
+	line-height: 1.4;
+  margin: 10px 0 20px 0;
+}
+
+.about .btn-buy {
+	padding: 40px 0 20px 0;
+}
+
+.about .btn-buy img {
+	display: inline;
+}
+
+
+
+
+.btn-action-primary {
+ font-family: Roboto;
+ background-color: #3333CC;
+ border: 1px solid #3333CC;
+ border-radius: 0;
+ color: #FFFFFF;
+ font-size: 13px;
+ font-weight: 400;
+ letter-spacing: 2px;
+ line-height: 1;
+ padding: 10px 21px;
+ text-transform: uppercase;
+ outline: none;
+ -webkit-transition: 200ms;
+ -moz-transition: 200ms;
+ -o-transition: 200ms;
+ transition: 200ms;
+}
+
+.btn-action-primary:hover, .btn-action-primary:focus,
+.btn-action-primary:active, .btn-action-primary:active:focus {
+ background: transparent;
+ outline: none;
+ color: #3333CC;
+ background: transparent;
+ border-color: #3333CC;
+}
+
+
+.product .btn-action-primary {
+ background-color: #92714A;
+ border: 1px solid #92714A;
+ color: white;
+}
+
+.product .btn-action-primary:hover, .product  .btn-action-primary:focus {
+ background: transparent;
+ color: #92714A;
+ border-color: #82714A;
+}
+
+
+
+/*  --------------------------------------------------
+------------- Instruction Section Styling ------------
+-----------------------------------------------------*/
 
 .instructions {
 	padding: 50px 0 100px 0;
