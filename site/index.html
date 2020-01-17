@@ -316,7 +316,7 @@
 
               <div class="footer-text">
                 <p>
-                  Copyright © 2019 LIFECLO.CC. All Rights Reserved.
+                  Copyright © 2020 LIFECLO.CC. All Rights Reserved.
                 </p>
               </div>
             </div>
@@ -326,9 +326,9 @@
                 <i class="ion-ios-chatboxes-outline"></i>
                 <h1>Need Help ?</h1>
                 <p>
-                  There is <strong>NO</strong> customer support. <br class="hidden-xs">You can check out my website I suppose.
+                  There is <strong>NO</strong> customer support. <br class="hidden-xs">Fine... drop me an email and I'll do my best to respond.
                 </p>
-                <a href="https://chaijiaxun.com">chaijiaxun.com</a>
+                <a id="email"></a>
               </div>
             </div>
 
@@ -353,5 +353,20 @@
   <script type="text/javascript" src="assets/js/plugins.js"></script>
   <script type="text/javascript" src="assets/js/menu.js"></script>
   <script type="text/javascript" src="assets/js/custom.js"></script>
+  <script>
+    (function() {
+      const a = "clo"
+      const b = "cc"
+      const c = "llo"
+      const d = "he"
+      const e = "life"
+
+      const f = d + c + "@" + e + a + '.' + b
+      const email = document.getElementById("email")
+      email.href = "mai" + "lto:" + f
+      email.innerHTML = f
+    })();
+    
+  </script>
   </body>
 </html>
