@@ -101,12 +101,12 @@ p {
 
 ::-moz-selection {
     color: #FFFFFF;
-    background: #3333CC;
+    background: rgb(194, 170, 140);
 }
 
 ::selection {
     color: #FFFFFF;
-    background: #3333CC;
+    background: rgb(194, 170, 140);
 }
 
 .nopadding {
