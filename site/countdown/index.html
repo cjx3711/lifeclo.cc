@@ -4,6 +4,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
     <link rel="stylesheet" href="clutterboard-theme.css"/>
     <link rel="stylesheet" href="main.css"/>
+    <style>
+      body {
+        text-align: center;
+      }
+      #datepicker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
   </head>
 
   <body>
@@ -15,14 +25,24 @@
             <p>Please enter your birthday to get started</p>
             <div id="datepicker"></div>
             <button id="set-birthday">Set</button>
+            <hr/>
+            <p>or</p>
+            <p>
+              Load an existing user ID
+            </p>
+            <p>
+              <input type="text" id="get-username"/> <button id="get">Retrieve</button>
+            </p>
           </div>
         </div>
       </div>
       <div class="states" id="countdown">
         <div class="row">
           <div class="twelve columns">
-            <h1>Welcome back<span class="username"></span></h1>
-            <p>You have <span id="counter"></span> seconds left to live</p>
+            <h3>Welcome back<span class="username"></span></h3>
+            <p>You have</p>
+            <h1 id="counter"></h1>
+            <p>seconds left to live</p>
 
             <div class="permalink">
               <p>
@@ -78,6 +98,12 @@ $("#reset-birthday").click((e) => {
   }
 })
 
+$("#get").click((e) => {
+  e.preventDefault();
+
+  let username = $("#get-username").val();
+  window.location = `/countdown/?u=${username}`
+})
 $("#save").click((e) => {
   e.preventDefault();
 
