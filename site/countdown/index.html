@@ -140,7 +140,7 @@ const updateClock = () => {
   let now = new Date().toString();
   let utcifiedString = `${now.substr(0, now.indexOf("GMT"))} GMT+0000`;
 
-  let secondsLeft = (2524608000000 - ( new Date().getTime() - bday.getTime() )) / 1000;
+  let secondsLeft = (2524608000000 - ( new Date(utcifiedString).getTime() - bday.getTime() )) / 1000;
   secondsLeft = parseInt(secondsLeft)
   $("#counter").text(secondsLeft);
   if (user) {
