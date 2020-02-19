@@ -1,0 +1,156 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lifeclo.cc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="clutterboard-theme.css"/>
+    <link rel="stylesheet" href="main.css"/>
+  </head>
+
+  <body>
+    <div class="container" id="app" style="display: none;">
+      <div class="states" id="firsttime">
+        <div class="row">
+          <div class="twelve columns">
+            <h1>Welcome to LIFECLO.CC<span class="username"></span></h1>
+            <p>Please enter your birthday to get started</p>
+            <div id="datepicker"></div>
+            <button id="set-birthday">Set</button>
+          </div>
+        </div>
+      </div>
+      <div class="states" id="countdown">
+        <div class="row">
+          <div class="twelve columns">
+            <h1>Welcome back<span class="username"></span></h1>
+            <p>You have <span id="counter"></span> seconds left to live</p>
+
+            <div class="permalink">
+              <p>
+                Get your very own permalink!
+              </p>
+              <p>
+                <input type="text" id="username"/> <button id="save">Save</button>
+              </p>
+            </div>
+            
+            <button id="reset-birthday">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+
+
+<script
+  src="http://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="mtr-datepicker.js"></script>
+<script>
+
+
+datepickerDefault = new MtrDatepicker({
+  target: "datepicker",
+  timestamp: new Date().getTime()
+});
+
+datepickerDefault.onChange('date', function() {
+});
+
+
+$("#set-birthday").click((e) => {
+  e.preventDefault();
+  birthday = datepickerDefault.format('Y-M-D');
+  localStorage.setItem(birthdayKey, birthday);
+  setState("countdown");
+  console.log("Setting birthday to", birthday)
+})
+
+$("#reset-birthday").click((e) => {
+  e.preventDefault();
+  if (confirm("Are you sure you want to clear your birthday?")) {
+    localStorage.removeItem(birthdayKey);
+    setState("firsttime");
+    window.location.href = "/countdown"
+  }
+})
+
+$("#save").click((e) => {
+  e.preventDefault();
+
+  let username = $("#username").val();
+  $.ajax({
+    method: "POST",
+    url: `/api/${username}`,
+    data: { birthday: birthday }
+  })
+  .done((msg) => {
+    if (msg.userid === username) {
+      window.location = `/countdown/?u=${username}`
+    }
+  })
+  .fail((e) => {
+    if (e.status == 400 && e.responseJSON.error === "User exists") {
+      alert("Username has been taken, please try another");
+    }
+  })
+})
+
+function setState(state) {
+  $(".states").hide();
+  $(`#${state}`).show();
+}
+
+function getParameterByName(name) {
+ return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||"";
+}
+var user = getParameterByName('u');
+let birthdayKey = `bday-${user}`
+let birthday = localStorage.getItem(birthdayKey);
+
+if (user) {
+  $("span.username").text(", " + user);
+
+  $.ajax({
+    method: "GET",
+    url: `/api/${user}`
+  })
+  .done((msg) => {
+    birthday = msg.birthday;
+    localStorage.setItem(birthdayKey, birthday);
+    setState("countdown");
+  })
+  .fail((e) => {
+    setState("firsttime");
+  })
+  .always(() => {
+    $("#app").removeAttr("style");
+  })
+} else {
+  setState("firsttime");
+  $("#app").removeAttr("style");
+}
+
+
+const updateClock = () => {
+  let bday = new Date(`${birthday} GMT+0000`);
+  let now = new Date().toString();
+  let utcifiedString = `${now.substr(0, now.indexOf("GMT"))} GMT+0000`;
+
+  let secondsLeft = (2524608000000 - ( new Date().getTime() - bday.getTime() )) / 1000;
+  secondsLeft = parseInt(secondsLeft)
+  $("#counter").text(secondsLeft);
+  if (user) {
+    $(".permalink").hide();
+  }
+}
+
+updateClock();
+
+setInterval(updateClock, 1000);
+</script>
+
+  
