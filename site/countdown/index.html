@@ -14,12 +14,8 @@
           <div class="twelve columns">
             <h1>Welcome to LIFECLO.CC</h1>
             <p>Please enter your birthday to get started</p>
-
-
             <div id="datepicker"></div>
             <button id="set-birthday">Set</button>
-
-  
           </div>
         </div>
       </div>
@@ -27,7 +23,7 @@
         <div class="row">
           <div class="twelve columns">
             <h1>Welcome back</h1>
-            <p>You have <span id="counter"></span> seconds left</p>
+            <p>You have <span id="counter"></span> seconds left to live</p>
 
             <button id="reset-birthday">Reset</button>
           </div>
@@ -63,7 +59,6 @@ datepickerDefault.onChange('date', function() {
 $("#set-birthday").click((e) => {
   e.preventDefault();
   birthday = datepickerDefault.format('Y-M-D');
-  console.log(birthday);
   localStorage.setItem("birthday", birthday);
   setState("countdown");
 })
@@ -77,7 +72,6 @@ $("#reset-birthday").click((e) => {
 })
 
 
-
 function setState(state) {
   $(".states").hide();
   $(`#${state}`).show();
@@ -89,6 +83,21 @@ if ( !birthday ) {
 } else {
   setState("countdown");
 }
+
+const updateClock = () => {
+  let bday = new Date(`${birthday} GMT+0000`);
+  let now = new Date().toString();
+  let utcifiedString = `${now.substr(0, now.indexOf("GMT"))} GMT+0000`;
+
+  let secondsLeft = (2524608000000 - ( new Date().getTime() - bday.getTime() )) / 1000;
+  secondsLeft = parseInt(secondsLeft)
+  $("#counter").text(Math.abs(secondsLeft));
+}
+
+updateClock();
+
+setInterval(updateClock, 1000);
+
 
 $("#app").removeAttr("style");
 </script>
