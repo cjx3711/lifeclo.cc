@@ -58,7 +58,7 @@ function MtrDatepicker(inputConfig) {
 		utcTimezone: 0,					// change the local timezone to a specific one
 
 		transitionDelay: 100,
-		transitionValidationDelay: 500,
+		transitionValidationDelay: 100,
 		references: { // Used to store references to the main elements
 			hours: null
 		},

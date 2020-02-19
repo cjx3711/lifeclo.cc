@@ -7,12 +7,11 @@
   </head>
 
   <body>
-
     <div class="container" id="app" style="display: none;">
       <div class="states" id="firsttime">
         <div class="row">
           <div class="twelve columns">
-            <h1>Welcome to LIFECLO.CC</h1>
+            <h1>Welcome to LIFECLO.CC<span class="username"></span></h1>
             <p>Please enter your birthday to get started</p>
             <div id="datepicker"></div>
             <button id="set-birthday">Set</button>
@@ -22,9 +21,18 @@
       <div class="states" id="countdown">
         <div class="row">
           <div class="twelve columns">
-            <h1>Welcome back</h1>
+            <h1>Welcome back<span class="username"></span></h1>
             <p>You have <span id="counter"></span> seconds left to live</p>
 
+            <div class="permalink">
+              <p>
+                Get your very own permalink!
+              </p>
+              <p>
+                <input type="text" id="username"/> <button id="save">Save</button>
+              </p>
+            </div>
+            
             <button id="reset-birthday">Reset</button>
           </div>
         </div>
@@ -46,10 +54,7 @@
 
 datepickerDefault = new MtrDatepicker({
   target: "datepicker",
-  years: {
-    min: 1900,
-    max: new Date().getFullYear()
-  }
+  timestamp: new Date().getTime()
 });
 
 datepickerDefault.onChange('date', function() {
@@ -59,30 +64,76 @@ datepickerDefault.onChange('date', function() {
 $("#set-birthday").click((e) => {
   e.preventDefault();
   birthday = datepickerDefault.format('Y-M-D');
-  localStorage.setItem("birthday", birthday);
+  localStorage.setItem(birthdayKey, birthday);
   setState("countdown");
+  console.log("Setting birthday to", birthday)
 })
 
 $("#reset-birthday").click((e) => {
   e.preventDefault();
   if (confirm("Are you sure you want to clear your birthday?")) {
-    localStorage.removeItem("birthday");
+    localStorage.removeItem(birthdayKey);
     setState("firsttime");
+    window.location.href = "/countdown"
   }
 })
 
+$("#save").click((e) => {
+  e.preventDefault();
+
+  let username = $("#username").val();
+  $.ajax({
+    method: "POST",
+    url: `/api/${username}`,
+    data: { birthday: birthday }
+  })
+  .done((msg) => {
+    if (msg.userid === username) {
+      window.location = `/countdown/?u=${username}`
+    }
+  })
+  .fail((e) => {
+    if (e.status == 400 && e.responseJSON.error === "User exists") {
+      alert("Username has been taken, please try another");
+    }
+  })
+})
 
 function setState(state) {
   $(".states").hide();
   $(`#${state}`).show();
 }
 
-let birthday = localStorage.getItem("birthday");
-if ( !birthday ) {
-  setState("firsttime");
-} else {
-  setState("countdown");
+function getParameterByName(name) {
+ return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||"";
 }
+var user = getParameterByName('u');
+let birthdayKey = `bday-${user}`
+let birthday = localStorage.getItem(birthdayKey);
+
+if (user) {
+  $("span.username").text(", " + user);
+
+  $.ajax({
+    method: "GET",
+    url: `/api/${user}`
+  })
+  .done((msg) => {
+    birthday = msg.birthday;
+    localStorage.setItem(birthdayKey, birthday);
+    setState("countdown");
+  })
+  .fail((e) => {
+    setState("firsttime");
+  })
+  .always(() => {
+    $("#app").removeAttr("style");
+  })
+} else {
+  setState("firsttime");
+  $("#app").removeAttr("style");
+}
+
 
 const updateClock = () => {
   let bday = new Date(`${birthday} GMT+0000`);
@@ -91,15 +142,15 @@ const updateClock = () => {
 
   let secondsLeft = (2524608000000 - ( new Date().getTime() - bday.getTime() )) / 1000;
   secondsLeft = parseInt(secondsLeft)
-  $("#counter").text(Math.abs(secondsLeft));
+  $("#counter").text(secondsLeft);
+  if (user) {
+    $(".permalink").hide();
+  }
 }
 
 updateClock();
 
 setInterval(updateClock, 1000);
-
-
-$("#app").removeAttr("style");
 </script>
 
   
