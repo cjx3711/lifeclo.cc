@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lifeclo.cc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="clutterboard-theme.css"/>
+    <link rel="stylesheet" href="main.css"/>
+  </head>
+
+  <body>
+
+    <div class="container" id="app" style="display: none;">
+      <div class="states" id="firsttime">
+        <div class="row">
+          <div class="twelve columns">
+            <h1>Welcome to LIFECLO.CC</h1>
+            <p>Please enter your birthday to get started</p>
+
+
+            <div id="datepicker"></div>
+            <button id="set-birthday">Set</button>
+
+  
+          </div>
+        </div>
+      </div>
+      <div class="states" id="countdown">
+        <div class="row">
+          <div class="twelve columns">
+            <h1>Welcome back</h1>
+            <p>You have <span id="counter"></span> seconds left</p>
+
+            <button id="reset-birthday">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+
+
+<script
+  src="http://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="mtr-datepicker.js"></script>
+<script>
+
+
+datepickerDefault = new MtrDatepicker({
+  target: "datepicker",
+  years: {
+    min: 1900,
+    max: new Date().getFullYear()
+  }
+});
+
+datepickerDefault.onChange('date', function() {
+});
+
+
+$("#set-birthday").click((e) => {
+  e.preventDefault();
+  birthday = datepickerDefault.format('Y-M-D');
+  console.log(birthday);
+  localStorage.setItem("birthday", birthday);
+  setState("countdown");
+})
+
+$("#reset-birthday").click((e) => {
+  e.preventDefault();
+  if (confirm("Are you sure you want to clear your birthday?")) {
+    localStorage.removeItem("birthday");
+    setState("firsttime");
+  }
+})
+
+
+
+function setState(state) {
+  $(".states").hide();
+  $(`#${state}`).show();
+}
+
+let birthday = localStorage.getItem("birthday");
+if ( !birthday ) {
+  setState("firsttime");
+} else {
+  setState("countdown");
+}
+
+$("#app").removeAttr("style");
+</script>
+
+  
