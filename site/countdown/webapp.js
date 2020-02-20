@@ -27,14 +27,32 @@ var app = new Vue({
      }
     vm.user = getParameterByName('u');
     vm.workings.birthdayKey = `bday-${vm.user}`
+    
+    // Check the local storage first
     let birthday = localStorage.getItem(vm.workings.birthdayKey);
     if (birthday) {
       vm.birthday = birthday;
       vm.state = STATE_COUNT;
+      vm.doCalculations();
     } else {
       vm.state = STATE_FIRST;
     }
 
+    // Then check the server for the user's birthday
+    if (vm.user) {
+      axios.get(`/api/${vm.user}`)
+      .then(function(response) {
+        vm.birthday = response.data.birthday;
+        console.log("Updated from server", vm.birthday);
+        localStorage.setItem(vm.workings.birthdayKey, vm.birthday);
+        vm.state = STATE_COUNT;
+        vm.doCalculations();
+      })
+      .catch(function(error) {
+        vm.state = STATE_FIRST
+      })
+    }
+    
     vm.doCalculations();
     setInterval(vm.doCalculations, 1000);
   },
@@ -70,8 +88,9 @@ var app = new Vue({
     },
     clickBack: function(event) {
       var vm = this;
-      if (confirm("Are you sure you want to reset your birthday? (This will not reset the link)")) {
+      if (confirm("Are you sure you want to reset your birthday?\n(This will not reset the link)")) {
         localStorage.removeItem(vm.workings.birthdayKey);
+        localStorage.removeItem('bday-');
         window.location.href = "/countdown"
       }
       vm.birthday = '';
