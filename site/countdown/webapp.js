@@ -1,6 +1,9 @@
 
 const STATE_FIRST = "firsttime"
 const STATE_COUNT = "countdown"
+const DAYS_IN_MONTH = [
+  31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+]
 
 var app = new Vue({
   el: '#app',
@@ -9,6 +12,9 @@ var app = new Vue({
     state: STATE_FIRST,
     inputs: {
       birthday: '1990-01-20',
+      byear: '1990',
+      bmonth: '1',
+      bdate: '20',
       user: ''
     },
     workings: {
@@ -57,6 +63,40 @@ var app = new Vue({
     setInterval(vm.doCalculations, 1000);
   },
   methods: {
+    highlight: function(event) {
+      console.log(event.target.select())
+    },
+    inputValidate: function(event) {
+      if (this.inputs.byear.length > 4) {
+        this.inputs.byear = this.inputs.byear.substring(0,4)
+      }
+      if (this.inputs.bmonth.length > 2) {
+        this.inputs.bmonth = this.inputs.bmonth.substring(0,2)
+      }
+      if (this.inputs.bdate.length > 2) {
+        this.inputs.bdate = this.inputs.bdate.substring(0,2)
+      }
+      this.inputs.birthday = `${this.inputs.byear}-${this.inputs.bmonth}-${this.inputs.bdate}`
+    },
+    dateValidate: function(event) {
+      let year = parseInt(this.inputs.byear)
+      if ( year < 1800 ) this.inputs.byear = 1800
+      if ( year > 2100 ) this.inputs.byear = 2100
+
+      let month = parseInt(this.inputs.bmonth)
+      if ( month < 1 ) this.inputs.bmonth = 1
+      if ( month > 12 ) this.inputs.bmonth = 12
+
+      let date = parseInt(this.inputs.bdate)
+      let max = DAYS_IN_MONTH[month-1]
+      if ( month == 2 && year % 4 == 0 && (year % 100 != 0 || year % 400 == 0) ) {
+        max = 29
+      }
+      if ( date < 1 ) this.inputs.bdate = 1
+      if ( date > max ) this.inputs.bdate = max
+
+      this.inputs.birthday = `${year}-${month}-${date}`
+    },
     setUser: function(event) {
       var vm = this;
       event.preventDefault();
