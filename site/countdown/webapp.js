@@ -59,10 +59,12 @@ var app = new Vue({
   methods: {
     setUser: function(event) {
       var vm = this;
+      event.preventDefault();
       window.location = `/countdown/?u=${vm.inputs.user}`
     },
     savePermalink: function(event) {
       var vm = this;
+      event.preventDefault();
       axios.post(`/api/${vm.inputs.user}`, {
         birthday: vm.birthday
       })
@@ -81,6 +83,7 @@ var app = new Vue({
     },
     setBirthday: function(event) {
       var vm = this;
+      event.preventDefault();
       vm.birthday = vm.inputs.birthday;
       localStorage.setItem(vm.workings.birthdayKey, vm.birthday);
       vm.state = STATE_COUNT;
@@ -88,6 +91,7 @@ var app = new Vue({
     },
     clickBack: function(event) {
       var vm = this;
+      event.preventDefault();
       if (confirm("Are you sure you want to reset your birthday?\n(This will not reset the link)")) {
         localStorage.removeItem(vm.workings.birthdayKey);
         localStorage.removeItem('bday-');

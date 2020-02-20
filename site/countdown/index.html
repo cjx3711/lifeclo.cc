@@ -25,19 +25,21 @@
             <h1>
               Welcome to LIFECLO.CC<template v-if="user">, {{ user }}</template>
             </h1>
-            <p>Please enter your birthday to get started</p>
-            <div>
+            <p>Please enter your birthday (YYYY-MM-DD) to get started</p>
+            <form>
               <input type="text" v-model="inputs.birthday" />
-            </div>
-            <button v-on:click="setBirthday">Set</button>
+              <button v-on:click="setBirthday" type="submit">Set</button>
+            </form>
             <hr/>
             <p>or</p>
-            <p>
-              Load an existing user ID
-            </p>
-            <p>
-              <input type="text" v-model="inputs.user"/> <button v-on:click="setUser">Retrieve</button>
-            </p>
+            <form>
+              <p>
+                Load an existing user ID
+              </p>
+              <p>
+                <input type="text" v-model="inputs.user"/> <button v-on:click="setUser" type="submit">Retrieve</button>
+              </p>
+            </form>
           </div>
         </div>
       </template>
@@ -51,12 +53,15 @@
             <p>seconds left to live</p>
 
             <div class="permalink" v-if="user === ''">
-              <p>
-                Get your very own permalink!
-              </p>
-              <p>
-                <input type="text" v-model="inputs.user"/> <button v-on:click="savePermalink">Save</button>
-              </p>
+              <form>
+                <p>
+                  Get your very own permalink!
+                </p>
+                <p>
+                  <input type="text" v-model="inputs.user"/> <button v-on:click="savePermalink" type="submit">Save</button>
+                </p>
+              </form>
+              
             </div>
             
             <button v-on:click="clickBack">Go Back</button>
