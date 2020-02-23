@@ -3,6 +3,7 @@ const path = require("path");
 const bodyParser = require('body-parser');
 const sqlite3 = require("sqlite3").verbose();
 const fs = require('fs');
+const vhost = require('vhost')
 
 const app = express()
 const port = 9000
@@ -45,9 +46,20 @@ db.run(sql_create, err => {
 });
 
 
+function setStaticPages(subdomain, directory) {
+  app.use(vhost(`${subdomain}localhost`, express.static(`${directory}`)))
+  app.use(vhost(`${subdomain}lifeclo.cc`, express.static(`${directory}`)))
+  
+}
+setStaticPages('', 'site')
+setStaticPages('app.', 'site/countdown')
 
-app.use(express.static('site'))
+app.get('/test', function(req, res) {
+  var hostname = req.headers.host.split(":")[0];
+  res.send(hostname);
+})
 
+// This will work for both app.lifeclo.cc and lifeclo.cc
 app.get('/api/:userid', function (req, res) {
   const userid = req.params.userid;
 
@@ -77,6 +89,7 @@ app.get('/api/:userid', function (req, res) {
   })
 })
 
+// This will work for both app.lifeclo.cc and lifeclo.cc
 app.post('/api/:userid', function (req, res) {
   console.log("App post")
   const userid = req.params.userid;

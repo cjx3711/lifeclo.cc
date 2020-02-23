@@ -100,7 +100,7 @@ var app = new Vue({
     setUser: function(event) {
       var vm = this;
       event.preventDefault();
-      window.location = `/countdown/?u=${vm.inputs.user}`
+      window.location = `?u=${vm.inputs.user}`
     },
     savePermalink: function(event) {
       var vm = this;
@@ -110,7 +110,7 @@ var app = new Vue({
       })
       .then(function(response) {
         if (response.data.userid === vm.inputs.user) {
-          window.location = `/countdown/?u=${vm.inputs.user}`
+          window.location = `?u=${vm.inputs.user}`
         } else {
           alert("Something went wrong with generating your link");
         }
@@ -135,7 +135,7 @@ var app = new Vue({
       if (confirm("Are you sure you want to reset your birthday?\n(This will not reset the link)")) {
         localStorage.removeItem(vm.workings.birthdayKey);
         localStorage.removeItem('bday-');
-        window.location.href = "/countdown"
+        window.location.href = "/"
       }
       vm.birthday = '';
       vm.state = STATE_FIRST;
