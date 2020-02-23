@@ -37,30 +37,30 @@ ON users(username);`
 
 db.run(sql_create, err => {
   if (err) { return console.error(err.message); }
-  console.log("Successful creation of the 'users' table");
+  console.log("'users' table working");
 
   db.run(sql_index, err => {
     if (err) { return console.error(err.message); }
-    console.log("Successful index creation");
+    console.log("index working");
   });
 });
 
-
-function setStaticPages(subdomain, directory) {
-  app.use(vhost(`${subdomain}localhost`, express.static(`${directory}`)))
-  app.use(vhost(`${subdomain}lifeclo.cc`, express.static(`${directory}`)))
-  
-}
-setStaticPages('', 'site')
-setStaticPages('app.', 'site/countdown')
-
-app.get('/test', function(req, res) {
-  var hostname = req.headers.host.split(":")[0];
-  res.send(hostname);
+// Redirect the source and manual subdirectories to the subdomains
+app.get('/manual', function(req, res) {
+  res.redirect(`http://manual.${req.headers.host}`);
+})
+app.get('/source', function(req, res) {
+  res.redirect(`http://source.${req.headers.host}`);
 })
 
 // This will work for both app.lifeclo.cc and lifeclo.cc
 app.get('/api/:userid', function (req, res) {
+  var hostname = req.headers.host.split(":")[0];
+  if (!hostname.startsWith('app.') && hostname !== 'lifeclo.cc' && hostname !== 'localhost') {
+    res.status(404).send();
+    return;
+  }
+
   const userid = req.params.userid;
 
   const sql_get = `SELECT * FROM users WHERE username = '${userid}'`
@@ -91,6 +91,11 @@ app.get('/api/:userid', function (req, res) {
 
 // This will work for both app.lifeclo.cc and lifeclo.cc
 app.post('/api/:userid', function (req, res) {
+  if (!hostname.startsWith('app.') && hostname !== 'lifeclo.cc' && hostname !== 'localhost') {
+    res.status(404).send();
+    return;
+  }
+
   console.log("App post")
   const userid = req.params.userid;
 
@@ -129,5 +134,18 @@ app.post('/api/:userid', function (req, res) {
 })
 
 
+// Set up the static page urls
+function setStaticPages(subdomain, directory) {
+  app.use(vhost(`${subdomain}localhost`, express.static(`${directory}`)))
+  app.use(vhost(`${subdomain}lifeclo.cc`, express.static(`${directory}`)))
+  
+}
+setStaticPages('', 'site')
+setStaticPages('app.', 'site-app')
+setStaticPages('manual.', 'site/manual')
+setStaticPages('source.', 'site/source')
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+// All subdomains will have an assets subfolder
+app.use('/assets', express.static('site/assets'))
+
+app.listen(port, () => console.log(`Lifeclo.cc app listening on port ${port}!`))
