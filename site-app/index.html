@@ -1,17 +1,68 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifeclo.cc</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73723112-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-73723112-6');
+    </script>
+
+
     <style>
       body {
         text-align: center;
       }
+
+      #app {
+        padding-top: 1em;
+      }
       
+
       input.dateinput {
         padding: 30px;
         font-size: 1.5em;
       }
 
+      .timer {
+        margin: 3em 0 4em 0;
+        font-size: 1.2em;
+      }
+
+      .segment-middler {
+        display: inline-block;
+        margin: 1em 0;
+      }
+
+      .segment-holder {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      span.seven-seg {
+        flex: 1;
+        flex-grow: 1;
+        flex-basis: 10%;
+      }
+
+      span.seven-seg img {
+        width: 100%;
+        margin: 0 0px;
+        pointer-events: none;
+      }
+
+      .disclaimer {
+        margin-top: 3em;
+        color: #BBBBBB;
+        font-size: 0.7em;
+      }
       [v-cloak] {
         display: none;
       }
@@ -24,7 +75,7 @@
         <div class="row">
           <div class="twelve columns">
             <h1>
-              Welcome to LIFECLO.CC<template v-if="user">, {{ user }}</template>
+              Welcome to LIFECLO.CC<template v-if="user">,<br/>{{ user }}</template>
             </h1>
             <p>Please enter your birthday (YYYY-MM-DD) to get started</p>
             <form>
@@ -51,11 +102,17 @@
       <template v-if="state === 'countdown'">
         <div class="row">
           <div class="twelve columns">
-            <h3>Welcome back<template v-if="user">, {{ user }}</template></h3>
-            <p>You have</p>
-            <h1>{{ workings.count }}</h1>
-            <p>seconds left to live</p>
-
+            <h3>Welcome back<template v-if="user">,<br/>{{ user }}</template></h3>
+            <div class="row timer">
+              <div>You have</div>
+              <div class="segment-middler">
+                <div class="segment-holder">
+                  <segment v-for="d in workings.digits" v-bind:number="d"></segment>
+                </div>
+              </div>
+              <div>seconds left to live.</div>
+            </div>
+            
             <div class="permalink" v-if="user === ''">
               <form>
                 <p>
@@ -68,10 +125,21 @@
               
             </div>
             
-            <button v-on:click="clickBack">Go Back</button>
+            <button v-on:click="clickBack">Home</button>
           </div>
         </div>
       </template>
+
+      <hr/>
+      <div class="disclaimer">
+        This is still a beta product, things might not work as expected.<br/>
+        If you encounter a bug, please let me know at hello <i>at</i> lifeclo.cc<br/>
+        <p>
+          <div><strong>Known bugs:</strong></div>
+          <div>Countdown does not work on safari and firefox.</div>
+          <div>There is no way to delete or edit a user's birthday</div>
+        </p>
+      </div>
       
     </div>
   </body>

@@ -5,6 +5,24 @@ const DAYS_IN_MONTH = [
   31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
 ]
 
+Vue.component('segment', {
+  props: ['number'],
+  template: `
+    <span class="seven-seg">
+      <img v-if="number=='0'" src="/assets/images/ss-0.svg"/>
+      <img v-if="number=='1'" src="/assets/images/ss-1.svg"/>
+      <img v-if="number=='2'" src="/assets/images/ss-2.svg"/>
+      <img v-if="number=='3'" src="/assets/images/ss-3.svg"/>
+      <img v-if="number=='4'" src="/assets/images/ss-4.svg"/>
+      <img v-if="number=='5'" src="/assets/images/ss-5.svg"/>
+      <img v-if="number=='6'" src="/assets/images/ss-6.svg"/>
+      <img v-if="number=='7'" src="/assets/images/ss-7.svg"/>
+      <img v-if="number=='8'" src="/assets/images/ss-8.svg"/>
+      <img v-if="number=='9'" src="/assets/images/ss-9.svg"/>
+    </span>
+  `
+})
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -19,10 +37,14 @@ var app = new Vue({
     },
     workings: {
       birthdayKey: '',
-      count: 0
+      count: 0,
+      digits: []
     },
     birthday: '',
     user: ''
+  },
+  nodrag: function(e) {
+    e.preventDefault();
   },
   created: function () {
     var vm = this;
@@ -30,7 +52,7 @@ var app = new Vue({
     // Vanilla JS way to achieve URL params without vue router
     function getParameterByName(name) {
       return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||"";
-     }
+    }
     vm.user = getParameterByName('u');
     vm.workings.birthdayKey = `bday-${vm.user}`
     
@@ -132,13 +154,13 @@ var app = new Vue({
     clickBack: function(event) {
       var vm = this;
       event.preventDefault();
-      if (confirm("Are you sure you want to reset your birthday?\n(This will not reset the link)")) {
+      if (confirm("Go back to home page?\nYou will need to enter your birthday or username again.")) {
         localStorage.removeItem(vm.workings.birthdayKey);
         localStorage.removeItem('bday-');
+        vm.birthday = '';
+        vm.state = STATE_FIRST;
         window.location.href = "/"
       }
-      vm.birthday = '';
-      vm.state = STATE_FIRST;
     },
     doCalculations: function() {
       var vm = this;
@@ -149,6 +171,14 @@ var app = new Vue({
 
         let secondsLeft = (2524608000000 - ( new Date(utcifiedString).getTime() - bday.getTime() )) / 1000;
         vm.workings.count = parseInt(secondsLeft);
+        vm.workings.digits.length = 0;
+        let digitWorking = vm.workings.count;
+        for (let i = 0; i < 10; i++) {
+          let digit = digitWorking % 10;
+          vm.workings.digits.push(digit);
+          digitWorking = parseInt(digitWorking / 10);
+        }
+        vm.workings.digits.reverse();
       }
     }
   }
