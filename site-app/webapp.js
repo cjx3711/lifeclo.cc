@@ -102,7 +102,7 @@ var app = new Vue({
     },
     dateValidate: function(event) {
       let year = parseInt(this.inputs.byear)
-      if ( year < 1800 ) this.inputs.byear = 1800
+      if ( year < 1900 ) this.inputs.byear = 1900
       if ( year > 2100 ) this.inputs.byear = 2100
 
       let month = parseInt(this.inputs.bmonth)
@@ -180,6 +180,9 @@ var app = new Vue({
         if (!secondsLeft) {
           vm.broken = true;
         } else {
+          if (secondsLeft < 0) {
+            secondsLeft = 0;
+          }
           vm.workings.count = parseInt(secondsLeft);
           vm.workings.digits.length = 0;
           let digitWorking = vm.workings.count;
