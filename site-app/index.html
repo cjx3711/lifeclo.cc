@@ -26,8 +26,14 @@
       
 
       input.dateinput {
-        padding: 30px;
+        padding: 10px 30px;
         font-size: 1.5em;
+        box-sizing: content-box;
+        width: 10%;
+      }
+
+      input.dateinput#year {
+        width: 15%
       }
 
       .timer {
@@ -80,7 +86,7 @@
             </h1>
             <p>Please enter your birthday (YYYY-MM-DD) to get started</p>
             <form>
-              <input class="dateinput" type="number" min="1900" max="2020" maxlength="4" v-model="inputs.byear" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
+              <input class="dateinput" type="number" min="1900" max="2020" maxlength="4" v-model="inputs.byear" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" id="year" />
               <input class="dateinput" type="number" min="1" max="12" maxlength="2" v-model="inputs.bmonth" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
               <input class="dateinput" type="number" min="1" max="31" maxlength="2" v-model="inputs.bdate" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
               <br/>
