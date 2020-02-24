@@ -114,7 +114,10 @@
             <h3>Welcome back<template v-if="user">,<br/>{{ user }}</template></h3>
             <div class="row timer">
               <div>You have</div>
-              <div class="segment-middler">
+              <div v-if="!features.sevenseg" class="text-counter">
+                <h1>{{ workings.count }}</h1>
+              </div>
+              <div v-if="features.sevenseg" class="segment-middler">
                 <div class="segment-holder">
                   <segment v-for="d in workings.digits" v-bind:number="d"></segment>
                 </div>

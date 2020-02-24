@@ -91,13 +91,14 @@ app.get('/api/:userid', function (req, res) {
 
 // This will work for both app.lifeclo.cc and lifeclo.cc
 app.post('/api/:userid', function (req, res) {
+  var hostname = req.headers.host.split(":")[0];
   if (!hostname.startsWith('app.') && hostname !== 'lifeclo.cc' && hostname !== 'localhost') {
     res.status(404).send();
     return;
   }
 
-  console.log("App post")
   const userid = req.params.userid;
+  console.log("Saving user: ", userid )
 
   if ( !req.body.birthday ) {
     res.status(400).send({"error": "No birthday"})

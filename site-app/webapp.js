@@ -29,10 +29,9 @@ var app = new Vue({
     message: 'Hello Vue!',
     state: STATE_FIRST,
     inputs: {
-      birthday: '1990-01-20',
-      byear: '1990',
-      bmonth: '1',
-      bdate: '20',
+      byear: new Date().getFullYear() - 30,
+      bmonth: new Date().getMonth() + 1,
+      bdate: new Date().getDate(),
       user: ''
     },
     workings: {
@@ -42,7 +41,10 @@ var app = new Vue({
     },
     birthday: '',
     user: '',
-    broken: false
+    broken: false,
+    features: {
+      sevenseg: true
+    }
   },
   created: function () {
     var vm = this;
@@ -146,8 +148,15 @@ var app = new Vue({
       event.preventDefault();
       vm.birthday = vm.inputs.birthday;
       localStorage.setItem(vm.workings.birthdayKey, vm.birthday);
-      vm.state = STATE_COUNT;
-      vm.doCalculations();
+
+      if(vm.user) {
+        vm.inputs.user = vm.user;
+        vm.savePermalink(event);
+        // This will refresh the page and bring the user to the countdown state
+      } else {
+        vm.state = STATE_COUNT;
+        vm.doCalculations();
+      }
     },
     clickBack: function(event) {
       var vm = this;
