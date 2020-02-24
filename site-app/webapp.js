@@ -41,10 +41,8 @@ var app = new Vue({
       digits: []
     },
     birthday: '',
-    user: ''
-  },
-  nodrag: function(e) {
-    e.preventDefault();
+    user: '',
+    broken: false
   },
   created: function () {
     var vm = this;
@@ -165,20 +163,25 @@ var app = new Vue({
     doCalculations: function() {
       var vm = this;
       if (vm.state === STATE_COUNT && vm.birthday !== '') {
-        let bday = new Date(vm.birthday.replace("-", "/"));
+        let bday = new Date(vm.birthday);
         let now = new Date().toString();
         let utcifiedString = `${now.substr(0, now.indexOf("GMT"))} GMT+0000`;
 
         let secondsLeft = (2524608000000 - ( new Date(utcifiedString).getTime() - bday.getTime() )) / 1000;
-        vm.workings.count = parseInt(secondsLeft);
-        vm.workings.digits.length = 0;
-        let digitWorking = vm.workings.count;
-        for (let i = 0; i < 10; i++) {
-          let digit = digitWorking % 10;
-          vm.workings.digits.push(digit);
-          digitWorking = parseInt(digitWorking / 10);
+        if (!secondsLeft) {
+          vm.broken = true;
+        } else {
+          vm.workings.count = parseInt(secondsLeft);
+          vm.workings.digits.length = 0;
+          let digitWorking = vm.workings.count;
+          for (let i = 0; i < 10; i++) {
+            let digit = digitWorking % 10;
+            vm.workings.digits.push(digit);
+            digitWorking = parseInt(digitWorking / 10);
+          }
+          vm.workings.digits.reverse();
+          vm.broken = false;
         }
-        vm.workings.digits.reverse();
       }
     }
   }

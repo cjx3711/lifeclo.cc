@@ -109,7 +109,7 @@
       </template>
 
       <template v-if="state === 'countdown'">
-        <div class="row">
+        <div v-if="!broken" class="row">
           <div class="twelve columns">
             <h3>Welcome back<template v-if="user">,<br/>{{ user }}</template></h3>
             <div class="row timer">
@@ -133,10 +133,20 @@
               </form>
               
             </div>
-            
+          </div>
+        </div>
+        <div v-if="broken" class="row">
+          <div class="twelve columns" style="margin: 4em 0;">
+            Sorry, your browser is currently not supported.<br/>
+            Please use a supported browser like the latest Chrome, Edge, or Firefox.
+          </div>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
             <button v-on:click="clickBack">Home</button>
           </div>
         </div>
+        
       </template>
 
       <hr/>
