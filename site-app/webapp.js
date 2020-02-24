@@ -165,7 +165,7 @@ var app = new Vue({
     doCalculations: function() {
       var vm = this;
       if (vm.state === STATE_COUNT && vm.birthday !== '') {
-        let bday = new Date(`${vm.birthday} GMT+0000`);
+        let bday = new Date(vm.birthday);
         let now = new Date().toString();
         let utcifiedString = `${now.substr(0, now.indexOf("GMT"))} GMT+0000`;
 
