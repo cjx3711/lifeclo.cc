@@ -16,8 +16,11 @@
 
 
     <style>
-      body {
+      html, body{ 
+        height:100%;
+        margin:0;
         text-align: center;
+
       }
 
       #app {
@@ -25,17 +28,36 @@
       }
       
 
+      .welcome small {
+        font-size: 0.5em;
+      }
+
+      .nowrap {
+        white-space: nowrap;
+      }
+
+      .well {
+        border: #DDDDDD 1px solid;
+        border-radius: 5px;
+        padding: 15px;
+      }
+
+      .well form, .well input, .well button {
+        margin: 0;
+      }
+
       input.dateinput {
         padding: 10px 30px;
         font-size: 1.5em;
         box-sizing: content-box;
         width: 10%;
-        min-width: 50px;
+        min-width: 35px;
+        text-align: center;
       }
 
       input.dateinput#year {
         width: 15%;
-        min-width: 100px;
+        min-width: 70px;
       }
 
       .timer {
@@ -68,10 +90,30 @@
       }
 
       .disclaimer {
-        margin-top: 3em;
-        color: #BBBBBB;
-        font-size: 0.7em;
+        margin-top: 0.7em;
+        color: #AAAAAA;
+        font-size: 0.75em;
       }
+
+      body { 
+        display:flex; 
+        flex-direction:column; 
+      }
+
+      a {
+        color:#4FA9B3;
+        text-decoration:underline;
+      }
+
+      footer {
+        margin-top:auto;
+        padding-bottom: 1.5em;
+      }
+
+      .columns, .column {
+        padding: 7px;
+      }
+ 
       [v-cloak] {
         display: none;
       }
@@ -83,15 +125,16 @@
       <template v-if="state === 'firsttime'">
         <div class="row">
           <div class="twelve columns">
-            <h1>
-              Welcome to LIFECLO.CC<template v-if="user">,<br/>{{ user }}</template>
+            <h1 class="welcome">
+              Welcome to Lifeclocc <small class="nowrap">(Digital Edition)</small><template v-if="user">,<br/>{{ user }}</template>
             </h1>
             <p>Please enter your birthday (YYYY-MM-DD) to get started</p>
             <form>
               <input class="dateinput" type="number" min="1900" max="2020" maxlength="4" v-model="inputs.byear" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" id="year" />
-              <input class="dateinput" type="number" min="1" max="12" maxlength="2" v-model="inputs.bmonth" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
-              <input class="dateinput" type="number" min="1" max="31" maxlength="2" v-model="inputs.bdate" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
-              <br/>
+              <span class="nowrap">
+                <input class="dateinput" type="number" min="1" max="12" maxlength="2" v-model="inputs.bmonth" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
+                <input class="dateinput" type="number" min="1" max="31" maxlength="2" v-model="inputs.bdate" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />  
+              </span><br/>
               <button v-on:click="setBirthday" type="submit">Set</button>
             </form>
             <hr/>
@@ -111,7 +154,7 @@
       <template v-if="state === 'countdown'">
         <div v-if="!broken" class="row">
           <div class="twelve columns">
-            <h3>Welcome back<template v-if="user">,<br/>{{ user }}</template></h3>
+            <template v-if="user"><h3>Welcome back,<br/>{{ user }}</h3></template>
             <div class="row timer">
               <div>You have</div>
               <div v-if="!features.sevenseg" class="text-counter">
@@ -125,14 +168,10 @@
               <div>seconds left to live.</div>
             </div>
             
-            <div class="permalink" v-if="user === ''">
+            <div class="permalink well" v-if="user === ''">
               <form>
-                <p>
-                  Get your very own permalink!
-                </p>
-                <p>
-                  <input type="text" v-model="inputs.user"/> <button v-on:click="savePermalink" type="submit">Save</button>
-                </p>
+                <div style="margin-bottom:0.4em">Get your very own permalink!</div>
+                <input type="text" v-model="inputs.user"/> <button v-on:click="savePermalink" type="submit">Save</button>
               </form>
               
             </div>
@@ -140,8 +179,9 @@
         </div>
         <div v-if="broken" class="row">
           <div class="twelve columns" style="margin: 4em 0;">
-            Sorry, your browser is currently not supported.<br/>
-            Please use a supported browser like the latest Chrome, Edge, or Firefox.
+            <strong>Sorry, something went wrong.</strong><br/>
+            Please use a supported browser like the latest Chrome, Edge, or Firefox.<br/>
+            If you are still experiencing problems, you can file a bug report using the feedback form below.<br/>
           </div>
         </div>
         <div class="row">
@@ -151,19 +191,30 @@
         </div>
         
       </template>
+    </div>
 
-      <hr/>
-      <div class="disclaimer">
-        This is still a beta product, things might not work as expected.<br/>
-        If you encounter a bug, please let me know at hello <i>at</i> lifeclo.cc<br/>
-        <p>
+    <footer>
+      <hr style="margin-top:2em; margin-bottom:1em"/>
+      <div class="row disclaimer">
+        <div class="four columns">
+          <div class="created-by">
+            Created by <a href="https://chaijiaxun.com" target="_blank">Chai Jia Xun</a><br/>
+            Check out the <a href="https://lifeclo.cc" target="_blank">physical edition of Lifeclocc.</a>
+          </div>
+        </div>
+        <div class="four columns">
+          This is still a beta product, things might not work as expected.<br/>
+          If you encounter a bug, please fill up the feedback form or let me know at hello <i>at</i> lifeclo.cc<br/>
+          <a class="typeform-share link" href="https://cjx3711.typeform.com/to/WtRmKD" data-mode="popup" style="font-size:1.1em;" data-submit-close-delay="1" target="_blank">Feedback form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+        </div>
+        <div class="four columns">
           <div><strong>Known bugs:</strong></div>
           <div>Countdown does not work on safari.</div>
           <div>There is no way to delete or edit a user's birthday</div>
-        </p>
+        </div>
+
       </div>
-      
-    </div>
+    </footer>
   </body>
 </html>
 

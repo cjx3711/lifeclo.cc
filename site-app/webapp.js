@@ -98,8 +98,8 @@ var app = new Vue({
       if (this.inputs.bdate.length > 2) {
         this.inputs.bdate = this.inputs.bdate.substring(0,2)
       }
-      this.inputs.birthday = `${this.inputs.byear}-${this.inputs.bmonth}-${this.inputs.bdate}`
     },
+    
     dateValidate: function(event) {
       let year = parseInt(this.inputs.byear)
       if ( year < 1900 ) this.inputs.byear = 1900
@@ -116,8 +116,6 @@ var app = new Vue({
       }
       if ( date < 1 ) this.inputs.bdate = 1
       if ( date > max ) this.inputs.bdate = max
-
-      this.inputs.birthday = `${year}-${month}-${date}`
     },
     setUser: function(event) {
       var vm = this;
@@ -146,7 +144,7 @@ var app = new Vue({
     setBirthday: function(event) {
       var vm = this;
       event.preventDefault();
-      vm.birthday = vm.inputs.birthday;
+      vm.birthday = `${this.inputs.byear}-${this.inputs.bmonth}-${this.inputs.bdate}`;
       localStorage.setItem(vm.workings.birthdayKey, vm.birthday);
 
       if(vm.user) {
