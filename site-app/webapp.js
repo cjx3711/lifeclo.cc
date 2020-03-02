@@ -125,19 +125,30 @@ var app = new Vue({
     savePermalink: function(event) {
       var vm = this;
       event.preventDefault();
-      axios.post(`/api/${vm.inputs.user}`, {
+      let user = vm.inputs.user.trim();
+      if (!/^[A-Za-z0-9\.\-_~]+$/.test(user)) {
+        alert("Invalid userid.\nMust be < 64 alphanumeric and .-_~ characters.");
+        return;
+      }
+      axios.post(`/api/${user}`, {
         birthday: vm.birthday
       })
       .then(function(response) {
-        if (response.data.userid === vm.inputs.user) {
-          window.location = `?u=${vm.inputs.user}`
+        if (response.data.userid === user) {
+          window.location = `?u=${user}`;
         } else {
           alert("Something went wrong with generating your link");
         }
       })
       .catch(function(error) {
-        if (error.response.status == 400 && error.response.data.error === "User exists") {
-          alert("Username has been taken, please try another");
+        if (error.response.status) {
+          if (error.response.data.error === "User exists") {
+            if (confirm("Username has been taken, go to link?")) {
+              window.location = `?u=${user}`;
+            }
+          } else {
+            alert("Server error: " + error.response.data.error);
+          }
         }
       })
     },

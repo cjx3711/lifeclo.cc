@@ -63,6 +63,12 @@ app.get('/api/:userid', function (req, res) {
 
   const userid = req.params.userid;
 
+  if (!/^[A-Za-z0-9\.\-_~]+$/.test(userid)) {
+    console.log("Invalid user id");
+    res.status(404).send({"error":"No such user"});
+    return;
+  }
+
   const sql_get = `SELECT * FROM users WHERE username = '${userid}'`
   db.all(sql_get, [], (err, rows) => {
     if (rows.length == 0) {
@@ -98,13 +104,19 @@ app.post('/api/:userid', function (req, res) {
   }
 
   const userid = req.params.userid;
-  console.log("Saving user: ", userid )
+  console.log("Saving user: ", userid );
 
   if ( !req.body.birthday ) {
     res.status(400).send({"error": "No birthday"})
     return
   }
   const birthday = req.body.birthday
+
+  if (!/^[A-Za-z0-9\.\-_~]+$/.test(userid)) {
+    console.log("Invalid user id");
+    res.status(400).send({"error":"Invalid userid"});
+    return;
+  }
 
   const sql_count = `SELECT COUNT(*) FROM users WHERE username = '${userid}'`
   db.all(sql_count, [], (err, rows) => {
