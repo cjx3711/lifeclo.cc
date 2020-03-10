@@ -1,6 +1,9 @@
 
 const STATE_FIRST = "firsttime"
 const STATE_COUNT = "countdown"
+const THEME_LIGHT = "light"
+const THEME_DARK = "dark"
+
 const DAYS_IN_MONTH = [
   31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
 ]
@@ -28,6 +31,10 @@ var app = new Vue({
   data: {
     message: 'Hello Vue!',
     state: STATE_FIRST,
+    settingsScreen: false,
+    settings: {
+      theme: 'light',
+    },
     inputs: {
       byear: new Date().getFullYear() - 30,
       bmonth: new Date().getMonth() + 1,
@@ -121,6 +128,14 @@ var app = new Vue({
       var vm = this;
       event.preventDefault();
       window.location = `?u=${vm.inputs.user}`
+    },
+    openSettings: function(event) {
+      event.preventDefault();
+      this.settingsScreen = true;
+    },
+    closeSettings: function(event) {
+      event.preventDefault();
+      this.settingsScreen = false;
     },
     savePermalink: function(event) {
       var vm = this;

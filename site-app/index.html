@@ -16,18 +16,26 @@
 
 
     <style>
-      html, body{ 
+      html, body, #app { 
         height:100%;
         margin:0;
         text-align: center;
-
       }
 
       #app {
         padding-top: 1em;
       }
-      
 
+      #app.dark {
+        background: #444444;
+      }
+      
+      .settings-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+      }
       .welcome small {
         font-size: 0.5em;
       }
@@ -95,7 +103,7 @@
         font-size: 0.75em;
       }
 
-      body { 
+      #app { 
         display:flex; 
         flex-direction:column; 
       }
@@ -121,100 +129,126 @@
   </head>
 
   <body>
-    <div class="container" id="app" v-cloak>
-      <template v-if="state === 'firsttime'">
-        <div class="row">
-          <div class="twelve columns">
-            <h1 class="welcome">
-              Welcome to Lifeclocc <small class="nowrap">(Digital Edition)</small><template v-if="user">,<br/>{{ user }}</template>
-            </h1>
-            <p>Please enter your birthday (YYYY-MM-DD) to get started</p>
-            <form>
-              <input class="dateinput" type="number" min="1900" max="2020" maxlength="4" v-model="inputs.byear" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" id="year" />
-              <span class="nowrap">
-                <input class="dateinput" type="number" min="1" max="12" maxlength="2" v-model="inputs.bmonth" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
-                <input class="dateinput" type="number" min="1" max="31" maxlength="2" v-model="inputs.bdate" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />  
-              </span><br/>
-              <button v-on:click="setBirthday" type="submit">Set</button>
-            </form>
-            <hr/>
-            <p>or</p>
-            <form>
-              <p>
-                Load an existing user ID
-              </p>
-              <p>
-                <input type="text" v-model="inputs.user"/> <button v-on:click="setUser" type="submit">Retrieve</button>
-              </p>
-            </form>
+    <div id="app" v-bind:class="settings.theme" v-cloak>
+      <div class="container">
+        <template v-if="!settingsScreen">
+          <div class="settings-container">
+            <a href="#" v-on:click="openSettings">settings</a>
           </div>
-        </div>
-      </template>
-
-      <template v-if="state === 'countdown'">
-        <div v-if="!broken" class="row">
-          <div class="twelve columns">
-            <template v-if="user"><h3>Welcome back,<br/>{{ user }}</h3></template>
-            <div class="row timer">
-              <div>You have</div>
-              <div v-if="!features.sevenseg" class="text-counter">
-                <h1>{{ workings.count }}</h1>
+          <template v-if="state === 'firsttime'">
+            <div class="row">
+              <div class="twelve columns">
+                <h1 class="welcome">
+                  Welcome to Lifeclocc <small class="nowrap">(Digital Edition)</small><template v-if="user">,<br/>{{ user }}</template>
+                </h1>
+                <p>Please enter your birthday (YYYY-MM-DD) to get started</p>
+                <form>
+                  <input class="dateinput" type="number" min="1900" max="2020" maxlength="4" v-model="inputs.byear" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" id="year" />
+                  <span class="nowrap">
+                    <input class="dateinput" type="number" min="1" max="12" maxlength="2" v-model="inputs.bmonth" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
+                    <input class="dateinput" type="number" min="1" max="31" maxlength="2" v-model="inputs.bdate" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />  
+                  </span><br/>
+                  <button v-on:click="setBirthday" type="submit">Set</button>
+                </form>
+                <hr/>
+                <p>or</p>
+                <form>
+                  <p>
+                    Load an existing user ID
+                  </p>
+                  <p>
+                    <input type="text" v-model="inputs.user"/> <button v-on:click="setUser" type="submit">Retrieve</button>
+                  </p>
+                </form>
               </div>
-              <div v-if="features.sevenseg" class="segment-middler">
-                <div class="segment-holder">
-                  <segment v-for="d in workings.digits" v-bind:number="d"></segment>
+            </div>
+          </template>
+  
+          <template v-if="state === 'countdown'">
+            <div v-if="!broken" class="row">
+              <div class="twelve columns">
+                <template v-if="user"><h3>Welcome back,<br/>{{ user }}</h3></template>
+                <div class="row timer">
+                  <div>You have</div>
+                  <div v-if="!features.sevenseg" class="text-counter">
+                    <h1>{{ workings.count }}</h1>
+                  </div>
+                  <div v-if="features.sevenseg" class="segment-middler">
+                    <div class="segment-holder">
+                      <segment v-for="d in workings.digits" v-bind:number="d"></segment>
+                    </div>
+                  </div>
+                  <div>seconds left to live.</div>
+                </div>
+                
+                <div class="permalink well" v-if="user === ''">
+                  <form>
+                    <div style="margin-bottom:0.4em">Get your very own permalink!</div>
+                    <input type="text" v-model="inputs.user"/> <button v-on:click="savePermalink" type="submit">Save</button>
+                  </form>
+                  
                 </div>
               </div>
-              <div>seconds left to live.</div>
+            </div>
+            <div v-if="broken" class="row">
+              <div class="twelve columns" style="margin: 4em 0;">
+                <strong>Sorry, something went wrong.</strong><br/>
+                Please use a supported browser like the latest Chrome, Edge, or Firefox.<br/>
+                If you are still experiencing problems, you can file a bug report using the feedback form below.<br/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="twelve columns">
+                <button v-on:click="clickBack">Home</button>
+              </div>
             </div>
             
-            <div class="permalink well" v-if="user === ''">
-              <form>
-                <div style="margin-bottom:0.4em">Get your very own permalink!</div>
-                <input type="text" v-model="inputs.user"/> <button v-on:click="savePermalink" type="submit">Save</button>
-              </form>
-              
+          </template>
+        </template>
+        <template v-if="settingsScreen">
+          <div class="settings-container">
+            <a href="#" v-on:click="closeSettings">x</a>
+          </div>
+          <div class="row">
+            <div class="twelve columns">
+              <h1 class="welcome">
+                Settings
+              </h1>
+              <p>
+                Theme: 
+                <select v-model="settings.theme">
+                  <option name="light" value="light">light</option>
+                  <option name="dark" value="dark">dark</option>
+                </select>
+              </p>
+            </div>
+          </template>
+        </template>
+      </div>
+  
+      <footer>
+        <hr style="margin-top:2em; margin-bottom:1em"/>
+        <div class="row disclaimer">
+          <div class="four columns">
+            <div class="created-by">
+              Created by <a href="https://chaijiaxun.com" target="_blank">Chai Jia Xun</a><br/>
+              Check out the <a href="https://lifeclo.cc" target="_blank">physical edition of Lifeclocc.</a>
             </div>
           </div>
-        </div>
-        <div v-if="broken" class="row">
-          <div class="twelve columns" style="margin: 4em 0;">
-            <strong>Sorry, something went wrong.</strong><br/>
-            Please use a supported browser like the latest Chrome, Edge, or Firefox.<br/>
-            If you are still experiencing problems, you can file a bug report using the feedback form below.<br/>
+          <div class="four columns">
+            This is still a beta product, things might not work as expected.<br/>
+            If you encounter a bug, please fill up the feedback form or let me know at hello <i>at</i> lifeclo.cc<br/>
+            <a class="typeform-share link" href="https://cjx3711.typeform.com/to/WtRmKD" data-mode="popup" style="font-size:1.1em;" data-submit-close-delay="1" target="_blank">Feedback form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
           </div>
-        </div>
-        <div class="row">
-          <div class="twelve columns">
-            <button v-on:click="clickBack">Home</button>
+          <div class="four columns">
+            <div><strong>Known bugs:</strong></div>
+            <div>Countdown does not work on safari.</div>
+            <div>There is no way to delete or edit a user's birthday</div>
           </div>
+  
         </div>
-        
-      </template>
+      </footer>
     </div>
-
-    <footer>
-      <hr style="margin-top:2em; margin-bottom:1em"/>
-      <div class="row disclaimer">
-        <div class="four columns">
-          <div class="created-by">
-            Created by <a href="https://chaijiaxun.com" target="_blank">Chai Jia Xun</a><br/>
-            Check out the <a href="https://lifeclo.cc" target="_blank">physical edition of Lifeclocc.</a>
-          </div>
-        </div>
-        <div class="four columns">
-          This is still a beta product, things might not work as expected.<br/>
-          If you encounter a bug, please fill up the feedback form or let me know at hello <i>at</i> lifeclo.cc<br/>
-          <a class="typeform-share link" href="https://cjx3711.typeform.com/to/WtRmKD" data-mode="popup" style="font-size:1.1em;" data-submit-close-delay="1" target="_blank">Feedback form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-        </div>
-        <div class="four columns">
-          <div><strong>Known bugs:</strong></div>
-          <div>Countdown does not work on safari.</div>
-          <div>There is no way to delete or edit a user's birthday</div>
-        </div>
-
-      </div>
-    </footer>
   </body>
 </html>
 
