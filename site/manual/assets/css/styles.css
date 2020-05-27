@@ -590,7 +590,7 @@ select {
 }
 
 .callout-block {
-  padding: 30px;
+  padding: 20px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -600,7 +600,7 @@ select {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .callout-block a {
@@ -614,13 +614,13 @@ select {
 .callout-block .icon-holder {
   font-size: 30px;
   position: absolute;
-  left: 30px;
-  top: 30px;
+  left: 20px;
+  top: 20px;
   color: rgba(0, 0, 0, 0.25);
 }
 
 .callout-block .content {
-  margin-left: 60px;
+  margin-left: 55px;
 }
 
 .callout-block .content p:last-child {
@@ -685,6 +685,11 @@ select {
   background-color: #f5f5f5;
 }
 
+.image-holder {
+  position: relative;
+  text-align: center;
+}
+
 .screenshot-holder {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -692,11 +697,11 @@ select {
   text-align: center;
 }
 
-.screenshot-holder img {
+.image-holder img {
   border: 1px solid #f0f0f0;
 }
 
-.screenshot-holder .mask {
+.image-holder .mask {
   display: block;
   visibility: hidden;
   position: absolute;
@@ -709,7 +714,7 @@ select {
   text-decoration: none;
 }
 
-.screenshot-holder .mask .svg-inline--fa {
+.image-holder .mask .svg-inline--fa {
   color: #fff;
   font-size: 42px;
   display: block;
@@ -720,7 +725,7 @@ select {
   margin-top: -21px;
 }
 
-.screenshot-holder:hover .mask {
+.image-holder:hover .mask {
   visibility: visible;
 }
 
