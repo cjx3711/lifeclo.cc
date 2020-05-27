@@ -495,7 +495,7 @@
 
                 <div class="callout-block callout-success">
                   <div class="icon-holder">
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-check-circle"></i>
                   </div><!--//icon-holder-->
                   <div class="content">
                     <h4 class="callout-title">Checkpoint</h4>
@@ -552,7 +552,7 @@
 
                 <div class="callout-block callout-info">
                   <div class="icon-holder">
-                    <i class="fas fa-exclamation-triangle"></i>
+                    <i class="fas fa-info-circle"></i>
                   </div><!--//icon-holder-->
                   <div class="content">
                     <h4 class="callout-title">Take Note</h4>
@@ -560,20 +560,128 @@
                   </div><!--//content-->
                 </div><!--//callout-block-->
 
+                <div class="callout-block callout-success">
+                  <div class="icon-holder">
+                    <i class="fas fa-check-circle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Checkpoint</h4>
+                    <p>
+                      Plug the micro USB cable in. The Teensy should light up and blink 3 times.
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
+
                 <hr/>
                 <h3 id="step3" class="block-title">Step 3 - Install Buttons</h3>
+
+                
+                <div class="callout-block callout-success">
+                  <div class="icon-holder">
+                    <i class="fas fa-check-circle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Checkpoint</h4>
+                    <p>
+                      Plug the Teensy in<br>
+                      When you press the buttons, the LED on board the Teensy should light up to indicate that it detects the button presses.<br>
+                      Unplug the device before continuing to solder.
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
                 <hr/>
                 <h3 id="step4" class="block-title">Step 4 - Install Indicator LEDs</h3>
+                <div class="callout-block callout-success">
+                  <div class="icon-holder">
+                    <i class="fas fa-check-circle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Checkpoint</h4>
+                    <p>
+                      Plug the Teensy in.<br>
+                      All the LEDs should flash as it boots up. This will indicate that it’s all working.<br>
+                      When you press the TIME and DATE buttons, the TIME and DATE LEDs should light up.<br>
+                      When you press and hold the SET button, the SET MODE LED should light up.<br>
+                      When you press and hold the TIME button, the BDAY and SET MODE LED should light up.<br>
+                      Unplug the device before continuing.
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
                 <hr/>
                 <h3 id="step5" class="block-title">Step 5 - Install Clock Module</h3>
+
+                <div class="callout-block callout-success">
+                  <div class="icon-holder">
+                    <i class="fas fa-check-circle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Checkpoint</h4>
+                    <p>
+                      Plug the Teensy in<br>
+                      The clock module should have a red light indicating that it's powered.
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
+                <hr/>
                 <hr/>
                 <h3 id="step6" class="block-title">Step 6 - Install Variable Resistor</h3>
+
+                <div class="callout-block callout-success">
+                  <div class="icon-holder">
+                    <i class="fas fa-check-circle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Checkpoint</h4>
+                    <p>
+                      No checkpoint here unfortunately.
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
+                <hr/>
                 <hr/>
                 <h3 id="step7" class="block-title">Step 7 - Install First Digit</h3>
+                <div class="callout-block callout-success">
+                  <div class="icon-holder">
+                    <i class="fas fa-check-circle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Checkpoint</h4>
+                    <p>
+                      Plug the Teensy in<br>
+                      The first digit should show an 8 as the device boots up. Then it should start counting down.<br>
+                      If this happens, that means the clock, and the Teensy are both working!
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
+                <hr/>
                 <hr/>
                 <h3 id="step8" class="block-title">Step 8 - Install Rest of Display</h3>
+
+                <div class="callout-block callout-success">
+                  <div class="icon-holder">
+                    <i class="fas fa-check-circle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Checkpoint</h4>
+                    <p>
+                      Plug the Teensy in<br>
+                      All the lights should blink to indicate that it's working.<br>
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
+                <hr/>
                 <hr/>
                 <h3 id="step9" class="block-title">Step 9 - Testing and Setup </h3>
+                <h6>Debug Mode</h6>
+                <p>To enter debug mode, press and hold all 3 buttons for 3 seconds. This will cause all the lights to blink. This helps you determine if ther are any broken parts.</p>
+                
+                <h6>Debug Mode</h6>
+                <p>Turn the brightness dial to make sure it's working</p>
+                <h6>Setting the date and time</h6>
+                <p>Please refer to the <a href="/v1/operation.html" target="_blank">operation manual</a> to setup the date, time and birthday.</p>
+                
+                <h6>Checking if clock is working</h6>
+                <p>Unplug and plug it back in, the countdown should not have reset. (Make sure your button battery is in the clock module)</p>
                 <hr/>
                 
               </div><!--//section-block-->
