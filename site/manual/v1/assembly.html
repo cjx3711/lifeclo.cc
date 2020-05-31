@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 4 project documentation theme for developers</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73723112-7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-73723112-7');
+
+  </script>
+  <title>Lifeclocc V1 Assembly</title>
   <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,13 +61,13 @@
         <div class="doc-body row">
           <div class="doc-content col-md-9 col-12 order-1">
             
-            <div class="callout-block callout-danger">
+            <div class="callout-block callout-warning">
               <div class="icon-holder">
                 <i class="fas fa-exclamation-triangle"></i>
               </div><!--//icon-holder-->
               <div class="content">
-                <h4 class="callout-title">Page is incomplete</h4>
-                <p>This instruction page is still incomplete. If you are looking for instructions, please check <a href="https://docs.google.com/document/d/1TOBn7nqTyzwpU5ygX8ydvUHnSu-CeFx6_WM4AlD6dhA/edit?usp=sharing">this document</a> for the draft.</p>
+                <h4 class="callout-title">Instructions are in beta</h4>
+                <p>If you have any issues or feedback for these instructions, do not hesitate to contact me via email at hello <i>at</i> lifeclo.cc</p>
               </div><!--//content-->
             </div><!--//callout-block-->
             <section id="prep" class="doc-section">
@@ -383,7 +393,7 @@
                 <h6>Assembly Video</h6>
                 <!-- 16:9 aspect ratio -->
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/z52ch94jUo4?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nPhNFR0LcUQ?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 
               </div><!--//section-block-->
@@ -663,6 +673,26 @@
                 <hr/>
                 <h3 id="step4" class="block-title">Step 4 - Install Indicator LEDs</h3>
 
+                <p>
+                  Solder the green LED into D1
+                </p>
+                <p>
+                  Solder the red LEDs into D2, D3 and D4
+                </p>
+                <p>
+                  Solder the yellow LED into D5
+                </p>
+
+                <div class="callout-block callout-warning">
+                  <div class="icon-holder">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Take Note</h4>
+                    <p>The LEDs are directional. The shorter leg goes into the square hole.</p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
+
                 <div class="row">
                   <div class="col-12">
                     <h6>Installation in Pictures</h6>
@@ -726,7 +756,14 @@
                 </div><!--//callout-block-->
                 <hr/>
                 <h3 id="step5" class="block-title">Step 5 - Install Clock Module</h3>
+                <p>
+                  The clock module is the one with a battery. Remove the battery before installation. It comes with the pins bent at a right angle. You will need to bend the pins so that they are straight. Insert the module into the area labelled DS3231 Module goes here and solder it in.
+                </p>
 
+                <p>
+                  Insert the battery after installation.
+                </p>
+                
 
                 <div class="row">
                   <div class="col-12">
@@ -789,7 +826,9 @@
                 <hr/>
                 <h3 id="step6" class="block-title">Step 6 - Install Variable Resistor</h3>
 
-
+                <p>
+                  Solder the variable resistor and make sure you turn the dial all the way clockwise. This will ensure full brightness when you’re testing the displays.
+                </p>
                 <div class="row">
                   <div class="col-12">
                     <h6>Installation in Pictures</h6>
@@ -833,6 +872,33 @@
                 <hr/>
                 <hr/>
                 <h3 id="step7" class="block-title">Step 7 - Install First Digit</h3>
+
+                <p>
+                  Solder the IC chip at U12. Make sure the small notch is facing up.
+                </p>
+                <p>
+                  Solder the 7-segment display at U22. Make sure the decimal point is at the bottom.
+                </p>
+                <p>
+                  Solder the resistor at R18. It doesn’t matter which way it is.
+                </p>
+                <p>
+                  If you are using a green display, you will need a 50Ω Resistor. If you are using a red display, you will need a 150Ω Resistor.
+                </p>
+
+                <div class="callout-block callout-warning">
+                  <div class="icon-holder">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Important</h4>
+                    <p>
+                      Make sure that you put the IC and Display in the right way up. Once soldered it's <strong>very</strong> hard to fix.<br>
+                      The IC's notch should be facing up and the display's decimal point should be at the bottom.<br>
+                      If you are still unsure, <a href="https://youtu.be/nPhNFR0LcUQ?t=348">please watch the video installation here</a>.
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
 
                 <div class="row">
                   <div class="col-12">
@@ -895,7 +961,24 @@
                 <hr/>
                 <hr/>
                 <h3 id="step8" class="block-title">Step 8 - Install Rest of Display</h3>
+                <p>
+                  Repeat step 9 for the other digits. You can test each one after you install it. Please make sure you don't solder while the device is plugged in.
+                </p>
 
+                <div class="callout-block callout-warning">
+                  <div class="icon-holder">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Important</h4>
+                    <p>
+                      I've mentioned this in the previous section, but it bears repeating<br>
+                      Make sure that you put the IC and Display in the right way up. Once soldered it's <strong>very</strong> hard to fix.<br>
+                      The IC's notch should be facing up and the display's decimal point should be at the bottom.<br>
+                      If you are still unsure, <a href="https://youtu.be/nPhNFR0LcUQ?t=348">please watch the video installation here</a>.
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
 
                 <div class="row">
                   <div class="col-12">
