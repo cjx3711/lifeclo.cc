@@ -49,6 +49,10 @@ db.run(sql_create, err => {
 app.get('/manual', function(req, res) {
   res.redirect(`http://manual.${req.headers.host}`);
 })
+// Required for legacy reasons. Printed this URL format on the circuit board.
+app.get('/manual/:version', function(req, res) {
+  res.redirect(`http://manual.${req.headers.host}/${req.params.version}`);
+})
 app.get('/source', function(req, res) {
   res.redirect(`http://source.${req.headers.host}`);
 })
