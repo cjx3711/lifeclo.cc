@@ -11,7 +11,7 @@
     gtag('config', 'UA-73723112-7');
 
   </script>
-  <title>Lifeclocc V1 Operation</title>
+  <title>Lifeclocc V2 Operation</title>
   <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,7 +45,7 @@
         </div><!--//branding-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item"><a href="/v1">v1</a></li>
+          <li class="breadcrumb-item"><a href="/v2a">v2</a></li>
           <li class="breadcrumb-item active">Operation</li>
         </ol>
       </div><!--//container-->
@@ -55,12 +55,22 @@
       <div class="container">
         <div id="doc-header" class="doc-header text-center">
           <h1 class="doc-title"><i class="icon fa fa-book"></i> Operation Manual</h1>
-          <div class="meta"><i class="far fa-clock"></i> Last updated: 2020-05-25</div>
+          <div class="meta"><i class="far fa-clock"></i> Last updated: 2020-06-15</div>
         </div><!--//doc-header-->
 
+        
         <div class="doc-body row">
           <div class="doc-content col-md-9 col-12 order-1">
             <div class="content-inner">
+              <div class="callout-block callout-warning">
+                <div class="icon-holder">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div><!--//icon-holder-->
+                <div class="content">
+                  <h4 class="callout-title">Instructions are incomplete</h4>
+                  <p>If you have any issues or feedback for these instructions, do not hesitate to contact me via email at hello <i>at</i> lifeclo.cc</p>
+                </div><!--//content-->
+              </div><!--//callout-block-->
               <section id="welcome" class="doc-section">
                 <h2 class="section-title">Welcome</h2>
                 <div class="section-block">
@@ -71,12 +81,6 @@
                   </p>
     
                   <h3 id="layout" class="block-title">Layout</h3>
-                  <p>
-                    This is roughly what Lifeclo.cc looks like. (colours may vary)
-                  </p>
-                  <p><img class="img-fluid" src="/assets/images/v1/diagram.png" /></p>
-                  <h3 id="breakdown" class="block-title">Part Breakdown</h3>
-                  <p><img class="img-fluid" src="/assets/images/v1/detail-diagram.png" /></p>
 
                 </div><!--//section-block-->
                 
@@ -88,14 +92,13 @@
                   
                   <h3 class="block-title">Controls</h3>
                   <p>
-                    There are three buttons and four indicator LEDs.
+                    There are four buttons and four indicator LEDs.
                   </p>
                   <p>
                     These are what you will use to control the clock and to know which mode you are currently on.
                   </p>
                   <p>
-                    <img class="img-fluid col-md-12" src="/assets/images/v1/location-indicator.png" />
-                    <img class="img-fluid col-md-12" src="/assets/images/v1/controls.png" />
+                    
                   </p>
                 </div>
 
@@ -105,7 +108,6 @@
                     <strong>Press</strong> the TIME/UP button. <strong>Pressing</strong> it again will go back to countdown mode, or it will go back <strong>after 5 seconds</strong>. 
                   </p>
                   <div class="screenshot-holder">
-                    <img class="img-fluid" src="/assets/images/v1/see-time.png" />
                   </div> 
 
                 </div>
@@ -115,7 +117,6 @@
                   <p>
                     <strong>Press</strong> the DATE/DOWN button. <strong>Pressing</strong> it again will go back to countdown mode, or it will go back <strong>after 5 seconds</strong>.
                   </p>
-                  <img class="img-fluid" src="/assets/images/v1/see-date.png" />
                 </div><!--//section-block-->
 
                 <div id="adjustbright" class="section-block">
@@ -145,9 +146,8 @@
                   <p><strong>Press</strong> the UP / DOWN buttons to increase or decrease the value of the number.</p>
                   <p><strong>Press</strong> the SET button to go to the next number.</p>
                   <p>The clock will cycle through the different date/time components in this order:<br /><br />
-                    YEAR > MONTH > DAY > HOUR > MINUTE > SECOND
+                    YEAR > MONTH > DAY > HOUR > MINUTE > SECOND > DECISECOND DISPLAY
                   </p>
-                  <img class="img-fluid" src="/assets/images/v1/set-clock.png" />
                 
                 </div><!--//section-block-->
                 <div class="section-block">
@@ -156,7 +156,6 @@
                   <p>Setting the birthday is the same as setting the date & time, but you will only have to set the date.</p>
                   <p><strong>Pressing</strong> the SET button will cycle through the date components in this order:<br /><br />
                     YEAR > MONTH > DAY
-                  <img class="img-fluid" src="/assets/images/v1/set-bday.png" />
                 
                 </div><!--//section-block-->
               </section>
@@ -255,7 +254,7 @@
                 <h2 class="section-title">Advanced Usage</h2>
                 <div class="section-block">
                   <p>
-                    Lifeclo.cc is teensy powered, meaning you can reprogram it to do whatever you want. Go to <a href="https://lifeclo.cc/source/v1">lifeclo.cc/source/v1/</a> for the source code and instructions on how to reprogram it.
+                    Lifeclo.cc is arduino powered, meaning you can reprogram it to do whatever you want. Go to <a href="https://lifeclo.cc/source/v1">lifeclo.cc/source/v1/</a> for the source code and instructions on how to reprogram it.
                   </p>
                 </div><!--//section-block-->
               </section>

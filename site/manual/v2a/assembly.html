@@ -55,25 +55,19 @@
       <div class="container">
         <div id="doc-header" class="doc-header text-center">
           <h1 class="doc-title"><i class="icon fa fa-book"></i> Assembly Instructions</h1>
-          <div class="meta"><i class="far fa-clock"></i> Last updated: 2020-06-06</div>
+          <div class="meta"><i class="far fa-clock"></i> Last updated: 2020-06-15</div>
         </div><!--//doc-header-->
         
         <div class="doc-body row">
           <div class="doc-content col-md-9 col-12 order-1">
             
-            <div class="callout-block callout-danger">
+            <div class="callout-block callout-warning">
               <div class="icon-holder">
                 <i class="fas fa-exclamation-triangle"></i>
               </div><!--//icon-holder-->
               <div class="content">
-                <h4 class="callout-title">Page is incomplete</h4>
-                <p>
-                  This instruction page has not been updated. 
-                  If you want to assemble this, the steps are fairly similar to v1, and you should be able to follow it without too much issue.
-                </p>
-                <p>
-                  <a href="/v1/assembly.html"><button class="btn btn-light">v1 Assembly instructions</button></a>
-                </p>
+                <h4 class="callout-title">Instructions are in beta</h4>
+                <p>If you have any issues or feedback for these instructions, do not hesitate to contact me via email at hello <i>at</i> lifeclo.cc</p>
               </div><!--//content-->
             </div><!--//callout-block-->
             <section id="prep" class="doc-section">
@@ -397,7 +391,23 @@
             <section id="video" class="doc-section">
               <h2 class="section-title">Video Tutorial</h2>
               <div class="section-block">
-               
+                <div class="callout-block callout-danger">
+                  <div class="icon-holder">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Video tutorial is incomplete</h4>
+                    <p>
+                      The video tutorial for this specific model has not been edited, but you can still view the tutorial for v1 below. The steps are mostly the same.
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
+
+                <h6>v1 Assembly Video</h6>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nPhNFR0LcUQ?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </div>
               </div><!--//section-block-->
             </section>
             
@@ -409,11 +419,17 @@
                   Plug the Arduino Nano into any USB port with the provided micro USB cable.
                 </p>
                 <p>
-                  The onboard LED should flash 4 times. This indicates that the device is running properly.
+                  The onboard LED should flash 3 times. This indicates that the device is running properly and is programmed with the correct software.
                 </p>
                 <hr/>
                 <h3 id="step1" class="block-title">Step 1 - Install Microcontroller</h3>
                 <div class="row">
+
+                  <div class="col-12">
+                    <p>
+                      The first step is to install the microcontroller. The header pins on the back of the arduino are optional for the operation of lifeclocc, but you should solder them if you intend on doing any programing yourself.
+                    </p>
+                  </div>
                   <div class="col-12">
                     <h6>Installation in Pictures</h6>
                   </div>
@@ -463,13 +479,35 @@
                       Solder the rest of the pins.
                     </span>
                   </div>
+
                 </div><!--//row-->  
+
+                
+                <div class="callout-block callout-success">
+                  <div class="icon-holder">
+                    <i class="fas fa-check-circle"></i>
+                  </div><!--//icon-holder-->
+                  <div class="content">
+                    <h4 class="callout-title">Checkpoint</h4>
+                    <p>
+                      Plug in the arduino to make sure it's still working. The LED should blink 3 times.
+                    </p>
+                  </div><!--//content-->
+                </div><!--//callout-block-->
                 <hr/>
 
                 <h3 id="step2" class="block-title">Step 2 - Install Buttons</h3>
 
                 
                 <div class="row">
+                  <div class="col-12">
+                    <p>
+                      To install the buttons, place them into the button slots and bend the pins over before soldering them down.
+                    </p>
+                    <p>
+                      You should also put the resistors in so that we can test the buttons.
+                    </p>
+                  </div>
                   <div class="col-12">
                     <h6>Installation in Pictures</h6>
                   </div>
@@ -527,7 +565,7 @@
                   <div class="content">
                     <h4 class="callout-title">Checkpoint</h4>
                     <p>
-                      
+                      Pressing the buttons should light up the LED on the arduino.
                     </p>
                   </div><!--//content-->
                 </div><!--//callout-block-->
@@ -618,7 +656,7 @@
                   <div class="content">
                     <h4 class="callout-title">Checkpoint</h4>
                     <p>
-                      
+                      When you turn on the arduino, the leds should flash in sequence. Pressing the buttons should also light up the corresponding LED.
                     </p>
                   </div><!--//content-->
                 </div><!--//callout-block-->
@@ -683,6 +721,7 @@
                   <div class="content">
                     <h4 class="callout-title">Checkpoint</h4>
                     <p>
+                      There should be a red light below the clock module when the arduino is powered on. There is no way to test if the clock is working till a later step.
                     </p>
                   </div><!--//content-->
                 </div><!--//callout-block-->
@@ -730,7 +769,7 @@
                   <div class="content">
                     <h4 class="callout-title">Checkpoint</h4>
                     <p>
-                      No checkpoint here unfortunately.
+                      No checkpoint here unfortunately. Remember to turn the resistor all the way to the right so that we have maximum brightness when we first turn on the displays.
                     </p>
                   </div><!--//content-->
                 </div><!--//callout-block-->
@@ -808,6 +847,7 @@
                   <div class="content">
                     <h4 class="callout-title">Checkpoint</h4>
                     <p>
+                      When we turn it on, the display will blink with a <code>-</code> followed by <code>8</code>, and finally it will show a number (most likely <code>2</code>). If that happens, that means that your clock, and display is all working.
                     </p>
                   </div><!--//content-->
                 </div><!--//callout-block-->
@@ -892,7 +932,7 @@
                   <div class="content">
                     <h4 class="callout-title">Checkpoint</h4>
                     <p>
-                      
+                      You will see the arduino flash with the words <code>-LIFECLO.CC-</code> followed by <code>88888888888</code> and finally show a number.
                     </p>
                   </div><!--//content-->
                 </div><!--//callout-block-->
