@@ -78,6 +78,33 @@
  border-color: #3333CC;
 }
 
+.btn-action-secondary {
+	background: transparent;
+	outline: none;
+	color: #3333CC;
+	background: transparent;
+	border-color: #3333CC;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 1;
+	padding: 10px 21px;
+	text-transform: uppercase;
+	outline: none;
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	-o-transition: 200ms;
+	transition: 200ms;
+}
+
+.btn-action-secondary:hover, .btn-action-secondary:focus,
+.btn-action-secondary:active, .btn-action-secondary:active:focus {
+ background-color: #3333CC;
+ border: 1px solid #3333CC;
+ outline: none;
+ color: #FFFFFF;
+}
+
 
 .product .btn-action-primary {
  background-color: #92714A;
