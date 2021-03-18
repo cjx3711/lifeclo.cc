@@ -17,6 +17,55 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="assets/css/custom-styles.css" rel="stylesheet" type="text/css" media="all" />
 
+    <style>
+      .image-bg .hero-section {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(/images/banner.jpg) no-repeat center center
+      }
+      .features {
+        background: #F9F9F9
+      }
+
+      .btn-light {
+        font-family: Roboto;
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        border-radius: 0;
+        color: #FFFFFF;
+      }
+
+      .btn-light-hover:hover, .btn-light-hover:focus,
+      .btn-light-hover:active, .btn-light-hover:active:focus {
+        background: transparent;
+        outline: none;
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+      }
+
+      .btn-dark-hover:hover, .btn-dark-hover:focus,
+      .btn-dark-hover:active, .btn-dark-hover:active:focus {
+        background: #ffffff;
+        outline: none;
+        color: #3333CC;
+        border-color: #3333CC;
+      }
+
+      .cta-notice { 
+        margin-left: 10px;
+        font-family: 'Josefin Sans';
+        color: #A1A1A1;
+        font-size: 0.8em;
+        text-transform: uppercase;
+      }
+
+      .app-features {
+        padding: 100px 0 50px 0; 
+      }
+
+      ::selection {
+        color: #FFFFFF;
+        background: #5e79e8;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -36,7 +85,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav nav-white">
-                    <li><a class="page-scroll" href="#main">What?</a></li>
+                    <li><a class="page-scroll" href="#why">Why?</a></li>
+                    <li><a class="page-scroll" href="#keyboards">Keyboards</a></li>
                 </ul>
             </div>
           </div>
@@ -54,22 +104,198 @@
                 Maybe there's a good reason for that, but who does market research anyway? <br class="hidden-xs">
                 Introducing the LIFECLO.CC line of keyboards.
               </p>
-              <a class="btn btn-primary btn-action popup wow fadeInUp" data-wow-delay="0.2s" href="https://manual.keebs.lifeclo.cc">Manual</a>
-              <a class="btn btn-primary btn-action btn-action-secondary popup wow fadeInUp" data-wow-delay="0.2s" href="https://lifeclo.cc">Lifeclo.cc</a>
+              <a class="btn btn-primary btn-action btn-light-hover popup wow fadeInUp" data-wow-delay="0.2s" href="https://manual.keebs.lifeclo.cc">Manual</a>
+              <a class="btn btn-primary btn-action btn-light btn-dark-hover popup wow fadeInUp" data-wow-delay="0.2s" href="https://lifeclo.cc">Lifeclo.cc</a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="pitch text-center">
+      <div class="pitch text-center" id="why">
         <div class="container">
           <div class="pitch-intro">
             <h1 class="wow fadeInDown" data-wow-delay="0.2s">Why Lifeclo.cc?</h1>
             <p class="wow fadeInDown" data-wow-delay="0.2s">
-              Well, I already happened to have the domain, and I could not think of another brilliant punny name for my keyboards. So here we have it. <br/>
-              Oh, you meant why choose this keyboard over others? I can't think of a good reason. You have to assemble it yourself too.
+              Well, I already happened to have the domain, and I could not think of another brilliant punny name for my keyboards. So here we have it. <br/><br/>
+              Ohhh, you meant why choose this keyboard over others?
             </p>
           </div>
+          <div class="col-md-12">
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.5s">
+              <div class="pitch-icon">
+                <i class="ion-android-arrow-dropup-circle"></i>
+              </div>
+              <div class="pitch-content">
+                <h1>Get Your Hands Dirty</h1>
+                <p>
+                  Lifeclocc keyboards are pretty barebones and don't have many acessories, you need to provide the other parts and assemble it yourself.<br/>How is this a selling point? Uh... next question.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.6s">
+              <div class="pitch-icon">
+                <i class="ion-cube"></i>
+              </div>
+              <div class="pitch-content">
+                <h1>One<sup><small>*</small></sup> of a Kind Designs</h1>
+                <p>
+                  Because no one in their right mind will buy these, you can be the special snowflake butterfly that you are.
+                </p>
+                <p style="font-size: 0.8em; margin-top: 5px">
+                  * Not really one, but like you'll be the only one in your friend group using this.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.7s">
+              <div class="pitch-icon">
+                <i class="ion-android-notifications"></i>
+              </div>
+              <div class="pitch-content">
+                <h1>Improved Security</h1>
+                <p>
+                  When I say security, I really mean having a keyboard layout that no one else can reasonably use. People will be unable to hack it when you inevitably leave your computer unlocked.
+                </p>
+                <p style="font-size: 0.8em; margin-top: 5px">It's like buying a manual transmission car in the US.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-features text-center" id="keyboards">
+        <div class="container">
+          <h1 class="wow fadeInDown" data-wow-delay="0.1s">The Keyboards</h1>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">
+            I'm surprised you're still here, congrats on scrolling this far. You shall now be rewarded with all the keyboards money can buy.
+          </p>
+        </div>
+      </div>
+
+      <div id="features" class="features">
+        <div class="container">
+          <div class="features-inner">
+            <div class="row">
+              <div class="col-md-6" style="margin-bottom: 50px">
+                <img class="img-responsive wow fadeInDown" data-wow-delay="0.2s" src="/images/chocolate_bar.jpg" alt="Features" />
+                <div class="features-list">
+                  <h1 class="wow fadeInDown" data-wow-delay="0.1s">Chocobar</h1>
+                  <p class="wow fadeInDown" data-wow-delay="0.2s">
+                    A split 40% keyboard that comes as row-staggered, ortholinear, or column-staggered. Mix and match the sides! 
+                  </p>
+                  <ul class="wow fadeInDown" data-wow-delay="0.3s" style="margin-top: 25px;">
+                    <li>Probably the only row-staggered split 40% there is</li>
+                    <li>Almost usable by normal people</li>
+                    <li>Wired so you don't lose the keyboard</li>
+                  </ul>
+                  <a class="btn btn-primary btn-action btn-action-secondary popup wow fadeInUp" data-wow-delay="0.2s" href="#">
+                    Tell me more
+                  </a>
+                  <a class="btn btn-primary btn-action popup wow fadeInUp" data-wow-delay="0.2s" href="#">
+                    Buy
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 " style="margin-bottom: 50px">
+                <img class="img-responsive wow fadeInDown" data-wow-delay="0.2s" src="/images/keyboard_keyboard.jpg" alt="Features" />
+                <div class="features-list">
+                  <h1 class="wow fadeInDown" data-wow-delay="0.1s">Keyboard Keyboard</h1>
+                  <p class="wow fadeInDown" data-wow-delay="0.2s">
+                   Ever needed a midi keyboard but also figured the ones on the market aren't crappy or expensive enough? This keyboard was built just for you!
+                  </p>
+                  <ul class="wow fadeInDown" data-wow-delay="0.3s" style="margin-top: 25px;">
+                    <li>Sends midi notes to your device</li>
+                    <li>Has no force detection, because you always want to give it your 100%</li>
+                    <li>Small and long enough to be used as an (ineffective) weapon</li>
+                  </ul>
+                  <a class="btn btn-primary btn-action btn-action-secondary popup wow fadeInUp" data-wow-delay="0.2s" href="#">
+                    Tell me more
+                  </a>
+                  <a class="btn btn-primary btn-action popup wow fadeInUp" data-wow-delay="0.2s" href="#">
+                    Buy
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 " style="margin-bottom: 50px">
+                <img class="img-responsive wow fadeInDown" data-wow-delay="0.2s" src="/images/lazy_choco.jpg" alt="Features" />
+                <div class="features-list">
+                  <h1 class="wow fadeInDown" data-wow-delay="0.1s">Lazychoco</h1>
+                  <p class="wow fadeInDown" data-wow-delay="0.2s">
+                   Have you ever hated moving your hand from keyboard to mouse constantly? Instead of learning keyboard shortcuts, why not learn to use a one handed keyboard?
+                  </p>
+                  <ul class="wow fadeInDown" data-wow-delay="0.3s" style="margin-top: 25px;">
+                    <li>All keys easily accessible with a single hand, for times when your other hand is busy.</li>
+                    <li>QWERTY like layout so you only need to relearn half the keyboard</li>
+                    <li>Mind meltingly hard to type on</li>
+                  </ul>
+                  <a class="btn btn-primary btn-action btn-action-secondary popup wow fadeInUp" data-wow-delay="0.2s" href="#">
+                    Notify me
+                  </a>
+                  <span data-wow-delay="0.3s" class="cta-notice">Ongoing Development</span>
+                </div>
+              </div>
+              <div class="col-md-6 " style="margin-bottom: 50px">
+                <img class="img-responsive wow fadeInDown" data-wow-delay="0.2s" src="/images/artist_macropad.jpg" alt="Features" />
+                <div class="features-list">
+                  <h1 class="wow fadeInDown" data-wow-delay="0.1s">The Macropad</h1>
+                  <p class="wow fadeInDown" data-wow-delay="0.2s">
+                   A keyboard built for artists who needed a bunch of shortcuts for drawing, but why stop there? Put all your shortcuts here. Sending an angry email? Check. Completely wiping your computer? Just one press away.
+                  </p>
+                  <ul class="wow fadeInDown" data-wow-delay="0.3s" style="margin-top: 25px;">
+                    <li>Has buttons.</li>
+                    <li>Small and portable.</li>
+                    <li>Small enough to be be thrown at people you don't like without causing actual damage</li>
+                  </ul>
+                  <a class="btn btn-primary btn-action btn-action-secondary popup wow fadeInUp" data-wow-delay="0.2s" href="#">
+                    Express interest
+                  </a>
+                  <span data-wow-delay="0.3s" class="cta-notice">Development Hiatus</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 " style="margin-bottom: 50px">
+                <img class="img-responsive wow fadeInDown" data-wow-delay="0.2s" src="/images/arrownumpad.jpg" alt="Features" />
+                <div class="features-list">
+                  <h1 class="wow fadeInDown" data-wow-delay="0.1s">Arrownumpad</h1>
+                  <p class="wow fadeInDown" data-wow-delay="0.2s">
+                   A keyboard for those who bought a 60% keyboard and regretted their decision. The keyboard to fill the void in your <span style="text-decoration: line-through;">soul</span> keyboard.
+                  </p>
+                  <ul class="wow fadeInDown" data-wow-delay="0.3s" style="margin-top: 25px;">
+                    <li>Numbers and arrows</li>
+                    <li>Compatible with all computers that support keyboards</li>
+                    <li>Can't think of a third bullet point</li>
+                  </ul>
+                  <a class="btn btn-primary btn-action btn-action-secondary popup wow fadeInUp" data-wow-delay="0.2s" href="#">
+                    Express interest
+                  </a>
+                  <span data-wow-delay="0.3s" class="cta-notice">Development Hiatus</span>
+                </div>
+              </div>
+  
+              <div class="col-md-6 " style="margin-bottom: 50px">
+                <img class="img-responsive wow fadeInDown" data-wow-delay="0.2s" src="/images/random.jpg" alt="Features" />
+                <div class="features-list">
+                  <h1 class="wow fadeInDown" data-wow-delay="0.1s">More?</h1>
+                  <p class="wow fadeInDown" data-wow-delay="0.2s">
+                    I love making crappy keyboard layouts. If you have an idea, send it my way and I might even make it come true.
+                  </p>
+                  <ul class="wow fadeInDown" data-wow-delay="0.3s" style="margin-top: 25px;">
+                    <li>No garauntees you'll get a reply</li>
+                    <li>Must be a sufficiently weird keyboard</li>
+                    <li>Only flat keyboards, no curvy stuff. My PCBs don't curve.</li>
+                  </ul>
+                  <a class="btn btn-primary btn-action btn-action-secondary popup wow fadeInUp" data-wow-delay="0.2s" href="#">
+                    I have a bad idea
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+          
         </div>
       </div>
 
