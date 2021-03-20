@@ -30,8 +30,6 @@ jQuery(function($) {
    }
   });
 
-
-
     /*-----------------------------------
     ----------- Scroll To Top -----------
     ------------------------------------*/
@@ -152,6 +150,17 @@ $(document).ready(function() {
       }
     }
   });
+
+  const a = "clo"
+  const b = "cc"
+  const c = "llo"
+  const d = "he"
+  const e = "life"
+
+  const f = d + c + "@" + e + a + '.' + b
+  const email = document.getElementById("email")
+  email.href = "mai" + "lto:" + f
+  email.innerHTML = f
 });
 
 });
