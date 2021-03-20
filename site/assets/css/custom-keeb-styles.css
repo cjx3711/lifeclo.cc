@@ -1,0 +1,71 @@
+.navbar-brand.nav-keeb {
+  padding-top: 15px;
+  font-size: 21px;
+}
+
+.image-bg .hero-section {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(/images/banner.jpg) no-repeat center center
+}
+
+
+.hero-content h2 {
+	font-size: 28px;
+	font-weight: 400;
+	color: #262626;
+	line-height: 1.2;
+	letter-spacing: -1px;
+	margin: 0 0 20px 0;
+}
+
+@media only screen and (min-width: 767px) {
+  .hero-content h2 {
+    font-size: 34px;
+    margin: -15px 0 20px 0;
+  }
+}
+
+
+.features {
+  background: #F9F9F9
+}
+
+.btn-light {
+  font-family: Roboto;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  color: #FFFFFF;
+}
+
+.btn-light-hover:hover, .btn-light-hover:focus,
+.btn-light-hover:active, .btn-light-hover:active:focus {
+  background: transparent;
+  outline: none;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.btn-dark-hover:hover, .btn-dark-hover:focus,
+.btn-dark-hover:active, .btn-dark-hover:active:focus {
+  background: #ffffff;
+  outline: none;
+  color: #3333CC;
+  border-color: #3333CC;
+}
+
+.cta-notice { 
+  margin-left: 10px;
+  font-family: 'Josefin Sans';
+  color: #A1A1A1;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.app-features {
+  padding: 100px 0 50px 0; 
+}
+
+::selection {
+  color: #FFFFFF;
+  background: #5e79e8;
+}
