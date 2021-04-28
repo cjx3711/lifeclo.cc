@@ -163,7 +163,10 @@ setStaticPages('manual.', 'site/manual')
 setStaticPages('source.', 'site/source')
 setStaticPages('keebs.', 'site/keebs')
 setStaticPages('keeb.', 'site/keebs/keeb-redirect')
-setStaticPages('manual.keebs.', 'site/manual-keebs')
+setStaticPages('manual.keebs.', 'site/keebs-how/redirect')
+setStaticPages('how.keebs.', 'site/keebs-how')
+setStaticPages('metro.', 'site/metro')
+setStaticPages('how.metro.', 'site/metro-how')
 
 // All subdomains will have an assets subfolder
 app.use('/assets', express.static('site/assets'))
