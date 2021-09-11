@@ -11,7 +11,7 @@
       gtag('config', 'G-S56NQBF3ZP');
     </script>
     <meta charset="utf-8">
-    <title>PCB Metro Maps by Lifeclo.cc</title>
+    <title>MetroM: PCB Metro Maps by Lifeclo.cc</title>
     <link rel="icon" href="assets/logos/favicon.png" type="image/png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Light up metro maps designed on printed circuit boards">
@@ -20,11 +20,90 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/animate.css"> <!-- Resource style -->
+    <!-- <link rel="stylesheet" href="assets/css/slider-pro.css"> -->
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/owl.theme.css">
     <link rel="stylesheet" href="assets/css/ionicons.min.css"> <!-- Resource style -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="assets/css/custom-metro-styles.css" rel="stylesheet" type="text/css" media="all" />
+
+    <style>
+
+      ::selection {
+          color: #FFFFFF;
+          background: #72bfff;
+      }
+      .navbar-default .navbar-brand.nav-white {
+        color: #FFFFFF;
+        font-size: 25px;
+        padding-top: 5px;
+      }
+
+      @media only screen and (min-width: 240px) {
+        .navbar-default.past-main .navbar-brand {
+            color: #1590f2;
+            padding-top: 15px;
+        }
+      }
+
+      .navbar-default .navbar-brand.nav-white strong{
+        font-weight: bold;
+      }
+      #pricing .pricing-details h2 {
+        margin: 1em auto 1.5em;
+      }
+      #pricing .pricing-details img {
+        margin: 1.5em 0;
+      }
+
+      .app-features {
+        background-color: white;
+      }
+
+      .app-features .icon img{
+        width: 100px;
+        height: 100px;
+      }
+
+      .app-features .features-left, .app-features .features-right {
+        padding: 10px 0 0 0;
+      }
+
+      .btn-action {
+        background-color: #1590f2;
+        border: 1px solid #1590f2;
+      }
+
+      .btn-action:hover, .btn-action:focus, .btn-action:active, .btn-action:active:focus {
+        outline: none;
+        color: #1590f2;
+        background: white;
+        border-color: #1590f2;
+      }
+      .contact i {
+        font-size: 42px;
+        color: #1590f2;
+      }
+      .contact h1, .contact a {
+        color: #1590f2;
+      }
+      
+      .footer-text p {
+        color: #1590f2;
+      }
+
+      .back-to-top {
+        background: #1590f2;
+        color: #FFFFFF;
+        opacity: 0.4;
+        transition: opacity 0.2s;
+      }
+      .back-to-top:hover {
+        background: #1590f2;
+        color: #FFFFFF;
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -39,7 +118,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand nav-white page-scroll" href="https://metro.lifeclo.cc">PCB METRO MAPS</a>
+          <a class="navbar-brand nav-white page-scroll" href="https://metro.lifeclo.cc"><strong>METROM:</strong> CIRCUIT BOARD METRO MAPS</a>
             </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -59,14 +138,29 @@
               <p class="wow fadeInUp" data-wow-delay="0.2s">
                 Introducing the LIFECLO.CC line of PCB Metro Maps. <br class="hidden-xs">
                 It is literally what it looks like. It also lights up if you want. <br class="hidden-xs">
-                Do you think it's cool? If so great! If not there's nothing else to say.
+                Do you think it's cool? If so great! If not, I have nothing.
               </p>
-              <a class="btn btn-primary btn-action btn-light btn-dark-hover popup wow fadeInUp" data-wow-delay="0.2s" href="https://lifeclo.cc">Lifeclo.cc?</a>
+              <a href="https://www.kickstarter.com/projects/cjx3711/metrom-circuit-board-transit-diagrams-by-lifeclocc" target="_blank" data-wow-delay="0.2s"  class="btn btn-primary btn-action btn-fill wow popup fadeInUp">Kickstarter</a>
+              <a class="btn btn-light btn-action popup wow fadeInUp" data-wow-delay="0.2s" href="https://lifeclo.cc">Lifeclo.cc?</a>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-offset-0 col-lg-6 nopadding">
+          <img class="img-responsive wow fadeIn" src="/images/photo_bayarea.jpg" alt="San Francisco Bay Area PCB" />
+        </div>
+        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-offset-0 col-lg-6 nopadding">
+          <img class="img-responsive wow fadeIn" src="/images/photo_sg2027.jpg" alt="Singapore 2027 PCB" />
+        </div>
+        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-offset-0 col-lg-6 nopadding">
+          <img class="img-responsive wow fadeIn" src="/images/photo_sg2030.jpg" alt="Singapore 2030 PCB" />
+        </div>
+        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-offset-0 col-lg-6 nopadding">
+          <img class="img-responsive wow fadeIn" src="/images/photo_tokyo.jpg" alt="Tokyo JR PCB" />
+        </div>
+      </div>
       <div class="app-features text-center">
         <div class="container">
           <h1 class="wow fadeInDown" data-wow-delay="0.1s">Features</h1>
@@ -76,18 +170,36 @@
           <div class="col-md-4 features-left">
             <div class="col-md-12 wow fadeInDown" data-wow-delay="0.2s">
               <div class="icon">
-                <i class="ion-xbox"></i>
+                <img src="/images/icon_display.png"/ >
               </div>
               <div class="feature-single">
                 <h1>Great display piece</h1>
                 <p>
-                  This will look great on your desk or wall, buried under the rest of the clutter.
+                  This will look great on your desk or wall, or buried under a pile of clutter.
                 </p>
               </div>
             </div>
+            <div class="col-md-12 wow fadeInDown" data-wow-delay="0.6s">
+              <div class="icon">
+                <img src="/images/icon_battery.png"/ >
+              </div>
+              <div class="feature-single">
+                <h1>Battery Powered (for a while)</h1>
+                <p>
+                  This is meant to be powered constantly, but it does have support for 4x AAA batteries for those times when you really want to bring it around and show it off to friends. It only lasts about a day on batteries though.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInDown" data-wow-delay="0.5s">
+            <img class="img-responsive" src="/images/tower.jpg"/>
+          </div>
+
+          <div class="col-md-4 features-left">
             <div class="col-md-12 wow fadeInDown" data-wow-delay="0.3s">
               <div class="icon">
-                <i class="ion-steam"></i>
+                <img src="/images/icon_light.png"/ >
               </div>
               <div class="feature-single">
                 <h1>Lines light up</h1>
@@ -96,30 +208,12 @@
                 </p>
               </div>
             </div>
-          </div>
-
-          <div class="col-md-4 wow fadeInDown" data-wow-delay="0.5s">
-            <img class="img-responsive" src="assets/images/iphone.png" alt="App" />
-          </div>
-
-          <div class="col-md-4 features-left">
-            <div class="col-md-12 wow fadeInDown" data-wow-delay="0.6s">
-              <div class="icon">
-                <i class="ion-social-html5-outline"></i>
-              </div>
-              <div class="feature-single">
-                <h1>Battery Powered (for a short while)</h1>
-                <p>
-                  This is meant to be powered constantly, but it does have support for 4x AAA batteries for those times when you really want to bring it around and show it off to friends. It only lasts about a day on batteries though.
-                </p>
-              </div>
-            </div>
             <div class="col-md-12 wow fadeInDown" data-wow-delay="0.7s">
               <div class="icon">
-                <i class="ion-social-github"></i>
+                <img src="/images/icon_button.png"/ >
               </div>
               <div class="feature-single">
-                <h1>As many buttons as iPhone!</h1>
+                <h1>As many buttons as an iPhone!</h1>
                 <p>
                   Yeah you read that right, if you buy this product, it comes with 3 whole buttons to control it. That puts us on par with Apple obviously.
                 </p>
@@ -136,90 +230,82 @@
           <div class="col-md-12 col-sm-12 nopadding">
             <div class="pricing-intro">
               <h1 class="wow fadeInDown" data-wow-delay="0s">Our range of flavours</h1>
-              <p class="wow fadeInDown" data-wow-delay="0.2s">
-                Our plans are designed to meet the requirements of both beginners <br class="hidden-xs"> and players.
-                Get the right plan that suits you.
+              <p class="wow fadeInDown" data-wow-delay="0.15s">
+                Our flavours are designed to meet the requirements of specific train otakus.<br/>If there isn't a flavour that suits you, feel free to contact me and I'll see what I can do.
               </p>
             </div>
-            <div class="col-sm-4">
-              <div class="table-left wow fadeInDown" data-wow-delay="0.4s">
-                <div class="icon">
-                  <img src="assets/logos/pricing1.png" alt="Icon" />
+            
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="table-left wow fadeInDown" data-wow-delay="0.2s">
+                  <img class="img-responsive" src="/images/sg2027.jpg"/>
+                  <div class="pricing-details">
+                    <h2>Singapore MRT 2027</h2>
+                    <!-- <span>$17 - 58</span> -->
+                    <ul>
+                      <li>10cm by 7.4cm</li>
+                      <li>6 lines</li>
+                    </ul>
+                    <a href="https://www.kickstarter.com/projects/cjx3711/metrom-circuit-board-transit-diagrams-by-lifeclocc" target="_blank" class="btn btn-primary btn-action btn-fill">Crowdfunding</a>
+                  </div>
                 </div>
-                <div class="pricing-details">
-                  <h2>Singapore MRT 2027</h2>
-                  <span>$TBD</span>
-                  <ul>
-                    <li>Size: </li>
-                    <li>Lines: </li>
-                  </ul>
-                  <button class="btn btn-primary btn-action btn-fill">Get Plan</button>
+              </div>
+              <div class="col-sm-4">
+                <div class="table-left wow fadeInDown" data-wow-delay="0.25s">
+                  <img class="img-responsive" src="/images/bayarea.jpg"/>
+                  <div class="pricing-details">
+                    <h2>San Francisco Bay Area</h2>
+                    <!-- <span>$TBD</span> -->
+                    <ul>
+                      <li>16cm by 9.5cm</li>
+                      <li>6 lines</li>
+                    </ul>
+                    <a href="https://www.kickstarter.com/projects/cjx3711/metrom-circuit-board-transit-diagrams-by-lifeclocc" target="_blank" class="btn btn-primary btn-action btn-fill">Crowdfunding</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="table-left wow fadeInDown" data-wow-delay="0.3s">
+                  <img class="img-responsive" src="/images/tokyo.jpg"/>
+                  <div class="pricing-details">
+                    <h2>Tokyo JR</h2>
+                    <!-- <span>$TBD</span> -->
+                    <ul>
+                      <li>18.6cm by 14.4cm</li>
+                      <li>16 lines</li>
+                    </ul>
+                    <a href="https://www.kickstarter.com/projects/cjx3711/metrom-circuit-board-transit-diagrams-by-lifeclocc" target="_blank" class="btn btn-primary btn-action btn-fill">Crowdfunding</a>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="col-sm-4">
-              <div class="table-left wow fadeInDown" data-wow-delay="0.4s">
-                <div class="icon">
-                  <img src="assets/logos/pricing1.png" alt="Icon" />
-                </div>
-                <div class="pricing-details">
-                  <h2>San Francisco Bay Area</h2>
-                  <span>$TBD</span>
-                  <ul>
-                    <li>Size: </li>
-                    <li>Lines: </li>
-                  </ul>
-                  <button class="btn btn-primary btn-action btn-fill">Get Plan</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="table-left wow fadeInDown" data-wow-delay="0.4s">
-                <div class="icon">
-                  <img src="assets/logos/pricing1.png" alt="Icon" />
-                </div>
-                <div class="pricing-details">
-                  <h2>Tokyo JR</h2>
-                  <span>$TBD</span>
-                  <ul>
-                    <li>Size: </li>
-                    <li>Lines: </li>
-                  </ul>
-                  <button class="btn btn-primary btn-action btn-fill">Get Plan</button>
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="table-left wow fadeInDown" data-wow-delay="0.35s">
+                  <img class="img-responsive" src="/images/sg2030.jpg"/>
+                  <div class="pricing-details">
+                    <h2>Singapore MRT 2030</h2>
+                    <!-- <span>$TBD</span> -->
+                    <ul>
+                      <li>22cm by 16cm</li>
+                      <li>8 lines</li>
+                    </ul>
+                    <a href="https://www.kickstarter.com/projects/cjx3711/metrom-circuit-board-transit-diagrams-by-lifeclocc" target="_blank" class="btn btn-primary btn-action btn-fill">Crowdfunding</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="table-left wow fadeInDown" data-wow-delay="0.4s">
-                <div class="icon">
-                  <img src="assets/logos/pricing1.png" alt="Icon" />
-                </div>
-                <div class="pricing-details">
-                  <h2>Singapore MRT 2030</h2>
-                  <span>$TBD</span>
-                  <ul>
-                    <li>Size: </li>
-                    <li>Lines: </li>
-                  </ul>
-                  <button class="btn btn-primary btn-action btn-fill">Get Plan</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="table-left wow fadeInDown" data-wow-delay="0.4s">
-                <div class="icon">
-                  <img src="assets/logos/pricing1.png" alt="Icon" />
-                </div>
-                <div class="pricing-details">
-                  <h2>Future boards</h2>
-                  <span>$TBD</span>
-                  <ul>
-                    <li>I might be open to comissions if I think the map will look cool</li>
-                    <li>Size: up to 24cm</li>
-                    <li>Lines: </li>
-                  </ul>
-                  <button class="btn btn-primary btn-action btn-fill">Contact me</button>
+              <div class="col-sm-4">
+                <div class="table-left wow fadeInDown" data-wow-delay="0.4s">
+                  <img class="img-responsive" src="/images/future.jpg"/>
+                  <div class="pricing-details">
+                    <h2>Future boards</h2>
+                    <!-- <span>$TBD</span> -->
+                    <ul>
+                      <li>I might be open to comissions if I think the map will look cool</li>
+                      <li>Size: up to 24cm</li>
+                    </ul>
+                    <a id="email2" class="btn btn-primary btn-action btn-fill">Contact me</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -227,25 +313,7 @@
         </div>
       </div>
 
-
-
-      <!-- Client Section -->
-      <div class="client-section">
-        <div class="container text-center">
-          <div class="clients owl-carousel owl-theme">
-            <div class="single">
-              Singapore MRT
-            </div>
-            <div class="single">
-              Bay Area Transit System
-            </div>
-            <div class="single">
-              Tokyo JR Lines
-            </div>
-          </div>
-        </div>
-      </div>
-      
+    
 
       <!-- Footer Section -->
         <div class="footer">
@@ -293,7 +361,20 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/js/plugins.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/jquery.sliderPro.min.js"></script> -->
   <script type="text/javascript" src="assets/js/menu.js"></script>
   <script type="text/javascript" src="assets/js/custom.js"></script>
+  <script>
+    $('#my-slider').sliderPro({
+        forceSize: 'fullWindow',
+        autoplay: true,
+        arrows: true,
+        buttons: false,
+        fade: true,
+        touchSwipe: true,
+        imageScaleMode: 'cover',
+        slideAnimationDuration: 1000
+    });
+    </script>
   </body>
 </html>

@@ -161,6 +161,11 @@ $(document).ready(function() {
   const email = document.getElementById("email")
   email.href = "mai" + "lto:" + f
   email.innerHTML = f
+
+  const email2 = document.getElementById("email2");
+  if (email2) {
+    email2.href = "mai" + "lto:" + f
+  }
 });
 
 });
