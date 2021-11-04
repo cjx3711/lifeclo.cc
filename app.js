@@ -155,7 +155,6 @@ app.post('/api/:userid', function (req, res) {
 function setStaticPages(subdomain, directory) {
   app.use(vhost(`${subdomain}localhost`, express.static(`${directory}`)))
   app.use(vhost(`${subdomain}lifeclo.cc`, express.static(`${directory}`)))
-  
 }
 setStaticPages('', 'site')
 setStaticPages('app.', 'site-app')
