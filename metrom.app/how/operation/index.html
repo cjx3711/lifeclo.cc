@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73723112-10"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-73723112-10');
+  </script>
+  <title>MetroM Operation</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">  
+  <link rel="icon" href="/assets/logos/favicon.png" type="image/png" sizes="16x16">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <!-- FontAwesome JS -->
+  <script defer src="/assets/fontawesome/js/all.js"></script>
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">   
+  <!-- Plugins CSS -->  
+  <link rel="stylesheet" href="/assets/plugins/elegant_font/css/style.css">  
+  <!-- Theme CSS -->
+  <link id="theme-style" rel="stylesheet" href="/assets/css/styles.css">
+  
+</head> 
+
+<body class="body-green">
+  <div class="page-wrapper">
+    <!-- ******Header****** -->
+    <header id="header" class="header">
+      <div class="container">
+        <div class="branding">
+          <h1 class="logo">
+            <a href="/">
+              <span class="text-highlight">Metrom</span>.<span>app</span>
+            </a>
+          </h1>
+        </div><!--//branding-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active">Operation</li>
+        </ol>
+      </div><!--//container-->
+    </header><!--//header-->
+    
+    <div class="doc-wrapper">
+      <div class="container">
+        <div id="doc-header" class="doc-header text-center">
+          <h1 class="doc-title"><i class="icon fa fa-book"></i> Operation Instructions</h1>
+          <div class="meta"><i class="far fa-clock"></i> Last updated: 2022-04-23</div>
+        </div><!--//doc-header-->
+        
+        <div class="doc-body row">
+          <div class="doc-content col-md-9 col-12 order-1">
+
+            <section id="overview" class="doc-section">
+              <h2 class="section-title">Overview</h2>
+              <div class="section-block">
+                <p>
+                  This page will contain the general operation instructions for all the MetroM devices.<br/>
+                  The operation instructions are similar, but the larger boards have a few more features.
+                </p>
+              </div>
+            </section>
+
+            <a id="feature-limits"></a>
+            <div class="callout-block callout-info" style="background: #9a9a9a">
+              <div class="icon-holder">
+                <i class="fas fa-microchip" style="color:white"></i>
+              </div><!--//icon-holder-->
+              <div class="content">
+                <h4 class="callout-title" style="color:white">Feature limits</h4>
+                <p>Instructions marked with this icon (<i class="fas fa-microchip"></i>) are only available on the larger maps.</p>
+                <ul class="list">
+                  <li>Singapore MRT 2030</li>
+                  <li>Tokyo JR 2021</li>
+                  <li>SF Bay Area 2021</li>
+                </ul>
+              </div><!--//content-->
+            </div><!--//callout-block-->
+            
+
+
+            <section id="features" class="doc-section">
+              <h2 class="section-title">Features</h2>
+              <div class="section-block">
+                <h3 class="block-title">Power Switch</h3>
+                <p>
+                  This might sound stupid, but there was originally had no way to turn off the board except unplugging it. So I'm including this as a feature.
+                </p>
+
+                <h3 class="block-title">Individually Controllable Lines</h3>
+                <p>
+                  Each train line can be turned on or off. The lines are controlled by shift registers which simply store a 1 or 0 for each line.
+                </p>
+                <p class="text-warning">There is no way to control the individual station.</p>
+
+                <h3 class="block-title">Global brightness (and fade) control</h3>
+                <p>When the pattern changes, it fades the entire board out, and back in.</p>
+                <p class="text-warning">There is no way to set different brightness levels per line.</p>
+
+                <h3 class="block-title">Speed controls</h3>
+                <p>You can set the speed at which the board changes it's pattern. Refer to the instructions below for how this works.</p>
+
+                <h3 class="block-title">Brightness Controls</h3>
+                <p>You can manually set the brightness of the board. Refer to the instructions below for how this works.</p>
+                
+                <h3 class="block-title">
+                  Auto Brightness
+                  <a class="scrollto" style="color:inherit; cursor:help" title="Limited Feature" href="#feature-limits"><i class="fas fa-microchip"></i></a>
+                </h3>
+                <p>The board will automatically dim when the ambient light is low so that it's not so bright.</p>
+
+                <h3 class="block-title">
+                  State saving
+                  <a class="scrollto" style="color:inherit; cursor:help" title="Limited Feature" href="#feature-limits"><i class="fas fa-microchip"></i></a>
+                </h3>
+                <p>When you turn off the board, it should remember the last pattern that you were on and your speed settings when you next turn it on.</p>
+              </div>
+            </section>
+
+            <section id="power" class="doc-section">
+              <h2 class="section-title">Powering the Board</h2>
+              <p>The board can be powered in 3 ways</p>
+              <div class="section-block">
+                <h3 id="pwr-usb" class="block-title">USB Cable (recommended)</h3>
+                <p>
+                  This is the recommended way to power the board. You will need a micro USB cable and any USB power source. This source can be a power bank so you can bring the board around and show people if you want.
+                </p>
+                <p>
+                  To turn it on with the cable plugged in, set the switch to the <code>USB</code> position.
+                </p>
+              </div>
+              <div class="section-block">
+                <h3 id="pwr-aaa" class="block-title">4 &times; AAA Batteries</h3>
+                <p>
+                  You can choose to power the board with 4x AAA batteries if you have the battery holder installed. It is not really meant to be powered with batteries and it will only last about a day or two on battery power. This will be useful if you want to bring it around and you don't want to have a power bank.
+                </p>
+                <p>
+                  To turn it on with the batteries in, set the switch to the <code>BATTERY</code> position.
+                </p>
+              </div>
+              <div class="section-block">
+                <h3 id="pwr-dc" class="block-title">Direct 5V DC power</h3>
+                <p>
+                  There are some 5V and GND pinouts on the board itself. If you feel like installing your own power source, you can solder wires directly to these pinouts and power the board directly.
+                </p>
+                <p>
+                  Note that this will bypass the switch entirely and you will have no way of turning the board off.
+                </p>
+              </div>
+            </section>
+
+            <section id="controls" class="doc-section">
+              <h2 class="section-title">Board Controls</h2>
+              <p>You can also find an abridged version of the </p>
+              <div class="section-block">
+                <h3 id="btn-mode" class="block-title">MODE Button - Flashing Mode</h3>
+                <p>
+                  When you click this button, the board will cycle between the various flashing modes. Depending on the board you have, the number of modes is different. But there will always be a solid mode, and a random mode.
+                </p>
+                <p>
+                  When you change to a new mode, the pattern will flash quickly for one cycle before it settles into it's regular speed. The speed also resets to the fastest speed. See below for how to change the speed
+                </p>
+              </div>
+              <div class="section-block">
+                <h3 id="btn-speed" class="block-title">SPEED Button - Flashing Speed</h3>
+                <p>
+                  When you click the button, the speed at which the pattern changes will slow down. There are about 7 - 8 speed steps and each time you click on it, it will slow down the pattern changing. After you reach the slowest, it will cycle back and the pattern will cycle through at the fastest rate again.
+                </p>
+                <p>
+                  Note that if you are clicking the speed button, and nothing happens. It probably means you are on a mode that only has one pattern and changing the speed will not affect anything.
+                </p>
+                <p>
+                  Changing the mode will reset the speed to the fastest one.
+                </p>
+              </div>
+              <div class="section-block">
+                <h3 id="btn-brightness" class="block-title">BRIGHTNESS Button - Board Brightness</h3>
+
+                <strong>Singapore 2027</strong>
+                <p>
+                  There is only manual brightness for this. When you click the brightness button the lights will get dimmer. Once it reaches the minimum dimness, it will cycle back to the brightest.
+                </p>
+                <strong>Singapore 2030, SF Bay Area, Tokyo JR <a class="scrollto" style="color:inherit; cursor:help" title="Limited Feature" href="#feature-limits"><i class="fas fa-microchip"></i></a></strong>
+                <p>
+                  These boards have an auto brightness sensor. To find out if you are on auto brightness, click the BRIGHTNESS button. If nothing happens that means you are on auto brightness. You can also cover the light sensor to see if the board reacts.
+                </p>
+                <p>
+                  To change toggle between auto and manual brightness, press and hold the BRIGHTNESS button. The board will flash twice to indicate the mode has been changed
+                </p>
+                <p>
+                  Short followed by Long flash means it is in auto brightness mode
+                </p>
+                <p>
+                  Long followed by Long flash means it is in manual brightness mode
+                </p>
+                <p>
+                  When in manual brightness mode, the behaviour is exactly the same as the Singapore 2027 board. Clicking the button will cycle through the brightness levels.
+                </p>
+                <p>
+                  Fun fact: dot dash is A and dash dash is M in morse code.
+                </p>
+              </div>
+            </section>
+            
+            <section id="troubleshooting" class="doc-section">
+              <h2 class="section-title">Troubleshooting</h2>
+              <div class="section-block">
+                <h3 class="block-title">Lighting</h3>
+                <div class="row mb-5">
+                  <div class="col-12">
+                    <h6>Some lights are not working</h6>
+                    <p>Check if the lights are being blocked by any of the layers. If the LED itself is broken, please contact me and I'll help you with a replacement.</p>
+                  </div>
+                </div> <!--//row-->  
+              </div>
+
+              <div class="section-block">
+                <h3 class="block-title">Buttons</h3>
+                <div class="row mb-5">
+                  <div class="col-12">
+                    <h6>Buttons are labelled incorrectly</h6>
+                    <p>Firstly, I would like to apologise for this. I had a mixup and mistakenly programed some boards with the incorrect labels and shipped them out before I noticed this issue.</p>
+                    <p>I have since fixed these issues in the code, but unfortunately the only way to fix ths is to flash the new software yourself. Instructions are provided in the Programming section.</p>
+                    <p>I will be happy to provide technical support for these few boards, just contact me at the email at the bottom of the page and I will try to rectify the issues as best I can.</p>
+                  </div>
+                </div> <!--//row-->  
+              </div>
+
+              <div class="section-block">
+                <h3 class="block-title">Board State</h3>
+                <div class="row mb-5">
+                  <div class="col-12">
+                    <h6>State is not Saving</h6>
+                    <p>When you turn on the board, it should remember the last mode you were on and start from there. In the early versions of the board, this feature was not working and I had them shipped out.</p>
+                    <p>This is another bug in the code that I have since fixed. and unfortunately the only way to fix ths is to flash the new software yourself. Instructions are provided in the Programming section.</p>
+                    <p>I will be happy to provide technical support for these few boards, just contact me at the email at the bottom of the page and I will try to rectify the issues as best I can.</p>
+                  </div>
+                </div> <!--//row-->  
+              </div>
+            </section>
+            
+            <section id="programming" class="doc-section">
+              <h2 class="section-title">Programming</h2>
+              <div class="section-block">
+                <p>
+                  This was made to be reprogrammable, you can find the instructions on how to program it on the <a href="https://github.com/cjx3711/metrom">github page</a>.
+                </p>
+              </div>
+            </section>
+          </div>
+          
+          
+          <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+            <div id="doc-nav" class="doc-nav">
+              <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                
+                <a class="nav-link scrollto" href="#features">Features</a>
+                <a class="nav-link scrollto" href="#power">Powering the Board</a>
+                <nav class="doc-sub-menu nav flex-column">
+                  <a class="nav-link scrollto" href="#pwr-usb">USB Cable</a>
+                  <a class="nav-link scrollto" href="#pwr-aaa">AAA Batteries</a>
+                  <a class="nav-link scrollto" href="#pwr-dc">DC input</a>
+                </nav>
+                <a class="nav-link scrollto" href="#controls">Controls</a>
+                <nav class="doc-sub-menu nav flex-column">
+                  <a class="nav-link scrollto" href="#btn-mode">MODE - Flashing Mode</a>
+                  <a class="nav-link scrollto" href="#btn-speed">SPEED - Flashing Speed</a>
+                  <a class="nav-link scrollto" href="#btn-brightness">BRIGHTNESS - Board Brightness</a>
+                </nav>
+                <a class="nav-link scrollto" href="#troubleshooting">Troubleshooting</a>
+                <a class="nav-link scrollto" href="#programming">Programming</a>
+                
+                <a class="nav-link scrollto" href="#"></a>
+                <nav class="doc-sub-menu nav flex-column">
+                  <a class="nav-link scrollto" href="#"></a>
+                  <a class="nav-link scrollto" href="#"></a>
+                </nav><!--//nav-->
+              </nav>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    
+    
+  </div><!--//page-wrapper-->
+  
+  <footer class="footer text-center">
+    <div class="container">
+      <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+      <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+      
+    </div><!--//container-->
+  </footer><!--//footer-->
+  
+  <!-- Main Javascript -->      
+  <script type="text/javascript" src="/assets/plugins/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>   
+  <script type="text/javascript" src="/assets/plugins/stickyfill/dist/stickyfill.min.js"></script>     
+  <script type="text/javascript" src="/assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+  <script type="text/javascript" src="/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+  <script type="text/javascript" src="/assets/js/main.js"></script>
+  
+  
+</body>
