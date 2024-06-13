@@ -8,16 +8,17 @@
     "npm": ">= 3.0.0"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "http-server": "^0.12.3",
-    "sqlite3": "^4.1.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "http-server": "^14.1.1",
+    "sqlite3": "^5.1.7",
     "vhost": "^3.0.2"
   },
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node app.js",
+    "dev:metro": "node metrom.app.js"
   },
   "repository": {
     "type": "git",
