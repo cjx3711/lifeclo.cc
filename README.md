@@ -64,7 +64,7 @@ Load the docker image on the server
 
 Run the docker container on the server
 
-`docker run -d -p 2567:2567 lifeclocc-metrom`
+`docker run -d -p 2030:2030 -p 2020:2020 lifeclocc-metrom`
 
 Accessing files in the container
 
