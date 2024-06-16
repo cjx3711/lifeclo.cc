@@ -56,7 +56,7 @@ Save the docker image
 
 Upload the docker image to the server
 
-`rsync -azP lifeclocc-metrom.tar root@xunling.art:/root/projects/lifeclocc-metrom/`
+`rsync -azP lifeclocc-metrom.tar root@cjx3711.com:/root/projects/lifeclocc-metrom/`
 
 Load the docker image on the server
 
