@@ -126,25 +126,25 @@
         <div class="row">
           <div class="twelve columns">
             <h1 class="welcome">
-              Welcome to Lifeclocc <small class="nowrap">(Digital Edition)</small><template v-if="user">,<br/>{{ user }}</template>
+              Wulcome to Lifecluwucc <small class="nowrap">(Digital Edition)</small><template v-if="user">,<br/>{{ user }}</template>
             </h1>
-            <p>Please enter your birthday (YYYY-MM-DD) to get started</p>
+            <p>Pwease entew youw biwthdwy (YYYY-MM-DD) tu get stawted</p>
             <form>
               <input class="dateinput" type="number" min="1900" max="2020" maxlength="4" v-model="inputs.byear" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" id="year" />
               <span class="nowrap">
                 <input class="dateinput" type="number" min="1" max="12" maxlength="2" v-model="inputs.bmonth" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
                 <input class="dateinput" type="number" min="1" max="31" maxlength="2" v-model="inputs.bdate" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />  
               </span><br/>
-              <button v-on:click="setBirthday" type="submit">Set</button>
+              <button v-on:click="setBirthday" type="submit">Setto</button>
             </form>
             <hr/>
             <p>or</p>
             <form>
               <p>
-                Load an existing user ID
+                Lowd an existing uwer ID
               </p>
               <p>
-                <input type="text" v-model="inputs.user"/> <button v-on:click="setUser" type="submit">Retrieve</button>
+                <input type="text" v-model="inputs.user"/> <button v-on:click="setUser" type="submit">Wetwieve</button>
               </p>
             </form>
           </div>
@@ -154,7 +154,7 @@
       <template v-if="state === 'countdown'">
         <div v-if="!broken" class="row">
           <div class="twelve columns">
-            <template v-if="user"><h3>Welcome back,<br/>{{ user }}</h3></template>
+            <template v-if="user"><h3>Wulcome back,<br/>{{ user }}</h3></template>
             <div class="row timer">
               <div>You have</div>
               <div v-if="!features.sevenseg" class="text-counter">
@@ -165,12 +165,12 @@
                   <segment v-for="d in workings.digits" v-bind:number="d"></segment>
                 </div>
               </div>
-              <div>seconds left to live.</div>
+              <div>secunds left to wive.</div>
             </div>
             
             <div class="permalink well" v-if="user === ''">
               <form>
-                <div style="margin-bottom:0.4em">Get your very own permalink!</div>
+                <div style="margin-bottom:0.4em">Get youw vewy uwn permawink!</div>
                 <input type="text" v-model="inputs.user"/> <button v-on:click="savePermalink" type="submit">Save</button>
               </form>
               
@@ -179,9 +179,9 @@
         </div>
         <div v-if="broken" class="row">
           <div class="twelve columns" style="margin: 4em 0;">
-            <strong>Sorry, something went wrong.</strong><br/>
-            Please use a supported browser like the latest Chrome, Edge, or Firefox.<br/>
-            If you are still experiencing problems, you can file a bug report using the feedback form below.<br/>
+            <strong>Sowwy, something went wuwng.</strong><br/>
+            Pwease use a suppowted bwowser like the latest Chwome, Edge, or Fiwefux.<br/>
+            If yuw are stiwl expewiencing pwoblems, yuw can file a bug wepowt using the feedback fowm below.<br/>
           </div>
         </div>
         <div class="row">
