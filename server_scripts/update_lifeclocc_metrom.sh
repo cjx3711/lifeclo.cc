@@ -10,22 +10,25 @@ TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 # Create backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
 
-# Check if container is running
-if docker ps | grep -q $CONTAINER_NAME; then
-    echo "Container is running. Stopping and removing..."
+# Check if container exists
+if docker ps -a --format '{{.Names}}' | grep -q "^${CONTAINER_NAME}$"; then
+    echo "Container exists."
+    
+    # Backup the database if it exists
+    if docker cp $CONTAINER_NAME:/data/$DB_NAME ./$DB_NAME 2>/dev/null; then
+        echo "Database copied from container."
+        mv $DB_NAME "$BACKUP_DIR/${DB_NAME}_${TIMESTAMP}"
+        echo "Database backed up to $BACKUP_DIR/${DB_NAME}_${TIMESTAMP}"
+    else
+        echo "No existing database found in the container."
+    fi
+    
+    # Stop and remove the container
+    echo "Stopping and removing container..."
     docker stop $CONTAINER_NAME
     docker rm $CONTAINER_NAME
 else
-    echo "Container is not running."
-fi
-
-# Backup the database if it exists
-if docker cp $CONTAINER_NAME:/data/$DB_NAME ./$DB_NAME 2>/dev/null; then
-    echo "Database copied from container."
-    mv $DB_NAME "$BACKUP_DIR/${DB_NAME}_${TIMESTAMP}"
-    echo "Database backed up to $BACKUP_DIR/${DB_NAME}_${TIMESTAMP}"
-else
-    echo "No existing database found in the container."
+    echo "Container does not exist."
 fi
 
 # Load the new docker image
