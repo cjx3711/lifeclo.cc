@@ -48,7 +48,7 @@ docker build -t lifeclocc-metrom .
 
 Run the docker container and map the port (to make sure it's working)
 
-`docker run -p 2030:2030 -p 2020:2020 lifeclocc-metrom`
+`docker run --name lifeclocc-metrom -p 2030:2030 -p 2020:2020 lifeclocc-metrom`
 
 Save the docker image
 
@@ -62,10 +62,18 @@ Load the docker image on the server
 
 `docker load -i lifeclocc-metrom.tar`
 
+Stop the docker container
+
+`docker stop lifeclocc-metrom`
+
+Remove the docker container
+
+`docker rm lifeclocc-metrom`
+
 Run the docker container on the server
 
-`docker run -d -p 2030:2030 -p 2020:2020 lifeclocc-metrom`
+`docker run -d --name lifeclocc-metrom -p 2030:2030 -p 2020:2020 lifeclocc-metrom`
 
 Accessing files in the container
 
-`docker exec -it <container_id> /bin/bash`
+`docker exec -it lifeclocc-metrom /bin/bash`

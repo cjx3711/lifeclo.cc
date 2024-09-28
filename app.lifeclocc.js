@@ -174,21 +174,21 @@ function setStaticPages(subdomain, directory) {
   app.use(vhost(`${subdomain}localhost`, express.static(`${directory}`)));
   app.use(vhost(`${subdomain}lifeclo.cc`, express.static(`${directory}`)));
 }
-setStaticPages("", "site");
-setStaticPages("app.", "site-app");
-setStaticPages("manual.", "site/manual");
-setStaticPages("source.", "site/source");
-setStaticPages("keebs.", "site/keebs");
-setStaticPages("keeb.", "site/keebs/keeb-redirect");
-setStaticPages("manual.keebs.", "site/keebs-how/redirect");
-setStaticPages("how.keebs.", "site/keebs-how");
-setStaticPages("metro.", "site/metro");
-setStaticPages("how.metro.", "site/metro-how");
-setStaticPages("metrom.", "site/metro");
-setStaticPages("how.metrom.", "site/metro-how");
+setStaticPages("", "lifeclo.cc_site");
+setStaticPages("app.", "lifeclo.cc_app");
+setStaticPages("manual.", "lifeclo.cc_site/manual");
+setStaticPages("source.", "lifeclo.cc_site/source");
+setStaticPages("keebs.", "lifeclo.cc_site/keebs");
+setStaticPages("keeb.", "lifeclo.cc_site/keebs/keeb-redirect");
+setStaticPages("manual.keebs.", "lifeclo.cc_site/keebs-how/redirect");
+setStaticPages("how.keebs.", "lifeclo.cc_site/keebs-how");
+setStaticPages("metro.", "lifeclo.cc_site/metro");
+setStaticPages("how.metro.", "lifeclo.cc_site/metro-how");
+setStaticPages("metrom.", "lifeclo.cc_site/metro");
+setStaticPages("how.metrom.", "lifeclo.cc_site/metro-how");
 
 // All subdomains will have an assets subfolder
-app.use("/assets", express.static("site/assets"));
+app.use("/assets", express.static("lifeclo.cc_site/assets"));
 
 app.listen(port, () =>
   console.log(`Lifeclo.cc app listening on port ${port}!`)
