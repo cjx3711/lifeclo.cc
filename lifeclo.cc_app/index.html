@@ -1,32 +1,42 @@
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/logos/favicon.png" type="image/png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="/assets/logos/favicon.png"
+      type="image/png"
+      sizes="16x16" />
     <title>Lifeclo.cc</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73723112-6"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY="
+      crossorigin="anonymous" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-L1K7SSZQ55"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'UA-73723112-6');
+      gtag("config", "G-L1K7SSZQ55");
     </script>
 
-
     <style>
-      html, body{ 
-        height:100%;
-        margin:0;
+      html,
+      body {
+        height: 100%;
+        margin: 0;
         text-align: center;
-
       }
 
       #app {
         padding-top: 1em;
       }
-      
 
       .welcome small {
         font-size: 0.5em;
@@ -37,12 +47,14 @@
       }
 
       .well {
-        border: #DDDDDD 1px solid;
+        border: #dddddd 1px solid;
         border-radius: 5px;
         padding: 15px;
       }
 
-      .well form, .well input, .well button {
+      .well form,
+      .well input,
+      .well button {
         margin: 0;
       }
 
@@ -91,29 +103,30 @@
 
       .disclaimer {
         margin-top: 0.7em;
-        color: #AAAAAA;
+        color: #aaaaaa;
         font-size: 0.75em;
       }
 
-      body { 
-        display:flex; 
-        flex-direction:column; 
+      body {
+        display: flex;
+        flex-direction: column;
       }
 
       a {
-        color:#4FA9B3;
-        text-decoration:underline;
+        color: #4fa9b3;
+        text-decoration: underline;
       }
 
       footer {
-        margin-top:auto;
+        margin-top: auto;
         padding-bottom: 1.5em;
       }
 
-      .columns, .column {
+      .columns,
+      .column {
         padding: 7px;
       }
- 
+
       [v-cloak] {
         display: none;
       }
@@ -126,25 +139,57 @@
         <div class="row">
           <div class="twelve columns">
             <h1 class="welcome">
-              Welcome to Lifeclocc <small class="nowrap">(Digital Edition)</small><template v-if="user">,<br/>{{ user }}</template>
+              Welcome to Lifeclocc
+              <small class="nowrap">(Digital Edition)</small
+              ><template v-if="user">,<br />{{ user }}</template>
             </h1>
             <p>Please enter your birthday (YYYY-MM-DD) to get started</p>
             <form>
-              <input class="dateinput" type="number" min="1900" max="2020" maxlength="4" v-model="inputs.byear" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" id="year" />
+              <input
+                class="dateinput"
+                type="number"
+                min="1900"
+                max="2020"
+                maxlength="4"
+                v-model="inputs.byear"
+                v-on:focus="highlight"
+                v-on:keyup="inputValidate"
+                v-on:change="inputValidate"
+                v-on:blur="dateValidate"
+                id="year" />
               <span class="nowrap">
-                <input class="dateinput" type="number" min="1" max="12" maxlength="2" v-model="inputs.bmonth" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />
-                <input class="dateinput" type="number" min="1" max="31" maxlength="2" v-model="inputs.bdate" v-on:focus="highlight" v-on:keyup="inputValidate" v-on:change="inputValidate" v-on:blur="dateValidate" />  
-              </span><br/>
+                <input
+                  class="dateinput"
+                  type="number"
+                  min="1"
+                  max="12"
+                  maxlength="2"
+                  v-model="inputs.bmonth"
+                  v-on:focus="highlight"
+                  v-on:keyup="inputValidate"
+                  v-on:change="inputValidate"
+                  v-on:blur="dateValidate" />
+                <input
+                  class="dateinput"
+                  type="number"
+                  min="1"
+                  max="31"
+                  maxlength="2"
+                  v-model="inputs.bdate"
+                  v-on:focus="highlight"
+                  v-on:keyup="inputValidate"
+                  v-on:change="inputValidate"
+                  v-on:blur="dateValidate" /> </span
+              ><br />
               <button v-on:click="setBirthday" type="submit">Set</button>
             </form>
-            <hr/>
+            <hr />
             <p>or</p>
             <form>
+              <p>Load an existing user ID</p>
               <p>
-                Load an existing user ID
-              </p>
-              <p>
-                <input type="text" v-model="inputs.user"/> <button v-on:click="setUser" type="submit">Retrieve</button>
+                <input type="text" v-model="inputs.user" />
+                <button v-on:click="setUser" type="submit">Retrieve</button>
               </p>
             </form>
           </div>
@@ -154,7 +199,9 @@
       <template v-if="state === 'countdown'">
         <div v-if="!broken" class="row">
           <div class="twelve columns">
-            <template v-if="user"><h3>Welcome back,<br/>{{ user }}</h3></template>
+            <template v-if="user"
+              ><h3>Welcome back,<br />{{ user }}</h3></template
+            >
             <div class="row timer">
               <div>You have</div>
               <div v-if="!features.sevenseg" class="text-counter">
@@ -162,26 +209,32 @@
               </div>
               <div v-if="features.sevenseg" class="segment-middler">
                 <div class="segment-holder">
-                  <segment v-for="d in workings.digits" v-bind:number="d"></segment>
+                  <segment
+                    v-for="d in workings.digits"
+                    v-bind:number="d"></segment>
                 </div>
               </div>
               <div>seconds left to live.</div>
             </div>
-            
+
             <div class="permalink well" v-if="user === ''">
               <form>
-                <div style="margin-bottom:0.4em">Get your very own permalink!</div>
-                <input type="text" v-model="inputs.user"/> <button v-on:click="savePermalink" type="submit">Save</button>
+                <div style="margin-bottom: 0.4em">
+                  Get your very own permalink!
+                </div>
+                <input type="text" v-model="inputs.user" />
+                <button v-on:click="savePermalink" type="submit">Save</button>
               </form>
-              
             </div>
           </div>
         </div>
         <div v-if="broken" class="row">
-          <div class="twelve columns" style="margin: 4em 0;">
-            <strong>Sorry, something went wrong.</strong><br/>
-            Please use a supported browser like the latest Chrome, Edge, or Firefox.<br/>
-            If you are still experiencing problems, you can file a bug report using the feedback form below.<br/>
+          <div class="twelve columns" style="margin: 4em 0">
+            <strong>Sorry, something went wrong.</strong><br />
+            Please use a supported browser like the latest Chrome, Edge, or
+            Firefox.<br />
+            If you are still experiencing problems, you can file a bug report
+            using the feedback form below.<br />
           </div>
         </div>
         <div class="row">
@@ -189,38 +242,75 @@
             <button v-on:click="clickBack">Home</button>
           </div>
         </div>
-        
       </template>
     </div>
 
     <footer>
-      <hr style="margin-top:2em; margin-bottom:1em"/>
+      <hr style="margin-top: 2em; margin-bottom: 1em" />
       <div class="row disclaimer">
         <div class="four columns">
           <div class="created-by">
-            Created by <a href="https://chaijiaxun.com" target="_blank">Chai Jia Xun</a><br/>
-            Check out the <a href="https://lifeclo.cc" target="_blank">physical edition of Lifeclocc.</a>
+            Created by
+            <a href="https://chaijiaxun.com" target="_blank">Chai Jia Xun</a
+            ><br />
+            Check out the
+            <a href="https://lifeclo.cc" target="_blank"
+              >physical edition of Lifeclocc.</a
+            >
           </div>
         </div>
         <div class="four columns">
-          This is still a beta product, things might not work as expected.<br/>
-          If you encounter a bug, please fill up the feedback form or let me know at hello <i>at</i> lifeclo.cc<br/>
-          <a class="typeform-share link" href="https://cjx3711.typeform.com/to/WtRmKD" data-mode="popup" style="font-size:1.1em;" data-submit-close-delay="1" target="_blank">Feedback form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+          This is still a beta product, things might not work as expected.<br />
+          If you encounter a bug, please fill up the feedback form or let me
+          know at hello <i>at</i> lifeclo.cc<br />
+          <a
+            class="typeform-share link"
+            href="https://cjx3711.typeform.com/to/WtRmKD"
+            data-mode="popup"
+            style="font-size: 1.1em"
+            data-submit-close-delay="1"
+            target="_blank"
+            >Feedback form
+          </a>
+          <script>
+            (function () {
+              var qs,
+                js,
+                q,
+                s,
+                d = document,
+                gi = d.getElementById,
+                ce = d.createElement,
+                gt = d.getElementsByTagName,
+                id = "typef_orm_share",
+                b = "https://embed.typeform.com/";
+              if (!gi.call(d, id)) {
+                js = ce.call(d, "script");
+                js.id = id;
+                js.src = b + "embed.js";
+                q = gt.call(d, "script")[0];
+                q.parentNode.insertBefore(js, q);
+              }
+            })();
+          </script>
         </div>
         <div class="four columns">
           <div><strong>Known bugs:</strong></div>
           <div>Countdown does not work on safari.</div>
           <div>There is no way to delete or edit a user's birthday</div>
         </div>
-
       </div>
     </footer>
   </body>
 </html>
 
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+  integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="webapp.js"></script>
-  

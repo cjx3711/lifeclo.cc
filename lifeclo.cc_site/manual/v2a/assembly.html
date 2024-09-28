@@ -1,1048 +1,1867 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73723112-7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-L1K7SSZQ55"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'UA-73723112-7');
+      gtag("config", "G-L1K7SSZQ55");
+    </script>
+    <title>Lifeclocc V2a Assembly</title>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="icon"
+      href="/assets/logos/favicon.png"
+      type="image/png"
+      sizes="16x16" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css" />
+    <!-- FontAwesome JS -->
+    <script defer src="/assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link
+      rel="stylesheet"
+      href="/assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/plugins/elegant_font/css/style.css" />
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
 
-  </script>
-  <title>Lifeclocc V2a Assembly</title>
-  <!-- Meta -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="/assets/logos/favicon.png" type="image/png" sizes="16x16">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <!-- FontAwesome JS -->
-  <script defer src="/assets/fontawesome/js/all.js"></script>
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">   
-  <!-- Plugins CSS -->  
-  <link rel="stylesheet" href="/assets/plugins/elegant_font/css/style.css">  
-  <!-- Theme CSS -->
-  <link id="theme-style" rel="stylesheet" href="/assets/css/styles.css">
-  
-</head> 
-
-<body class="body-green">
-  <div class="page-wrapper">
-    <!-- ******Header****** -->
-    <header id="header" class="header">
-      <div class="container">
-        <div class="branding">
-          <h1 class="logo">
-            <a href="/">
-              <span class="text-highlight">LIFECLO</span>.<span>CC</span>
-            </a>
-          </h1>
-        </div><!--//branding-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item"><a href="/v2a">v2a</a></li>
-          <li class="breadcrumb-item active">Assembly</li>
-        </ol>
-      </div><!--//container-->
-    </header><!--//header-->
-    
-    <div class="doc-wrapper">
-      <div class="container">
-        <div id="doc-header" class="doc-header text-center">
-          <h1 class="doc-title"><i class="icon fa fa-book"></i> Assembly Instructions</h1>
-          <div class="meta"><i class="far fa-clock"></i> Last updated: 2020-06-15</div>
-        </div><!--//doc-header-->
-        
-        <div class="doc-body row">
-          <div class="doc-content col-md-9 col-12 order-1">
-            
-            <div class="callout-block callout-warning">
-              <div class="icon-holder">
-                <i class="fas fa-exclamation-triangle"></i>
-              </div><!--//icon-holder-->
-              <div class="content">
-                <h4 class="callout-title">Instructions are in beta</h4>
-                <p>If you have any issues or feedback for these instructions, do not hesitate to contact me via email at hello <i>at</i> lifeclo.cc</p>
-              </div><!--//content-->
-            </div><!--//callout-block-->
-            <section id="prep" class="doc-section">
-              <h2 class="section-title">Preparation</h2>
-              <div class="section-block">
-                <h3 id="prereq" class="block-title">Prerequisites</h3>
-                <p>
-                  You should know how to solder. This project is perfectly doable with just a soldering iron and solder, but knowing how to use solder flux and a desoldering wick will definitely make your life easier.
-                </p>
-              </div>
-              <div class="section-block">
-                <div id="tools" class="row">
-                  <div class="col-md-6 col-12">
-                    <h3 class="block-title">Required Tools</h3>
-                    <ul class="list">
-                      <li>Soldering Kit</li>
-                      <li>The Parts in the Parts List</li>
-                      <li>This instruction manual</li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-12">
-                    <h3 class="block-title">Recommended Tools</h3>
-                    <ul class="list">
-                      <li>
-                        Tweezers<br/>
-                        <span class="text-secondary">For picking up small parts and assembling them</span>
-                      </li>
-                      <li>
-                        Needle Nose Pliers<br/>
-                        <span class="text-secondary">For bending the pins out of the way</span>
-                      </li>
-                      <li>
-                        Wire Cutters (or nail clipper)<br/>
-                        <span class="text-secondary">For cutting the legs after soldering</span>
-                      </li>  
-                      <li>
-                        Soldering Arm<br/>
-                        <span class="text-secondary">For holding the parts in place while soldering</span>
-                      </li>
-                      <li>
-                        Soldering Fan (or a well ventilated room)<br/>
-                        <span class="text-secondary">For keeping fumes out of your face</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="section-block">
-                <h3 id="parts" class="block-title">Parts List</h3>
-                <div class="table-responsive">
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th>Part</th>
-                        <th style="width: 5%">Count</th>
-                        <th style="width: 15%">PCB Label</th>
-                        <th style="width: 30%">Image</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Printed Circuit Board (PCB)</td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/partpcb.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/partpcb.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/partpcb.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      
-                      <tr>
-                        <td>
-                          Arduino Nano<br/>
-                          <span class="text-secondary">
-                            Used for power and programming.
-                          </span>
-                        </td>
-                        <td>1</td>
-                        <td>A1</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/partnano.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/partnano.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/partnano.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          DS3231 Module<br/>
-                          <span class="text-secondary">
-                            with CR2032 Button Battery
-                          </span>
-                        </td>
-                        <td>1</td>
-                        <td>U1</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/partclock.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/partclock.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/partclock.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          SET LED<br/>
-                          <span class="text-secondary">
-                            Colours may vary
-                          </span>
-                        </td>
-                        <td>2</td>
-                        <td>D2 D4</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/partled.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/partled.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/partled.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          MODE LED<br/>
-                          <span class="text-secondary">
-                            Colours may vary
-                          </span>
-                        </td>
-                        <td>2</td>
-                        <td>D1 D3</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/partled.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/partled.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/partled.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Tactile Buttons</td>
-                        <td>4</td>
-                        <td>SW1 SW2 SW3 SW4</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/partbutton.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/partbutton.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/partbutton.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          50kΩ Variable Resistor <br/>
-                          <span class="text-secondary">
-                            Label 504
-                          </span>
-                        </td>
-                        <td>1</td>
-                        <td>RV1</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/partvr.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/partvr.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/partvr.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          74HC595 DIP-16 IC
-                          <span class="text-secondary">
-                            Shift Register
-                          </span>
-                        </td>
-                        <td>11</td>
-                        <td>U2 U4 U6 U8 U10 U12 U14 U16 U18 U20 U22</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/partic.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/partic.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/partic.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          7-segment display<br/>
-                          <span class="text-secondary">
-                            Common Anode<br/>
-                            5161BG = <span class="text-success">Green</span> Display<br>
-                            5161BS = <span class="text-danger">Red</span> Display
-                          </span>
-                        </td>
-                        <td>11</td>
-                        <td>U3 U5 U7 U9 U11 U13 U15 U17 U19 U21 U23</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/part7seg.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/part7seg.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/part7seg.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          22Ω / 100Ω Resistor<br/>
-                          <p>
-                            <span class="text-secondary">
-                              22Ω for <span class="text-success">Green</span> Display<br>
-                              100Ω for <span class="text-danger">Red</span> Display
-                            </span>
-                          </p>
-                          <p>
-                            <a href="https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code-4-band" target="_blank"><button class="btn btn-info">Resistor calculator</button></a><br>
-                            <span class="text-info"><small>Trouble identifying resistors?</small></span>
-                          </p>
-                        </td>
-                        <td>11</td>
-                        <td>R9 R10 R11 R12 R13 R14 R15 R16 R17 R18 R19</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/part22100.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/part22100.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/part22100.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>
-                            470Ω Resistor
-                          </p>
-                          <p>
-                            <a href="https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code-4-band" target="_blank"><button class="btn btn-info">Resistor calculator</button></a><br>
-                            <span class="text-info"><small>Trouble identifying resistors?</small></span>
-                          </p>
-                        </td>
-                        <td>4</td>
-                        <td>R1 R2 R3 R4 </td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/part470.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/part470.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/part470.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>
-                            10kΩ Resistor
-                          </p>
-                          <p>
-                            <a href="https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code-4-band" target="_blank"><button class="btn btn-info">Resistor calculator</button></a><br>
-                            <span class="text-info"><small>Trouble identifying resistors?</small></span>
-                          </p>
-                        </td>
-                        <td>4</td>
-                        <td>R5 R6 R7 R8</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v2/assembly/part10k.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v2/assembly/part10k.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v2/assembly/part10k.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Micro USB Wire<br/>
-                          <span class="text-secondary">
-                            Used for power and programming.
-                          </span>
-                        </td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td>
-                          <div class="image-holder">
-                            <a href="/assets/images/v1/assembly/partwire.jpg" data-title="PCB" data-toggle="lightbox">
-                              <img class="img-fluid" src="/assets/images/v1/assembly/partwire.jpg" alt="image" />
-                            </a>
-                            <a class="mask" href="/assets/images/v1/assembly/partwire.jpg" data-title="PCB" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div><!--//section-block-->
-              <div class="section-block">
-                <h3 id="best" class="block-title">Best Practices</h3>
-                <p>
-                  Always check the direction of the componets before soldering it. If you have mistakenly soldered an IC upside down, it is very difficult to remove and redo it. In the event that happens, you will likely need a solder wick and a lot of patience.
-                </p>
-                <p>
-                  For soldering any component, it’s best to solder only one pin first and then check if it’s aligned. If it’s not aligned, you will be able to melt the solder and reposition the component/ After that, solder the second pin that’s diagonally across. By doing this, you can be sure that the component is positioned correctly before soldering the rest of the pins.
-                </p>
-                <p>
-                  For all components, you can choose to use Male to Female header pins instead of soldering them directly to the board. This means that you can easily remove and replace components if necessary.
-                </p>
-              </div><!--//section-block-->
-            </section>
-            
-            <section id="video" class="doc-section">
-              <h2 class="section-title">Video Tutorial</h2>
-              <div class="section-block">
-                <div class="callout-block callout-danger">
-                  <div class="icon-holder">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Video tutorial is incomplete</h4>
-                    <p>
-                      The video tutorial for this specific model has not been edited, but you can still view the tutorial for v1 below. The steps are mostly the same.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-
-                <h6>v1 Assembly Video</h6>
-                <!-- 16:9 aspect ratio -->
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nPhNFR0LcUQ?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div><!--//section-block-->
-            </section>
-            
-            <section id="assembly" class="doc-section">
-              <h2 class="section-title">Assembly</h2>
-              <div class="section-block">
-                <h3 id="step0" class="block-title">Step 0 - Test Arduino Nano</h3>
-                <p>
-                  Plug the Arduino Nano into any USB port with the provided micro USB cable.
-                </p>
-                <p>
-                  The onboard LED should flash 3 times. This indicates that the device is running properly and is programmed with the correct software.
-                </p>
-                <hr/>
-                <h3 id="step1" class="block-title">Step 1 - Install Microcontroller</h3>
-                <div class="row">
-
-                  <div class="col-12">
-                    <p>
-                      The first step is to install the microcontroller. The header pins on the back of the arduino are optional for the operation of lifeclocc, but you should solder them if you intend on doing any programing yourself.
-                    </p>
-                  </div>
-                  <div class="col-12">
-                    <h6>Installation in Pictures</h6>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step1a.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step1a.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step1a.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      These are the parts required. Put the 2 x 3 header pins into the top of the Arduino Nano.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step1b.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step1b.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step1b.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      <strong>Flip the arduino over.</strong>  Solder the header pins on the bottom of the Arduino. <br/>
-                      <span class="text-info">This is not necessary for operation, unless you want to program it.</span>
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step1c.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step1c.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step1c.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      <strong>Flip the arduino back.</strong> Place the header pins into the PCB.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step1d.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step1d.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step1d.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Solder the corner pins on the top and the bottom. Adjust and align the arduino at this stage.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step1e.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step1e.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step1e.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Solder the rest of the pins.
-                    </span>
-                  </div>
-
-                </div><!--//row-->  
-
-                
-                <div class="callout-block callout-success">
-                  <div class="icon-holder">
-                    <i class="fas fa-check-circle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Checkpoint</h4>
-                    <p>
-                      Plug in the arduino to make sure it's still working. The LED should blink 3 times.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-                <hr/>
-
-                <h3 id="step2" class="block-title">Step 2 - Install Buttons</h3>
-
-                
-                <div class="row">
-                  <div class="col-12">
-                    <p>
-                      To install the buttons, place them into the button slots and bend the pins over before soldering them down.
-                    </p>
-                    <p>
-                      You should also put the resistors in so that we can test the buttons.
-                    </p>
-                  </div>
-                  <div class="col-12">
-                    <h6>Installation in Pictures</h6>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step2a.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step2a.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step2a.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      4 buttons and 4 10kΩ resistors.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step2b.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step2b.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step2b.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      Bend the resistors into an <strong>n</strong> shape.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step2c.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step2c.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step2c.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Insert the resistors and the buttons into the PCB. The directions don't matter.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step2d.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step2d.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step2d.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Bend the legs of the buttons down, and bend the legs of the resistors as shown. This helps to keep in in place whle you solder it.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step2e.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step2e.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step2e.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Cut the excess legs off.
-                    </span>
-                  </div>
-                </div><!--//row-->  
-
-                <div class="callout-block callout-success">
-                  <div class="icon-holder">
-                    <i class="fas fa-check-circle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Checkpoint</h4>
-                    <p>
-                      Pressing the buttons should light up the LED on the arduino.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-                <hr/>
-                <h3 id="step3" class="block-title">Step 3 - Install Indicator LEDs</h3>
-
-                <p>
-                  Solder two LEDs into D1, and D3
-                </p>
-                <p>
-                  Solder two LED into D2, and D4
-                </p>
-
-                <div class="callout-block callout-warning">
-                  <div class="icon-holder">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Take Note</h4>
-                    <p>The LEDs are directional. The shorter leg goes into the square hole.</p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-
-                <div class="row">
-                  <div class="col-12">
-                    <h6>Installation in Pictures</h6>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step3a.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step3a.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step3a.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      These are the required parts. 2x LEDs of each colour and 4x 470Ω resistors.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step3b.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step3b.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step3b.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      Make sure the shorter leg goes into the square hole.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step3c.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step3c.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step3c.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Insert the LEDs and the resistors into the PCB.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step3d.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step3d.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step3d.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Bend the legs to secure the LEDs and resistors.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step3e.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step3e.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step3e.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Solder the parts in.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step3f.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step3f.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step1f.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Cut the excess.
-                    </span>
-                  </div>
-                </div><!--//row-->  
-
-                <div class="callout-block callout-success">
-                  <div class="icon-holder">
-                    <i class="fas fa-check-circle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Checkpoint</h4>
-                    <p>
-                      When you turn on the arduino, the leds should flash in sequence. Pressing the buttons should also light up the corresponding LED.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-                <hr/>
-                <h3 id="step4" class="block-title">Step 4 - Install Clock Module</h3>
-
-                <div class="row">
-                  <div class="col-12">
-                    <h6>Installation in Pictures</h6>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step4a.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step4a.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step4a.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      Required Parts
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step4b.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step4b.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step4b.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      Remove the battery before soldering.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step4c.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step4c.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step4c.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Stick the clock into the PCB, then use it to bend the pins straight. Fit it into the PCB after you're done.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step4d.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step4d.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step4d.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Solder one leg first. Use this to adjust the clock before soldering the rest of the legs. After that, bend the legs down or cut them off.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step4e.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step4e.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step4e.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      After that, put the battery back in. Plug the arduino in, and you should see a red light below to indicate that it's soldered properly.
-                    </span>
-                  </div>
-                </div><!--//row-->  
-
-                <div class="callout-block callout-success">
-                  <div class="icon-holder">
-                    <i class="fas fa-check-circle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Checkpoint</h4>
-                    <p>
-                      There should be a red light below the clock module when the arduino is powered on. There is no way to test if the clock is working till a later step.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-                <hr/>
-                <hr/>
-                <h3 id="step5" class="block-title">Step 5 - Install Variable Resistor</h3>
-
-                <div class="row">
-                  <div class="col-12">
-                    <h6>Installation in Pictures</h6>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step5a.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step5a.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step5a.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      This is the variable resistor.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step5b.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step5b.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step5b.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      Insert the resistor into the board.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step5c.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step5c.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step5c.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Bend the resistor legs down, then solder them in.
-                    </span>
-                  </div>
-                </div><!--//row-->  
-
-                <div class="callout-block callout-success">
-                  <div class="icon-holder">
-                    <i class="fas fa-check-circle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Checkpoint</h4>
-                    <p>
-                      No checkpoint here unfortunately. Remember to turn the resistor all the way to the right so that we have maximum brightness when we first turn on the displays.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-                <hr/>
-                <h3 id="step6" class="block-title">Step 6 - Install First Digit</h3>
-
-                <div class="callout-block callout-warning">
-                  <div class="icon-holder">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Important</h4>
-                    <p>
-                      Make sure that you put the IC and Display in the right way up. Once soldered it's <strong>very</strong> hard to fix.<br>
-                      The IC's notch should be facing up and the display's decimal point should be at the bottom.<br>
-                      If you are still unsure, <a href="https://youtu.be/nPhNFR0LcUQ?t=348">please watch the video installation here</a>.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-
-                <div class="row">
-                  <div class="col-12">
-                    <h6>Installation in Pictures</h6>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step6a.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step6a.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step6a.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      Grab the parts.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step6b.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step6b.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step6b.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      Insert the IC, display and resistor in the leftmost slot.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step6c.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step6c.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step6c.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Bend the pins down to secure them. You can choose not to bend the display and resistor pins for now if you want to cut them off later.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step6d.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step6d.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step6d.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Solder everything.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step6e.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step6e.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step6e.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Power the arduino. The leds should blink, and the display should show an 8 for a while before showing a number.
-                    </span>
-                  </div>
-                </div><!--//row-->  
-                <div class="callout-block callout-success">
-                  <div class="icon-holder">
-                    <i class="fas fa-check-circle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Checkpoint</h4>
-                    <p>
-                      When we turn it on, the display will blink with a <code>-</code> followed by <code>8</code>, and finally it will show a number (most likely <code>2</code>). If that happens, that means that your clock, and display is all working.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-                <hr/>
-                <hr/>
-                <h3 id="step7" class="block-title">Step 7 - Install Rest of Display</h3>
-                
-                <p>
-                  Repeat step 6 for the other digits. You can test each one after you install it. Please make sure you don't solder while the device is plugged in.
-                </p>
-
-                <div class="callout-block callout-warning">
-                  <div class="icon-holder">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Important</h4>
-                    <p>
-                      I've mentioned this in the previous section, but it bears repeating<br>
-                      Make sure that you put the IC and Display in the right way up. Once soldered it's <strong>very</strong> hard to fix.<br>
-                      The IC's notch should be facing up and the display's decimal point should be at the bottom.<br>
-                      If you are still unsure, <a href="https://youtu.be/nPhNFR0LcUQ?t=348">please watch the video installation here</a>.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-                <div class="row">
-                  <div class="col-12">
-                    <h6>Installation in Pictures</h6>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step7a.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step7a.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step7a.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      Grab the parts.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step7b.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step7b.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step7b.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div>
-                    <span class="text-secondary">
-                      Put them all in. Check the direction. <br/>
-                      Bend all the pins down.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step7c.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step7c.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step7c.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      Solder everything, and cut off the legs.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step7d.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step7d.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step7d.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      When you power on, everything should blink a bit.
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
-                    <div class="image-holder mt-2 mb-2">
-                      <a href="/assets/images/v2/assembly/step7e.jpg" data-toggle="lightbox"><img class="img-fluid" src="/assets/images/v2/assembly/step7e.jpg" alt="image" /></a>
-                      <a class="mask" href="/assets/images/v2/assembly/step7e.jpg" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                    </div> 
-                    <span class="text-secondary">
-                      The displays should eventually show a countdown.
-                    </span>
-                  </div>
-                </div><!--//row-->  
-
-                <div class="callout-block callout-success">
-                  <div class="icon-holder">
-                    <i class="fas fa-check-circle"></i>
-                  </div><!--//icon-holder-->
-                  <div class="content">
-                    <h4 class="callout-title">Checkpoint</h4>
-                    <p>
-                      You will see the arduino flash with the words <code>-LIFECLO.CC-</code> followed by <code>88888888888</code> and finally show a number.
-                    </p>
-                  </div><!--//content-->
-                </div><!--//callout-block-->
-                <hr/>
-                <hr/>
-                <h3 id="step8" class="block-title">Step 8 - Testing and Setup </h3>
-
-                <h6>Debug Mode</h6>
-                <p>To enter debug mode, press and hold all 4 buttons for 3 seconds. This will cause all the lights to turn on. This helps you determine if ther are any broken parts.</p>
-                
-                <h6>Debug Mode</h6>
-                <p>Turn the brightness dial to make sure it's working</p>
-                <h6>Setting the date and time</h6>
-                <p>Please refer to the <a href="/v2a/operation.html" target="_blank">operation manual</a> to setup the date, time and birthday.</p>
-                
-                <h6>Checking if clock is working</h6>
-                <p>Unplug and plug it back in, the countdown should not have reset. (Make sure your button battery is in the clock module)</p>
-                <hr/>
-                
-              </div><!--//section-block-->
-            </section>
-            
-            <section id="troubleshooting" class="doc-section"> 
-              <h2 class="section-title">Troubleshooting</h2>
-              <div class="section-block">
-              </div>
-            </section>
-            
-            <section id="programming" class="doc-section">
-              <h2 class="section-title">Programming</h2>
-              <div class="section-block">
-                <p>
-                  This board was made to be hackable. What that means is that the source code is open and you are free to do whatever you want to do with it.
-                </p>
-                
-                <p>
-                  In order to program this, you need to download the arduino IDE, and the Teensyduino plugin. You also need a <strong>mini</strong> USB B cable to program it.
-                </p>
-                
-                <p>
-                  The pins on the top of the board also act as a breakout to the Teensy, so you can attach other devices to the Teensy if you wish.
-                </p>
-              </div>
-            </section>
-
-            <section id="updating" class="doc-section">
-              <h2 class="section-title">Updating</h2>
-              <div class="section-block">
-                <p>
-                  The microcontroller will come pre-programmed with the lifeclocc firmware.
-                </p>
-              </div>
-            </section>
+  <body class="body-green">
+    <div class="page-wrapper">
+      <!-- ******Header****** -->
+      <header id="header" class="header">
+        <div class="container">
+          <div class="branding">
+            <h1 class="logo">
+              <a href="/">
+                <span class="text-highlight">LIFECLO</span>.<span>CC</span>
+              </a>
+            </h1>
           </div>
-          
-          <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
-            <div id="doc-nav" class="doc-nav">
-              <nav id="doc-menu" class="nav doc-menu flex-column sticky">
-                
-                <a class="nav-link scrollto" href="#prep">Preperation</a>
-                <nav class="doc-sub-menu nav flex-column">
-                  <a class="nav-link scrollto" href="#prereq">Prerequisites</a>
-                  <a class="nav-link scrollto" href="#tools">Tools</a>
-                  <a class="nav-link scrollto" href="#parts">Parts List</a>
-                  <a class="nav-link scrollto" href="#best">Best Practices</a>
-                </nav><!--//nav-->
-                <a class="nav-link scrollto" href="#video">Video Tutorial</a>
-                <a class="nav-link scrollto" href="#assembly">Assembly Steps</a>
-                <nav class="doc-sub-menu nav flex-column">
-                  <a class="nav-link scrollto" href="#step0">Step 0 - Test Microcontroller</a>
-                  <a class="nav-link scrollto" href="#step1">Step 1 - Microcontroller</a>
-                  <a class="nav-link scrollto" href="#step2">Step 2 - Buttons</a>
-                  <a class="nav-link scrollto" href="#step3">Step 3 - Indicator LEDs</a>
-                  <a class="nav-link scrollto" href="#step4">Step 4 - Clock Module</a>
-                  <a class="nav-link scrollto" href="#step5">Step 5 - Variable Resistor</a>
-                  <a class="nav-link scrollto" href="#step6">Step 6 - First Digit</a>
-                  <a class="nav-link scrollto" href="#step7">Step 7 - Other Digits</a>
-                  <a class="nav-link scrollto" href="#step8">Step 8 - Testing and Setup</a>
+          <!--//branding-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/v2a">v2a</a></li>
+            <li class="breadcrumb-item active">Assembly</li>
+          </ol>
+        </div>
+        <!--//container-->
+      </header>
+      <!--//header-->
+
+      <div class="doc-wrapper">
+        <div class="container">
+          <div id="doc-header" class="doc-header text-center">
+            <h1 class="doc-title">
+              <i class="icon fa fa-book"></i> Assembly Instructions
+            </h1>
+            <div class="meta">
+              <i class="far fa-clock"></i> Last updated: 2020-06-15
+            </div>
+          </div>
+          <!--//doc-header-->
+
+          <div class="doc-body row">
+            <div class="doc-content col-md-9 col-12 order-1">
+              <div class="callout-block callout-warning">
+                <div class="icon-holder">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <!--//icon-holder-->
+                <div class="content">
+                  <h4 class="callout-title">Instructions are in beta</h4>
+                  <p>
+                    If you have any issues or feedback for these instructions,
+                    do not hesitate to contact me via email at hello
+                    <i>at</i> lifeclo.cc
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+              <section id="prep" class="doc-section">
+                <h2 class="section-title">Preparation</h2>
+                <div class="section-block">
+                  <h3 id="prereq" class="block-title">Prerequisites</h3>
+                  <p>
+                    You should know how to solder. This project is perfectly
+                    doable with just a soldering iron and solder, but knowing
+                    how to use solder flux and a desoldering wick will
+                    definitely make your life easier.
+                  </p>
+                </div>
+                <div class="section-block">
+                  <div id="tools" class="row">
+                    <div class="col-md-6 col-12">
+                      <h3 class="block-title">Required Tools</h3>
+                      <ul class="list">
+                        <li>Soldering Kit</li>
+                        <li>The Parts in the Parts List</li>
+                        <li>This instruction manual</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <h3 class="block-title">Recommended Tools</h3>
+                      <ul class="list">
+                        <li>
+                          Tweezers<br />
+                          <span class="text-secondary"
+                            >For picking up small parts and assembling
+                            them</span
+                          >
+                        </li>
+                        <li>
+                          Needle Nose Pliers<br />
+                          <span class="text-secondary"
+                            >For bending the pins out of the way</span
+                          >
+                        </li>
+                        <li>
+                          Wire Cutters (or nail clipper)<br />
+                          <span class="text-secondary"
+                            >For cutting the legs after soldering</span
+                          >
+                        </li>
+                        <li>
+                          Soldering Arm<br />
+                          <span class="text-secondary"
+                            >For holding the parts in place while
+                            soldering</span
+                          >
+                        </li>
+                        <li>
+                          Soldering Fan (or a well ventilated room)<br />
+                          <span class="text-secondary"
+                            >For keeping fumes out of your face</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-block">
+                  <h3 id="parts" class="block-title">Parts List</h3>
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Part</th>
+                          <th style="width: 5%">Count</th>
+                          <th style="width: 15%">PCB Label</th>
+                          <th style="width: 30%">Image</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Printed Circuit Board (PCB)</td>
+                          <td>1</td>
+                          <td>-</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/partpcb.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/partpcb.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/partpcb.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            Arduino Nano<br />
+                            <span class="text-secondary">
+                              Used for power and programming.
+                            </span>
+                          </td>
+                          <td>1</td>
+                          <td>A1</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/partnano.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/partnano.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/partnano.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            DS3231 Module<br />
+                            <span class="text-secondary">
+                              with CR2032 Button Battery
+                            </span>
+                          </td>
+                          <td>1</td>
+                          <td>U1</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/partclock.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/partclock.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/partclock.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            SET LED<br />
+                            <span class="text-secondary">
+                              Colours may vary
+                            </span>
+                          </td>
+                          <td>2</td>
+                          <td>D2 D4</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/partled.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/partled.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/partled.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            MODE LED<br />
+                            <span class="text-secondary">
+                              Colours may vary
+                            </span>
+                          </td>
+                          <td>2</td>
+                          <td>D1 D3</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/partled.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/partled.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/partled.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Tactile Buttons</td>
+                          <td>4</td>
+                          <td>SW1 SW2 SW3 SW4</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/partbutton.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/partbutton.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/partbutton.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            50kΩ Variable Resistor <br />
+                            <span class="text-secondary"> Label 504 </span>
+                          </td>
+                          <td>1</td>
+                          <td>RV1</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/partvr.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/partvr.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/partvr.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            74HC595 DIP-16 IC
+                            <span class="text-secondary"> Shift Register </span>
+                          </td>
+                          <td>11</td>
+                          <td>U2 U4 U6 U8 U10 U12 U14 U16 U18 U20 U22</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/partic.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/partic.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/partic.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            7-segment display<br />
+                            <span class="text-secondary">
+                              Common Anode<br />
+                              5161BG =
+                              <span class="text-success">Green</span>
+                              Display<br />
+                              5161BS =
+                              <span class="text-danger">Red</span> Display
+                            </span>
+                          </td>
+                          <td>11</td>
+                          <td>U3 U5 U7 U9 U11 U13 U15 U17 U19 U21 U23</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/part7seg.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/part7seg.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/part7seg.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            22Ω / 100Ω Resistor<br />
+                            <p>
+                              <span class="text-secondary">
+                                22Ω for
+                                <span class="text-success">Green</span>
+                                Display<br />
+                                100Ω for
+                                <span class="text-danger">Red</span> Display
+                              </span>
+                            </p>
+                            <p>
+                              <a
+                                href="https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code-4-band"
+                                target="_blank"
+                                ><button class="btn btn-info">
+                                  Resistor calculator
+                                </button></a
+                              ><br />
+                              <span class="text-info"
+                                ><small
+                                  >Trouble identifying resistors?</small
+                                ></span
+                              >
+                            </p>
+                          </td>
+                          <td>11</td>
+                          <td>R9 R10 R11 R12 R13 R14 R15 R16 R17 R18 R19</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/part22100.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/part22100.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/part22100.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>470Ω Resistor</p>
+                            <p>
+                              <a
+                                href="https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code-4-band"
+                                target="_blank"
+                                ><button class="btn btn-info">
+                                  Resistor calculator
+                                </button></a
+                              ><br />
+                              <span class="text-info"
+                                ><small
+                                  >Trouble identifying resistors?</small
+                                ></span
+                              >
+                            </p>
+                          </td>
+                          <td>4</td>
+                          <td>R1 R2 R3 R4</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/part470.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/part470.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/part470.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>10kΩ Resistor</p>
+                            <p>
+                              <a
+                                href="https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code-4-band"
+                                target="_blank"
+                                ><button class="btn btn-info">
+                                  Resistor calculator
+                                </button></a
+                              ><br />
+                              <span class="text-info"
+                                ><small
+                                  >Trouble identifying resistors?</small
+                                ></span
+                              >
+                            </p>
+                          </td>
+                          <td>4</td>
+                          <td>R5 R6 R7 R8</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v2/assembly/part10k.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v2/assembly/part10k.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v2/assembly/part10k.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Micro USB Wire<br />
+                            <span class="text-secondary">
+                              Used for power and programming.
+                            </span>
+                          </td>
+                          <td>1</td>
+                          <td>-</td>
+                          <td>
+                            <div class="image-holder">
+                              <a
+                                href="/assets/images/v1/assembly/partwire.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox">
+                                <img
+                                  class="img-fluid"
+                                  src="/assets/images/v1/assembly/partwire.jpg"
+                                  alt="image" />
+                              </a>
+                              <a
+                                class="mask"
+                                href="/assets/images/v1/assembly/partwire.jpg"
+                                data-title="PCB"
+                                data-toggle="lightbox"
+                                ><i class="icon fa fa-search-plus"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!--//section-block-->
+                <div class="section-block">
+                  <h3 id="best" class="block-title">Best Practices</h3>
+                  <p>
+                    Always check the direction of the componets before soldering
+                    it. If you have mistakenly soldered an IC upside down, it is
+                    very difficult to remove and redo it. In the event that
+                    happens, you will likely need a solder wick and a lot of
+                    patience.
+                  </p>
+                  <p>
+                    For soldering any component, it’s best to solder only one
+                    pin first and then check if it’s aligned. If it’s not
+                    aligned, you will be able to melt the solder and reposition
+                    the component/ After that, solder the second pin that’s
+                    diagonally across. By doing this, you can be sure that the
+                    component is positioned correctly before soldering the rest
+                    of the pins.
+                  </p>
+                  <p>
+                    For all components, you can choose to use Male to Female
+                    header pins instead of soldering them directly to the board.
+                    This means that you can easily remove and replace components
+                    if necessary.
+                  </p>
+                </div>
+                <!--//section-block-->
+              </section>
+
+              <section id="video" class="doc-section">
+                <h2 class="section-title">Video Tutorial</h2>
+                <div class="section-block">
+                  <div class="callout-block callout-danger">
+                    <div class="icon-holder">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">
+                        Video tutorial is incomplete
+                      </h4>
+                      <p>
+                        The video tutorial for this specific model has not been
+                        edited, but you can still view the tutorial for v1
+                        below. The steps are mostly the same.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+
+                  <h6>v1 Assembly Video</h6>
+                  <!-- 16:9 aspect ratio -->
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      class="embed-responsive-item"
+                      src="https://www.youtube.com/embed/nPhNFR0LcUQ?rel=0&amp;controls=1&amp;showinfo=0"
+                      frameborder="0"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+                <!--//section-block-->
+              </section>
+
+              <section id="assembly" class="doc-section">
+                <h2 class="section-title">Assembly</h2>
+                <div class="section-block">
+                  <h3 id="step0" class="block-title">
+                    Step 0 - Test Arduino Nano
+                  </h3>
+                  <p>
+                    Plug the Arduino Nano into any USB port with the provided
+                    micro USB cable.
+                  </p>
+                  <p>
+                    The onboard LED should flash 3 times. This indicates that
+                    the device is running properly and is programmed with the
+                    correct software.
+                  </p>
+                  <hr />
+                  <h3 id="step1" class="block-title">
+                    Step 1 - Install Microcontroller
+                  </h3>
+                  <div class="row">
+                    <div class="col-12">
+                      <p>
+                        The first step is to install the microcontroller. The
+                        header pins on the back of the arduino are optional for
+                        the operation of lifeclocc, but you should solder them
+                        if you intend on doing any programing yourself.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <h6>Installation in Pictures</h6>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step1a.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step1a.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step1a.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        These are the parts required. Put the 2 x 3 header pins
+                        into the top of the Arduino Nano.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step1b.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step1b.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step1b.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        <strong>Flip the arduino over.</strong> Solder the
+                        header pins on the bottom of the Arduino. <br />
+                        <span class="text-info"
+                          >This is not necessary for operation, unless you want
+                          to program it.</span
+                        >
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step1c.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step1c.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step1c.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        <strong>Flip the arduino back.</strong> Place the header
+                        pins into the PCB.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step1d.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step1d.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step1d.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Solder the corner pins on the top and the bottom. Adjust
+                        and align the arduino at this stage.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step1e.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step1e.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step1e.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Solder the rest of the pins.
+                      </span>
+                    </div>
+                  </div>
+                  <!--//row-->
+
+                  <div class="callout-block callout-success">
+                    <div class="icon-holder">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Checkpoint</h4>
+                      <p>
+                        Plug in the arduino to make sure it's still working. The
+                        LED should blink 3 times.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                  <hr />
+
+                  <h3 id="step2" class="block-title">
+                    Step 2 - Install Buttons
+                  </h3>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <p>
+                        To install the buttons, place them into the button slots
+                        and bend the pins over before soldering them down.
+                      </p>
+                      <p>
+                        You should also put the resistors in so that we can test
+                        the buttons.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <h6>Installation in Pictures</h6>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step2a.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step2a.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step2a.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        4 buttons and 4 10kΩ resistors.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step2b.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step2b.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step2b.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Bend the resistors into an <strong>n</strong> shape.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step2c.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step2c.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step2c.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Insert the resistors and the buttons into the PCB. The
+                        directions don't matter.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step2d.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step2d.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step2d.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Bend the legs of the buttons down, and bend the legs of
+                        the resistors as shown. This helps to keep in in place
+                        whle you solder it.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step2e.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step2e.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step2e.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Cut the excess legs off.
+                      </span>
+                    </div>
+                  </div>
+                  <!--//row-->
+
+                  <div class="callout-block callout-success">
+                    <div class="icon-holder">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Checkpoint</h4>
+                      <p>
+                        Pressing the buttons should light up the LED on the
+                        arduino.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                  <hr />
+                  <h3 id="step3" class="block-title">
+                    Step 3 - Install Indicator LEDs
+                  </h3>
+
+                  <p>Solder two LEDs into D1, and D3</p>
+                  <p>Solder two LED into D2, and D4</p>
+
+                  <div class="callout-block callout-warning">
+                    <div class="icon-holder">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Take Note</h4>
+                      <p>
+                        The LEDs are directional. The shorter leg goes into the
+                        square hole.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+
+                  <div class="row">
+                    <div class="col-12">
+                      <h6>Installation in Pictures</h6>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step3a.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step3a.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step3a.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        These are the required parts. 2x LEDs of each colour and
+                        4x 470Ω resistors.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step3b.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step3b.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step3b.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Make sure the shorter leg goes into the square hole.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step3c.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step3c.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step3c.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Insert the LEDs and the resistors into the PCB.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step3d.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step3d.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step3d.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Bend the legs to secure the LEDs and resistors.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step3e.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step3e.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step3e.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary"> Solder the parts in. </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step3f.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step3f.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step1f.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary"> Cut the excess. </span>
+                    </div>
+                  </div>
+                  <!--//row-->
+
+                  <div class="callout-block callout-success">
+                    <div class="icon-holder">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Checkpoint</h4>
+                      <p>
+                        When you turn on the arduino, the leds should flash in
+                        sequence. Pressing the buttons should also light up the
+                        corresponding LED.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                  <hr />
+                  <h3 id="step4" class="block-title">
+                    Step 4 - Install Clock Module
+                  </h3>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <h6>Installation in Pictures</h6>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step4a.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step4a.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step4a.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary"> Required Parts </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step4b.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step4b.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step4b.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Remove the battery before soldering.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step4c.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step4c.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step4c.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Stick the clock into the PCB, then use it to bend the
+                        pins straight. Fit it into the PCB after you're done.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step4d.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step4d.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step4d.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Solder one leg first. Use this to adjust the clock
+                        before soldering the rest of the legs. After that, bend
+                        the legs down or cut them off.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step4e.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step4e.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step4e.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        After that, put the battery back in. Plug the arduino
+                        in, and you should see a red light below to indicate
+                        that it's soldered properly.
+                      </span>
+                    </div>
+                  </div>
+                  <!--//row-->
+
+                  <div class="callout-block callout-success">
+                    <div class="icon-holder">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Checkpoint</h4>
+                      <p>
+                        There should be a red light below the clock module when
+                        the arduino is powered on. There is no way to test if
+                        the clock is working till a later step.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                  <hr />
+                  <hr />
+                  <h3 id="step5" class="block-title">
+                    Step 5 - Install Variable Resistor
+                  </h3>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <h6>Installation in Pictures</h6>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step5a.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step5a.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step5a.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        This is the variable resistor.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step5b.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step5b.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step5b.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Insert the resistor into the board.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step5c.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step5c.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step5c.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Bend the resistor legs down, then solder them in.
+                      </span>
+                    </div>
+                  </div>
+                  <!--//row-->
+
+                  <div class="callout-block callout-success">
+                    <div class="icon-holder">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Checkpoint</h4>
+                      <p>
+                        No checkpoint here unfortunately. Remember to turn the
+                        resistor all the way to the right so that we have
+                        maximum brightness when we first turn on the displays.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                  <hr />
+                  <h3 id="step6" class="block-title">
+                    Step 6 - Install First Digit
+                  </h3>
+
+                  <div class="callout-block callout-warning">
+                    <div class="icon-holder">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Important</h4>
+                      <p>
+                        Make sure that you put the IC and Display in the right
+                        way up. Once soldered it's <strong>very</strong> hard to
+                        fix.<br />
+                        The IC's notch should be facing up and the display's
+                        decimal point should be at the bottom.<br />
+                        If you are still unsure,
+                        <a href="https://youtu.be/nPhNFR0LcUQ?t=348"
+                          >please watch the video installation here</a
+                        >.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+
+                  <div class="row">
+                    <div class="col-12">
+                      <h6>Installation in Pictures</h6>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step6a.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step6a.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step6a.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary"> Grab the parts. </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step6b.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step6b.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step6b.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Insert the IC, display and resistor in the leftmost
+                        slot.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step6c.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step6c.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step6c.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Bend the pins down to secure them. You can choose not to
+                        bend the display and resistor pins for now if you want
+                        to cut them off later.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step6d.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step6d.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step6d.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary"> Solder everything. </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step6e.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step6e.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step6e.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Power the arduino. The leds should blink, and the
+                        display should show an 8 for a while before showing a
+                        number.
+                      </span>
+                    </div>
+                  </div>
+                  <!--//row-->
+                  <div class="callout-block callout-success">
+                    <div class="icon-holder">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Checkpoint</h4>
+                      <p>
+                        When we turn it on, the display will blink with a
+                        <code>-</code> followed by <code>8</code>, and finally
+                        it will show a number (most likely <code>2</code>). If
+                        that happens, that means that your clock, and display is
+                        all working.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                  <hr />
+                  <hr />
+                  <h3 id="step7" class="block-title">
+                    Step 7 - Install Rest of Display
+                  </h3>
+
+                  <p>
+                    Repeat step 6 for the other digits. You can test each one
+                    after you install it. Please make sure you don't solder
+                    while the device is plugged in.
+                  </p>
+
+                  <div class="callout-block callout-warning">
+                    <div class="icon-holder">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Important</h4>
+                      <p>
+                        I've mentioned this in the previous section, but it
+                        bears repeating<br />
+                        Make sure that you put the IC and Display in the right
+                        way up. Once soldered it's <strong>very</strong> hard to
+                        fix.<br />
+                        The IC's notch should be facing up and the display's
+                        decimal point should be at the bottom.<br />
+                        If you are still unsure,
+                        <a href="https://youtu.be/nPhNFR0LcUQ?t=348"
+                          >please watch the video installation here</a
+                        >.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                  <div class="row">
+                    <div class="col-12">
+                      <h6>Installation in Pictures</h6>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step7a.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step7a.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step7a.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary"> Grab the parts. </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step7b.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step7b.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step7b.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Put them all in. Check the direction. <br />
+                        Bend all the pins down.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step7c.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step7c.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step7c.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        Solder everything, and cut off the legs.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step7d.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step7d.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step7d.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        When you power on, everything should blink a bit.
+                      </span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 mb-3">
+                      <div class="image-holder mt-2 mb-2">
+                        <a
+                          href="/assets/images/v2/assembly/step7e.jpg"
+                          data-toggle="lightbox"
+                          ><img
+                            class="img-fluid"
+                            src="/assets/images/v2/assembly/step7e.jpg"
+                            alt="image"
+                        /></a>
+                        <a
+                          class="mask"
+                          href="/assets/images/v2/assembly/step7e.jpg"
+                          data-toggle="lightbox"
+                          ><i class="icon fa fa-search-plus"></i
+                        ></a>
+                      </div>
+                      <span class="text-secondary">
+                        The displays should eventually show a countdown.
+                      </span>
+                    </div>
+                  </div>
+                  <!--//row-->
+
+                  <div class="callout-block callout-success">
+                    <div class="icon-holder">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <!--//icon-holder-->
+                    <div class="content">
+                      <h4 class="callout-title">Checkpoint</h4>
+                      <p>
+                        You will see the arduino flash with the words
+                        <code>-LIFECLO.CC-</code> followed by
+                        <code>88888888888</code> and finally show a number.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                  <hr />
+                  <hr />
+                  <h3 id="step8" class="block-title">
+                    Step 8 - Testing and Setup
+                  </h3>
+
+                  <h6>Debug Mode</h6>
+                  <p>
+                    To enter debug mode, press and hold all 4 buttons for 3
+                    seconds. This will cause all the lights to turn on. This
+                    helps you determine if ther are any broken parts.
+                  </p>
+
+                  <h6>Debug Mode</h6>
+                  <p>Turn the brightness dial to make sure it's working</p>
+                  <h6>Setting the date and time</h6>
+                  <p>
+                    Please refer to the
+                    <a href="/v2a/operation.html" target="_blank"
+                      >operation manual</a
+                    >
+                    to setup the date, time and birthday.
+                  </p>
+
+                  <h6>Checking if clock is working</h6>
+                  <p>
+                    Unplug and plug it back in, the countdown should not have
+                    reset. (Make sure your button battery is in the clock
+                    module)
+                  </p>
+                  <hr />
+                </div>
+                <!--//section-block-->
+              </section>
+
+              <section id="troubleshooting" class="doc-section">
+                <h2 class="section-title">Troubleshooting</h2>
+                <div class="section-block"></div>
+              </section>
+
+              <section id="programming" class="doc-section">
+                <h2 class="section-title">Programming</h2>
+                <div class="section-block">
+                  <p>
+                    This board was made to be hackable. What that means is that
+                    the source code is open and you are free to do whatever you
+                    want to do with it.
+                  </p>
+
+                  <p>
+                    In order to program this, you need to download the arduino
+                    IDE, and the Teensyduino plugin. You also need a
+                    <strong>mini</strong> USB B cable to program it.
+                  </p>
+
+                  <p>
+                    The pins on the top of the board also act as a breakout to
+                    the Teensy, so you can attach other devices to the Teensy if
+                    you wish.
+                  </p>
+                </div>
+              </section>
+
+              <section id="updating" class="doc-section">
+                <h2 class="section-title">Updating</h2>
+                <div class="section-block">
+                  <p>
+                    The microcontroller will come pre-programmed with the
+                    lifeclocc firmware.
+                  </p>
+                </div>
+              </section>
+            </div>
+
+            <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+              <div id="doc-nav" class="doc-nav">
+                <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                  <a class="nav-link scrollto" href="#prep">Preperation</a>
+                  <nav class="doc-sub-menu nav flex-column">
+                    <a class="nav-link scrollto" href="#prereq"
+                      >Prerequisites</a
+                    >
+                    <a class="nav-link scrollto" href="#tools">Tools</a>
+                    <a class="nav-link scrollto" href="#parts">Parts List</a>
+                    <a class="nav-link scrollto" href="#best">Best Practices</a>
+                  </nav>
+                  <!--//nav-->
+                  <a class="nav-link scrollto" href="#video">Video Tutorial</a>
+                  <a class="nav-link scrollto" href="#assembly"
+                    >Assembly Steps</a
+                  >
+                  <nav class="doc-sub-menu nav flex-column">
+                    <a class="nav-link scrollto" href="#step0"
+                      >Step 0 - Test Microcontroller</a
+                    >
+                    <a class="nav-link scrollto" href="#step1"
+                      >Step 1 - Microcontroller</a
+                    >
+                    <a class="nav-link scrollto" href="#step2"
+                      >Step 2 - Buttons</a
+                    >
+                    <a class="nav-link scrollto" href="#step3"
+                      >Step 3 - Indicator LEDs</a
+                    >
+                    <a class="nav-link scrollto" href="#step4"
+                      >Step 4 - Clock Module</a
+                    >
+                    <a class="nav-link scrollto" href="#step5"
+                      >Step 5 - Variable Resistor</a
+                    >
+                    <a class="nav-link scrollto" href="#step6"
+                      >Step 6 - First Digit</a
+                    >
+                    <a class="nav-link scrollto" href="#step7"
+                      >Step 7 - Other Digits</a
+                    >
+                    <a class="nav-link scrollto" href="#step8"
+                      >Step 8 - Testing and Setup</a
+                    >
+                  </nav>
+                  <a class="nav-link scrollto" href="#troubleshooting"
+                    >Troubleshooting</a
+                  >
+                  <a class="nav-link scrollto" href="#programming"
+                    >Programming</a
+                  >
+
+                  <a class="nav-link scrollto" href="#"></a>
+                  <nav class="doc-sub-menu nav flex-column">
+                    <a class="nav-link scrollto" href="#"></a>
+                    <a class="nav-link scrollto" href="#"></a>
+                  </nav>
+                  <!--//nav-->
                 </nav>
-                <a class="nav-link scrollto" href="#troubleshooting">Troubleshooting</a>
-                <a class="nav-link scrollto" href="#programming">Programming</a>
-                      
-                <a class="nav-link scrollto" href="#"></a>
-                <nav class="doc-sub-menu nav flex-column">
-                  <a class="nav-link scrollto" href="#"></a>
-                  <a class="nav-link scrollto" href="#"></a>
-                </nav><!--//nav-->
-              </nav>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div><!--//page-wrapper-->
-  
-  <footer class="footer text-center">
-    <div class="container">
-      <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-      <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
-      
-    </div><!--//container-->
-  </footer><!--//footer-->
-  
-  <!-- Main Javascript -->      
-  <script type="text/javascript" src="/assets/plugins/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>   
-  <script type="text/javascript" src="/assets/plugins/stickyfill/dist/stickyfill.min.js"></script>     
-  <script type="text/javascript" src="/assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
-  <script type="text/javascript" src="/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
-  <script type="text/javascript" src="/assets/js/main.js"></script>
-  
-  
-</body>
+    <!--//page-wrapper-->
+
+    <footer class="footer text-center">
+      <div class="container">
+        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+        <small class="copyright"
+          >Designed with <i class="fas fa-heart"></i> by
+          <a href="https://themes.3rdwavemedia.com/" target="_blank"
+            >Xiaoying Riley</a
+          >
+          for developers</small
+        >
+      </div>
+      <!--//container-->
+    </footer>
+    <!--//footer-->
+
+    <!-- Main Javascript -->
+    <script
+      type="text/javascript"
+      src="/assets/plugins/jquery-3.4.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="/assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script
+      type="text/javascript"
+      src="/assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+    <script
+      type="text/javascript"
+      src="/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+  </body>
+</html>
