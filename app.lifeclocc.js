@@ -188,7 +188,7 @@ setStaticPages("metrom.", "lifeclo.cc_site/metro");
 setStaticPages("how.metrom.", "lifeclo.cc_site/metro-how");
 
 // All subdomains will have an assets subfolder
-app.use("/assets", express.static("lifeclo.cc_site/assets"));
+app.use("/assets", express.static("/shared_assets"));
 
 app.listen(port, () =>
   console.log(`Lifeclo.cc app listening on port ${port}!`)

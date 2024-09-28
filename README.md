@@ -12,15 +12,15 @@ You can find the rest of the source files over here:
 
 # Local Development
 
-Runs node 18
+Runs node 20
 
 To run the lifeclo.cc site
 
-`npm run dev:lifeclocc`
+`npm run start:lifeclocc`
 
 To run the metrom.app site
 
-`npm run dev:metro`
+`npm run start:metro`
 
 To run both at the same time
 
@@ -31,6 +31,14 @@ To run both at the same time
 This site is deployed manually to the server using docker.
 
 ## Docker Deployment
+
+You can run this command that will do everything for you.
+
+```
+npm run docker:buildx:upload
+```
+
+If you want to do it manually, here's how.
 
 Build the docker file
 
@@ -77,3 +85,7 @@ Run the docker container on the server
 Accessing files in the container
 
 `docker exec -it lifeclocc-metrom /bin/bash`
+
+## On the server
+
+You can run the script `./update_lifeclocc_metrom.sh` to update the docker image and restart the docker container.

@@ -26,7 +26,8 @@
     "docker:rm": "docker rm lifeclocc-metrom",
     "docker:load": "docker load -i lifeclocc-metrom.tar",
     "docker:rsync": "rsync -azP lifeclocc-metrom.tar root@cjx3711.com:/root/projects/lifeclocc-metrom/",
-    "clean": "rimraf dist"
+    "delete:tar": "rm lifeclocc-metrom.tar",
+    "docker:buildx:upload": "npm run docker:buildx && npm run docker:save && npm run docker:rsync && npm run delete:tar"
   },
   "repository": {
     "type": "git",

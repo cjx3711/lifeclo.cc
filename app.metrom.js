@@ -13,7 +13,7 @@ setStaticPages("", "metrom.app/main");
 setStaticPages("how.", "metrom.app/how");
 
 // All subdomains will have an assets subfolder
-app.use("/assets", express.static("site/assets"));
+app.use("/assets", express.static("shared_assets"));
 
 app.listen(port, () =>
   console.log(`MetroM.app app listening on port ${port}!`)
