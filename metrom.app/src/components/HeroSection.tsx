@@ -13,7 +13,6 @@ const HeroSection = () => {
       alignItems="center"
       sx={{ minHeight: "80vh" }}>
       <Box flex={1}>
-        <h1>{t("hero.title")}</h1>
         <p>{t("hero.description")}</p>
       </Box>
 

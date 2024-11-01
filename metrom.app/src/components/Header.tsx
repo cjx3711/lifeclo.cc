@@ -2,23 +2,73 @@ import { Button } from "@mui/base";
 import { Box, Stack, styled } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import logo from "../assets/logo.png";
+import LanguageSwitch from "./LanguageSwitch";
 
 const NavButton = styled(Button)({
-  padding: "8px 20px",
+  padding: "8px 10px",
   borderRadius: "4px",
-  color: "#DDAA55",
+  width: "100px",
+  height: "36px",
+  color: "#D9AD68",
   backgroundColor: "transparent",
   border: "none",
   transition: "all 0.15s ease-in-out",
   cursor: "pointer",
   "&:hover": {
-    backgroundColor: "#DDAA55",
+    backgroundColor: "#D9AD68",
     color: "#fff",
   },
 });
 
+const MobileMenuButton = styled(Button)({
+  display: "none",
+  backgroundColor: "transparent",
+  border: "none",
+  padding: "8px",
+  cursor: "pointer",
+  "@media (max-width: 600px)": {
+    display: "block",
+  },
+});
+
+const HamburgerIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="#D9AD68">
+    <rect y="4" width="24" height="2" rx="1" />
+    <rect y="11" width="24" height="2" rx="1" />
+    <rect y="18" width="24" height="2" rx="1" />
+  </svg>
+);
+
+const MobileMenu = styled(Box)(({ isOpen }: { isOpen: boolean }) => ({
+  position: "fixed",
+  top: "72px",
+  left: 0,
+  backgroundColor: "rgba(0, 52, 29, 0.95)",
+  backdropFilter: "blur(8px)",
+  width: "calc(100% - 2rem)",
+  transform: isOpen ? "translateY(0)" : "translateY(-20%)",
+  opacity: isOpen ? 1 : 0,
+  pointerEvents: isOpen ? "auto" : "none",
+  transition: "transform 0.3s ease, opacity 0.3s ease",
+  padding: "1rem",
+  boxShadow: "-4px 0 8px rgba(0,0,0,0.2)",
+  display: "none",
+  "@media (max-width: 600px)": {
+    display: "block",
+  },
+}));
+
+const NavButtons = styled(Stack)(({ isMobile }: { isMobile: boolean }) => ({
+  display: isMobile ? "none" : "flex",
+  "@media (max-width: 600px)": {
+    display: isMobile ? "flex" : "none",
+  },
+}));
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -38,6 +88,7 @@ const Header = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -47,15 +98,18 @@ const Header = () => {
         top: 0,
         padding: "1rem",
         zIndex: 1000,
-        backgroundColor: isScrolled
-          ? "rgba(170, 170, 170, 0.1)"
-          : "transparent",
-        backdropFilter: isScrolled ? "blur(4px)" : "none",
-        borderBottom: isScrolled
-          ? "1px solid rgba(255, 255, 255, 0.1)"
-          : "none",
-        boxShadow: isScrolled ? "0 4px 8px rgba(0,0,0,0.2)" : "none",
-        transition: "all 0.3s ease-in-out",
+        backgroundColor:
+          isScrolled || isMobileMenuOpen
+            ? "rgba(10, 10, 10, 0.6)"
+            : "transparent",
+        backdropFilter: isScrolled || isMobileMenuOpen ? "blur(4px)" : "none",
+        borderBottom:
+          isScrolled || isMobileMenuOpen
+            ? "2px solid rgba(120, 120, 120, 0.2)"
+            : "none",
+        boxShadow:
+          isScrolled || isMobileMenuOpen ? "0 4px 8px rgba(0,0,0,0.2)" : "none",
+        transition: "all 0.2s ease-in-out",
       }}>
       <Stack
         direction="row"
@@ -63,15 +117,50 @@ const Header = () => {
         alignItems="center"
         sx={{ maxWidth: "1200px", margin: "0 auto" }}>
         <img
-          src="https://via.placeholder.com/150"
+          src={logo}
           alt="Logo"
-          style={{ height: "40px" }}
+          style={{
+            height: "40px",
+            filter: "drop-shadow(0 0 1px rgba(255, 255, 255, 0.5))",
+          }}
         />
 
         <Stack direction="row" spacing={2} alignItems="center">
-          <NavButton onClick={toggleLanguage}>
-            {i18n.language === "en" ? "日本語" : "English"}
-          </NavButton>
+          <LanguageSwitch
+            isJapanese={i18n.language === "ja"}
+            onToggle={toggleLanguage}
+          />
+
+          {/* Desktop Menu */}
+          <NavButtons isMobile={false} direction="row" spacing={2}>
+            <NavButton onClick={() => scrollToSection("hero")}>
+              {t("header.home")}
+            </NavButton>
+            <NavButton onClick={() => scrollToSection("about")}>
+              {t("header.about")}
+            </NavButton>
+            <NavButton onClick={() => scrollToSection("products")}>
+              {t("header.products")}
+            </NavButton>
+            <NavButton
+              onClick={() => {
+                window.open("https://old.metrom.app", "_blank");
+              }}>
+              {t("header.old")}
+            </NavButton>
+          </NavButtons>
+
+          {/* Mobile Menu Button */}
+          <MobileMenuButton
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <HamburgerIcon />
+          </MobileMenuButton>
+        </Stack>
+      </Stack>
+
+      {/* Mobile Menu */}
+      <MobileMenu isOpen={isMobileMenuOpen}>
+        <NavButtons isMobile={true} direction="column" spacing={2}>
           <NavButton onClick={() => scrollToSection("hero")}>
             {t("header.home")}
           </NavButton>
@@ -87,8 +176,8 @@ const Header = () => {
             }}>
             {t("header.old")}
           </NavButton>
-        </Stack>
-      </Stack>
+        </NavButtons>
+      </MobileMenu>
     </Box>
   );
 };
