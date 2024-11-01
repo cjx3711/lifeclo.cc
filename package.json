@@ -6,6 +6,7 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.3",
     "sqlite3": "^5.1.7",
     "vhost": "^3.0.2"
   },
@@ -15,9 +16,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "start:lifeclocc": "node app.lifeclocc.js",
-    "start:metro": "node app.metrom.js",
-    "dev": "node_modules/.bin/concurrently \"npm run start:lifeclocc\" \"npm run start:metro\"",
+    "dev:lifeclocc": "node app.lifeclocc.js",
+    "dev:metro-old": "node app.metrom.js",
+    "dev:metro": "cd metrom.app && npm run dev",
+    "dev": "node_modules/.bin/concurrently \"npm run dev:lifeclocc\" \"npm run dev:metro-old\" \"npm run dev:metro\"",
     "docker:build": "docker build -t lifeclocc-metrom .",
     "docker:buildx": "docker buildx build --platform linux/amd64 -t lifeclocc-metrom . --load",
     "docker:run": "docker run --name lifeclocc-metrom -p 2030:2030 -p 2020:2020 lifeclocc-metrom",
@@ -27,6 +29,7 @@
     "docker:load": "docker load -i lifeclocc-metrom.tar",
     "docker:rsync": "rsync -azP lifeclocc-metrom.tar root@cjx3711.com:/root/projects/lifeclocc-metrom/",
     "delete:tar": "rm lifeclocc-metrom.tar",
+    "docker:buildx:save": "npm run docker:buildx && npm run docker:save",
     "docker:buildx:upload": "npm run docker:buildx && npm run docker:save && npm run docker:rsync && npm run delete:tar"
   },
   "repository": {
