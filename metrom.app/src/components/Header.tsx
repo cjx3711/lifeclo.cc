@@ -1,12 +1,18 @@
 import { Box, Stack } from "@mui/system";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "ja" : "en";
+    i18n.changeLanguage(newLang);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      // You can adjust this value (50) to change when the background appears
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -47,10 +53,26 @@ const Header = () => {
           style={{ height: "40px" }}
         />
 
-        <Stack direction="row" spacing={4}>
-          <button onClick={() => scrollToSection("hero")}>Home</button>
-          <button onClick={() => scrollToSection("about")}>About</button>
-          <button onClick={() => scrollToSection("products")}>Products</button>
+        <Stack direction="row" spacing={4} alignItems="center">
+          <button onClick={() => scrollToSection("hero")}>
+            {t("header.home")}
+          </button>
+          <button onClick={() => scrollToSection("about")}>
+            {t("header.about")}
+          </button>
+          <button onClick={() => scrollToSection("products")}>
+            {t("header.products")}
+          </button>
+          <button
+            onClick={toggleLanguage}
+            style={{
+              padding: "4px 8px",
+              borderRadius: "4px",
+              backgroundColor: "#444",
+              color: "#fff",
+            }}>
+            {i18n.language === "en" ? "日本語" : "English"}
+          </button>
         </Stack>
       </Stack>
     </Box>

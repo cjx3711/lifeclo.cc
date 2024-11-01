@@ -1,0 +1,30 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products"
+  },
+  "hero": {
+    "title": "Welcome to Our Company",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "products": {
+    "title": "Our Products",
+    "product1": {
+      "title": "Product 1",
+      "description": "Description 1"
+    },
+    "product2": {
+      "title": "Product 2",
+      "description": "Description 2"
+    },
+    "product3": {
+      "title": "Product 3",
+      "description": "Description 3"
+    }
+  }
+}

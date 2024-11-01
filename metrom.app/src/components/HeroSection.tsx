@@ -1,6 +1,10 @@
 import { Stack, Box } from "@mui/system";
+import SkewedImage from "./SkewedImage";
+import { useTranslation } from "react-i18next";
+import tokyo from "../assets/tokyo.jpg";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <Stack
       id="hero"
@@ -9,18 +13,17 @@ const HeroSection = () => {
       alignItems="center"
       sx={{ minHeight: "80vh" }}>
       <Box flex={1}>
-        <h1>Welcome to Our Company</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <h1>{t("hero.title")}</h1>
+        <p>{t("hero.description")}</p>
       </Box>
 
       <Box flex={1}>
-        <img
-          src="https://via.placeholder.com/500"
+        <SkewedImage
+          imageUrl={"/favicon.png"}
           alt="Hero"
-          style={{ width: "100%", minHeight: "300px", backgroundColor: "red" }}
+          startAngle={13}
+          finalAngle={10}
+          lock={false}
         />
       </Box>
     </Stack>

@@ -1,24 +1,40 @@
-import { Box } from "@mui/system";
+import { Stack } from "@mui/system";
+import SkewedImage from "./SkewedImage";
 
 interface ProductCardProps {
   title: string;
   description: string;
   image: string;
+  angles: { start: number; final: number };
 }
 
-const ProductCard = ({ title, description, image }: ProductCardProps) => {
+const ProductCard = ({
+  title,
+  description,
+  image,
+  angles,
+}: ProductCardProps) => {
   return (
-    <Box
+    <Stack
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+      spacing={2}
       sx={{
         width: "300px",
         padding: "1rem",
-        border: "1px solid #eee",
-        borderRadius: "8px",
       }}>
-      <img src={image} alt={title} style={{ width: "100%", height: "auto" }} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </Box>
+      <SkewedImage
+        imageUrl={image}
+        alt={title}
+        startAngle={angles.start}
+        finalAngle={angles.final}
+        lock={false}
+      />
+
+      <h3 style={{ marginTop: "50px" }}>{title}</h3>
+      <p style={{ marginBottom: "70px" }}>{description}</p>
+    </Stack>
   );
 };
 

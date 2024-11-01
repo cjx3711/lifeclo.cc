@@ -23,6 +23,8 @@ function App() {
         <HeroSection />
         <AboutSection />
         <ProductsSection />
+
+        <Box sx={{ height: "400px" }} />
       </Stack>
     </MetroGridBackground>
   );

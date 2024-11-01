@@ -1,0 +1,30 @@
+{
+  "header": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "products": "製品"
+  },
+  "hero": {
+    "title": "私たちの会社へようこそ",
+    "description": "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+  },
+  "about": {
+    "title": "会社概要",
+    "description": "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+  },
+  "products": {
+    "title": "製品一覧",
+    "product1": {
+      "title": "製品 1",
+      "description": "説明 1"
+    },
+    "product2": {
+      "title": "製品 2",
+      "description": "説明 2"
+    },
+    "product3": {
+      "title": "製品 3",
+      "description": "説明 3"
+    }
+  }
+}
