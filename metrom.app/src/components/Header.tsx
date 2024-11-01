@@ -1,6 +1,21 @@
-import { Box, Stack } from "@mui/system";
+import { Button } from "@mui/base";
+import { Box, Stack, styled } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+const NavButton = styled(Button)({
+  padding: "8px 20px",
+  borderRadius: "4px",
+  color: "#DDAA55",
+  backgroundColor: "transparent",
+  border: "none",
+  transition: "all 0.15s ease-in-out",
+  cursor: "pointer",
+  "&:hover": {
+    backgroundColor: "#DDAA55",
+    color: "#fff",
+  },
+});
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,26 +68,25 @@ const Header = () => {
           style={{ height: "40px" }}
         />
 
-        <Stack direction="row" spacing={4} alignItems="center">
-          <button onClick={() => scrollToSection("hero")}>
-            {t("header.home")}
-          </button>
-          <button onClick={() => scrollToSection("about")}>
-            {t("header.about")}
-          </button>
-          <button onClick={() => scrollToSection("products")}>
-            {t("header.products")}
-          </button>
-          <button
-            onClick={toggleLanguage}
-            style={{
-              padding: "4px 8px",
-              borderRadius: "4px",
-              backgroundColor: "#444",
-              color: "#fff",
-            }}>
+        <Stack direction="row" spacing={2} alignItems="center">
+          <NavButton onClick={toggleLanguage}>
             {i18n.language === "en" ? "日本語" : "English"}
-          </button>
+          </NavButton>
+          <NavButton onClick={() => scrollToSection("hero")}>
+            {t("header.home")}
+          </NavButton>
+          <NavButton onClick={() => scrollToSection("about")}>
+            {t("header.about")}
+          </NavButton>
+          <NavButton onClick={() => scrollToSection("products")}>
+            {t("header.products")}
+          </NavButton>
+          <NavButton
+            onClick={() => {
+              window.open("https://old.metrom.app", "_blank");
+            }}>
+            {t("header.old")}
+          </NavButton>
         </Stack>
       </Stack>
     </Box>
