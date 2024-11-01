@@ -9,8 +9,8 @@ function setStaticPages(subdomain, directory) {
   app.use(vhost(`${subdomain}localhost`, express.static(`${directory}`)));
   app.use(vhost(`${subdomain}metrom.app`, express.static(`${directory}`)));
 }
-setStaticPages("", "metrom.app/main");
-setStaticPages("how.", "metrom.app/how");
+setStaticPages("old.", "old.metrom.app/main");
+setStaticPages("old.how.", "old.metrom.app/how");
 
 // All subdomains will have an assets subfolder
 app.use("/assets", express.static("shared_assets"));
