@@ -4,6 +4,7 @@
   "description": "The static landing page for the lifeclo.cc site.",
   "private": true,
   "dependencies": {
+    "@emotion/styled": "^11.13.0",
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "http-proxy-middleware": "^3.0.3",
