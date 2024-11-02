@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { Box } from "@mui/system";
+import { Box, height, Stack, width } from "@mui/system";
 
 interface SkewedImageProps {
   startAngle: number;
   finalAngle: number;
   lock: boolean;
   imageUrl: string;
+  text?: string;
   alt?: string;
 }
 
@@ -16,6 +17,7 @@ const SkewedImage: React.FC<SkewedImageProps> = ({
   finalAngle,
   lock,
   imageUrl,
+  text,
   alt = "",
 }) => {
   const [rotation, setRotation] = useState(startAngle);
@@ -60,13 +62,32 @@ const SkewedImage: React.FC<SkewedImageProps> = ({
 
   return (
     <Box
+      className="skewed-image"
       ref={imageRef}
       sx={{
+        position: "relative",
         transform: `rotate(${rotation}deg)`,
         transition: "transform 0.1s ease-out",
         filter: `drop-shadow(${dropShadow}px ${dropShadow}px 1px rgba(0, 0, 0, 0.8))`,
       }}>
       <img src={imageUrl} alt={alt} style={{ width: "100%" }} />
+      {text && (
+        <Stack
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            fontSize: "1.2rem",
+            fontWeight: "500",
+            width: "100%",
+            height: "100%",
+            filter: `drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.8))`,
+          }}
+          justifyContent={"center"}
+          alignItems={"center"}>
+          {text}
+        </Stack>
+      )}
     </Box>
   );
 };

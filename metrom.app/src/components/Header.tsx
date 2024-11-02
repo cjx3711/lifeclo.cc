@@ -22,13 +22,17 @@ const NavButton = styled(Button)({
   },
 });
 
+const MobileNavButton = styled(NavButton)({
+  width: "100%",
+});
+
 const MobileMenuButton = styled(Button)({
   display: "none",
   backgroundColor: "transparent",
   border: "none",
   padding: "8px",
   cursor: "pointer",
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     display: "block",
   },
 });
@@ -55,14 +59,14 @@ const MobileMenu = styled(Box)(({ isOpen }: { isOpen: boolean }) => ({
   padding: "1rem",
   boxShadow: "-4px 0 8px rgba(0,0,0,0.2)",
   display: "none",
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     display: "block",
   },
 }));
 
 const NavButtons = styled(Stack)(({ isMobile }: { isMobile: boolean }) => ({
   display: isMobile ? "none" : "flex",
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     display: isMobile ? "flex" : "none",
   },
 }));
@@ -133,7 +137,13 @@ const Header = () => {
           />
 
           {/* Desktop Menu */}
-          <NavButtons isMobile={false} direction="row" spacing={2}>
+          <NavButtons
+            isMobile={false}
+            direction="row"
+            spacing={{
+              xs: 0,
+              md: 3,
+            }}>
             <NavButton onClick={() => scrollToSection("hero")}>
               {t("header.home")}
             </NavButton>
@@ -162,21 +172,21 @@ const Header = () => {
       {/* Mobile Menu */}
       <MobileMenu isOpen={isMobileMenuOpen}>
         <NavButtons isMobile={true} direction="column" spacing={2}>
-          <NavButton onClick={() => scrollToSection("hero")}>
+          <MobileNavButton onClick={() => scrollToSection("hero")}>
             {t("header.home")}
-          </NavButton>
-          <NavButton onClick={() => scrollToSection("about")}>
-            {t("header.about")}
-          </NavButton>
-          <NavButton onClick={() => scrollToSection("products")}>
+          </MobileNavButton>
+          <MobileNavButton onClick={() => scrollToSection("about")}>
+            {t("header.features")}
+          </MobileNavButton>
+          <MobileNavButton onClick={() => scrollToSection("products")}>
             {t("header.products")}
-          </NavButton>
-          <NavButton
+          </MobileNavButton>
+          <MobileNavButton
             onClick={() => {
               window.open("https://old.metrom.app", "_blank");
             }}>
             {t("header.old")}
-          </NavButton>
+          </MobileNavButton>
         </NavButtons>
       </MobileMenu>
     </Box>

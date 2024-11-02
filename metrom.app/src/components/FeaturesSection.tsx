@@ -12,7 +12,11 @@ const FeaturesSection = () => {
       spacing={4}
       alignItems="center"
       sx={{ minHeight: "80vh" }}>
-      <Box flex={1}>
+      <Box
+        flex={1}
+        padding={4}
+        maxWidth={{ xs: "500px", md: "100%" }}
+        mx="auto">
         <SkewedImage
           imageUrl={tokyo}
           alt="About"
@@ -22,7 +26,11 @@ const FeaturesSection = () => {
         />
       </Box>
 
-      <Box flex={1}>
+      <Box
+        flex={1}
+        padding={4}
+        maxWidth={{ xs: "500px", md: "100%" }}
+        mx="auto">
         <h1>{t("features.title")}</h1>
         <h2>{t("features.subtitle1")}</h2>
         <p>{t("features.description1")}</p>

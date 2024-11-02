@@ -1,23 +1,34 @@
 import { Stack } from "@mui/system";
 import SkewedImage from "./SkewedImage";
-import { useState } from "react";
-import Modal from "./Modal";
+import styled from "@emotion/styled";
 
 interface ProductCardProps {
   title: string;
-  description: string;
+  description?: string;
+  stamp?: string;
   image: string;
   angles: { start: number; final: number };
-  isProduct: boolean;
   onClick: () => void;
 }
+
+const Title = styled.h2`
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 1rem;
+`;
+
+const Subtitle = styled.p`
+  font-size: 1rem;
+  margin: 0;
+`;
 
 const ProductCard = ({
   title,
   description,
+  stamp,
   image,
   angles,
-  isProduct,
   onClick,
 }: ProductCardProps) => {
   return (
@@ -31,10 +42,7 @@ const ProductCard = ({
         sx={{
           width: "300px",
           padding: "1rem",
-          backgroundColor: isProduct
-            ? "transparent"
-            : "rgba(255, 255, 255, 0.05)",
-          borderRadius: isProduct ? 0 : "8px",
+          backgroundColor: "transparent",
           cursor: "pointer",
           transition: "transform 0.2s ease-in-out",
           "&:hover": {
@@ -47,17 +55,18 @@ const ProductCard = ({
           startAngle={angles.start}
           finalAngle={angles.final}
           lock={false}
+          text={stamp}
         />
-
-        <h3 style={{ marginTop: "50px" }}>{title}</h3>
-        <p
-          style={{
-            marginBottom: "70px",
-            fontSize: isProduct ? "1rem" : "0.9rem",
-            opacity: isProduct ? 0.9 : 0.7,
-          }}>
-          {description}
-        </p>
+        <Stack
+          sx={{
+            height: "100px",
+          }}
+          justifyContent={"flex-start"}
+          alignItems={"center"}
+          gap={0}>
+          <Title>{title}</Title>
+          {description && <Subtitle>{description}</Subtitle>}
+        </Stack>
       </Stack>
     </>
   );
