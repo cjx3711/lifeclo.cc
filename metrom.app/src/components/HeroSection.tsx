@@ -1,7 +1,6 @@
-import { Stack, Box } from "@mui/system";
-import SkewedImage from "./SkewedImage";
+import { Box, Stack } from "@mui/system";
 import { useTranslation } from "react-i18next";
-import tokyo from "../assets/tokyo.jpg";
+import SkewedImage from "./SkewedImage";
 
 const HeroSection = () => {
   const { t } = useTranslation();

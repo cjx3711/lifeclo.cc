@@ -1,31 +1,62 @@
 {
   "header": {
     "home": "ホーム",
-    "about": "会社概要",
+    "features": "特徴",
     "products": "製品",
     "old": "MetroM 2021"
   },
   "hero": {
-    "title": "私たちの会社へようこそ",
-    "description": "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+    "description": "プリント基板（PCB）は美しいものです。\n\n機能的で地域社会に貢献する鉄道網はさらに素晴らしいものです。\n\nMetroMは、怠け者の頭の中で数年前に生まれた、この2つを組み合わせた突飛なアイデアです。"
   },
-  "about": {
-    "title": "会社概要",
-    "description": "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+  "features": {
+    "title": "MetroM 2024の新機能：",
+    "subtitle1": "美しいディスプレイ作品",
+    "description1": "壁掛けや卓上など、設置方法が選べます",
+    "subtitle2": "より明るく鮮やかな光",
+    "description2": "USB-C電源対応",
+    "subtitle3": "2つのバージョン",
+    "description3": "ニーズと予算に応じて選択可能"
   },
   "products": {
-    "title": "製品一覧",
-    "product1": {
-      "title": "製品 1",
-      "description": "説明 1"
+    "series_title": "MetroMシリーズ一覧",
+    "products": {
+      "jr": "JR路線図",
+      "metro": "東京メトロ",
+      "sg2030": "シンガポールMRT 2030",
+      "sf": "サンフランシスコ・ベイエリア",
+      "taiwan": "台湾MRT",
+      "hokkaido": "北海道JR",
+      "sapporo": "札幌市営地下鉄",
+      "london": "ロンドン地下鉄",
+      "paris": "パリメトロ"
     },
-    "product2": {
-      "title": "製品 2",
-      "description": "説明 2"
+    "tags": {
+      "display-light": "ディスプレイ＆発光バージョン",
+      "display": "ディスプレイバージョン",
+      "wip": "開発中",
+      "thinking": "企画検討中"
     },
-    "product3": {
-      "title": "製品 3",
-      "description": "説明 3"
+    "merch_title": "MetroMグッズ",
+    "merch": {
+      "tshirt": "Tシャツ",
+      "hoodie": "パーカー",
+      "pcb_lines": {
+        "title": "PCB路線図",
+        "subtitle": "マスキングテープ - ¥300"
+      },
+      "landmarks": {
+        "title": "東京ランドマーク",
+        "subtitle": "箔押しマスキングテープ - ¥500"
+      },
+      "postcards": {
+        "title": "MetroMポストカード",
+        "subtitle": "ペーパー製品"
+      }
     }
+  },
+  "modal": {
+    "coming_soon": "近日公開",
+    "contact_interest": "この製品は現在開発中です。ご興味がある方、詳細をお知りになりたい方はお問い合わせください。",
+    "close": "閉じる"
   }
 }

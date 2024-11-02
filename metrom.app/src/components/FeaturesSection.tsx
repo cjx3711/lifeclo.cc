@@ -3,7 +3,7 @@ import SkewedImage from "./SkewedImage";
 import { useTranslation } from "react-i18next";
 import tokyo from "../assets/tokyo.jpg";
 
-const AboutSection = () => {
+const FeaturesSection = () => {
   const { t } = useTranslation();
   return (
     <Stack
@@ -23,11 +23,16 @@ const AboutSection = () => {
       </Box>
 
       <Box flex={1}>
-        <h2>{t("about.title")}</h2>
-        <p>{t("about.description")}</p>
+        <h1>{t("features.title")}</h1>
+        <h2>{t("features.subtitle1")}</h2>
+        <p>{t("features.description1")}</p>
+        <h2>{t("features.subtitle2")}</h2>
+        <p>{t("features.description2")}</p>
+        <h2>{t("features.subtitle3")}</h2>
+        <p>{t("features.description3")}</p>
       </Box>
     </Stack>
   );
 };
 
-export default AboutSection;
+export default FeaturesSection;

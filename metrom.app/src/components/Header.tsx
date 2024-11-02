@@ -4,19 +4,20 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.png";
 import LanguageSwitch from "./LanguageSwitch";
+import { GOLD } from "../utils/colours";
 
 const NavButton = styled(Button)({
   padding: "8px 10px",
   borderRadius: "4px",
   width: "100px",
   height: "36px",
-  color: "#D9AD68",
+  color: GOLD,
   backgroundColor: "transparent",
   border: "none",
   transition: "all 0.15s ease-in-out",
   cursor: "pointer",
   "&:hover": {
-    backgroundColor: "#D9AD68",
+    backgroundColor: GOLD,
     color: "#fff",
   },
 });
@@ -33,7 +34,7 @@ const MobileMenuButton = styled(Button)({
 });
 
 const HamburgerIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="#D9AD68">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill={GOLD}>
     <rect y="4" width="24" height="2" rx="1" />
     <rect y="11" width="24" height="2" rx="1" />
     <rect y="18" width="24" height="2" rx="1" />
@@ -137,7 +138,7 @@ const Header = () => {
               {t("header.home")}
             </NavButton>
             <NavButton onClick={() => scrollToSection("about")}>
-              {t("header.about")}
+              {t("header.features")}
             </NavButton>
             <NavButton onClick={() => scrollToSection("products")}>
               {t("header.products")}

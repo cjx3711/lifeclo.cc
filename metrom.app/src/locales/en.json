@@ -1,30 +1,62 @@
 {
   "header": {
     "home": "Home",
-    "about": "About",
+    "features": "Features",
     "products": "Products",
     "old": "MetroM 2021"
   },
   "hero": {
     "description": "Well-planned printed circuit boards (PCB) are a thing of beauty.\n\nFunctional, community-serving train networks? Even more so.\n\nMetroM is an unholy amalgamation of the former with the latter conceived a couple of years ago in the mind of a serial procrastinator."
   },
-  "about": {
-    "title": "About Us",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  "features": {
+    "title": "MetroM 2024 has a few new features:",
+    "subtitle1": "Gorgeous display pieces",
+    "description1": "with options to hang on your wall or stand on your table",
+    "subtitle2": "Brighter & more vibrant lights",
+    "description2": "on a USB-C power supply",
+    "subtitle3": "Two versions available",
+    "description3": "depending on your needs & budget"
   },
   "products": {
-    "title": "Our Products",
-    "product1": {
-      "title": "Product 1",
-      "description": "Description 1"
+    "series_title": "The MetroM Series So Far",
+    "products": {
+      "jr": "Tokyo JR",
+      "metro": "Tokyo Metro",
+      "sg2030": "Singapore MRT 2030",
+      "sf": "San Francisco Bay Area",
+      "taiwan": "Taiwan MRT",
+      "hokkaido": "Hokkaido JR",
+      "sapporo": "Sapporo Metro",
+      "london": "London Underground",
+      "paris": "Paris Metro"
     },
-    "product2": {
-      "title": "Product 2",
-      "description": "Description 2"
+    "tags": {
+      "display-light": "Display & Light Up Versions",
+      "display": "Display Version",
+      "wip": "Work in Progress",
+      "thinking": "Still Thinking About This"
     },
-    "product3": {
-      "title": "Product 3",
-      "description": "Description 3"
+    "merch_title": "MetroM Merchandise",
+    "merch": {
+      "tshirt": "T-Shirt",
+      "hoodie": "Hoodie",
+      "pcb_lines": {
+        "title": "PCB Train Lines",
+        "subtitle": "Washi Tape - ¥300"
+      },
+      "landmarks": {
+        "title": "Tokyo Landmarks",
+        "subtitle": "Washi Tape with Gold Foil - ¥500"
+      },
+      "postcards": {
+        "title": "MetroM Postcards",
+        "subtitle": "Paper Product"
+      }
     }
+  },
+  "modal": {
+    "coming_soon": "Coming Soon",
+    "contact_interest": "This product is currently in development. Please contact us to express your interest or for more information.",
+    "close": "Close"
   }
 }

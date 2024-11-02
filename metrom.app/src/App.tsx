@@ -1,7 +1,7 @@
 import { Stack, Box, styled } from "@mui/system";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
+import FeaturesSection from "./components/FeaturesSection";
 import ProductsSection from "./components/ProductSection";
 
 const MetroGridBackground = styled(Box)({
@@ -21,7 +21,7 @@ function App() {
         spacing={8}
         sx={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
         <HeroSection />
-        <AboutSection />
+        <FeaturesSection />
         <ProductsSection />
 
         <Box sx={{ height: "400px" }} />
