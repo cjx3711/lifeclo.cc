@@ -23,6 +23,7 @@ const ProductsSection = () => {
       description: t("products.tags.display-light"),
       image: photo_tokyo,
       angles: { start: 6, final: 3 },
+      link: "",
     },
     {
       id: "metro",
@@ -30,6 +31,7 @@ const ProductsSection = () => {
       description: t("products.tags.display-light"),
       image: photo_tokyo,
       angles: { start: -7, final: -3 },
+      link: "",
     },
     {
       id: "sg2030",
@@ -37,6 +39,7 @@ const ProductsSection = () => {
       description: t("products.tags.display"),
       image: photo_tokyo,
       angles: { start: 7, final: 3 },
+      link: "www.google.com",
     },
     {
       id: "sf",
@@ -107,6 +110,8 @@ const ProductsSection = () => {
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [selectedProduct, setSelectedProduct] = useState();
 
   return (
     <>
