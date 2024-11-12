@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 interface ProductCardProps {
   title: string;
-  description?: string;
+  subtitle?: string;
   stamp?: string;
   image: string;
   angles: { start: number; final: number };
@@ -25,7 +25,7 @@ const Subtitle = styled.p`
 
 const ProductCard = ({
   title,
-  description,
+  subtitle,
   stamp,
   image,
   angles,
@@ -65,7 +65,7 @@ const ProductCard = ({
           alignItems={"center"}
           gap={0}>
           <Title>{title}</Title>
-          {description && <Subtitle>{description}</Subtitle>}
+          {subtitle && <Subtitle>{subtitle}</Subtitle>}
         </Stack>
       </Stack>
     </>

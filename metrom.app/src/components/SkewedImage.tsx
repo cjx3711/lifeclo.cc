@@ -1,5 +1,5 @@
+import { Box, Stack } from "@mui/system";
 import { useEffect, useRef, useState } from "react";
-import { Box, height, Stack, width } from "@mui/system";
 
 interface SkewedImageProps {
   startAngle: number;

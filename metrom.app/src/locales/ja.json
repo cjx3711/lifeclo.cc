@@ -55,8 +55,8 @@
     }
   },
   "modal": {
-    "coming_soon": "近日公開",
     "contact_interest": "この製品は現在開発中です。ご興味がある方、詳細をお知りになりたい方はお問い合わせください。",
-    "close": "閉じる"
+    "btn_buy_now": "購入する",
+    "btn_contact": "お問い合わせ"
   }
 }

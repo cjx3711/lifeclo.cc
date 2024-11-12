@@ -14,104 +14,129 @@ const SectionTitle = styled.h1`
   margin-bottom: 3rem;
 `;
 
+export type Product = {
+  id: string;
+  title: string;
+  subtitle?: string;
+  long_description?: string;
+  stamp?: string;
+  image_thumbnail: string;
+  image_full?: string;
+  link?: string;
+  price?: string;
+  angles: { start: number; final: number };
+};
+
 const ProductsSection = () => {
   const { t } = useTranslation();
-  const products = [
+  const products: Product[] = [
     {
       id: "jr",
       title: t("products.products.jr"),
-      description: t("products.tags.display-light"),
-      image: photo_tokyo,
+      subtitle: t("products.tags.display-light"),
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: 6, final: 3 },
       link: "",
     },
     {
       id: "metro",
       title: t("products.products.metro"),
-      description: t("products.tags.display-light"),
-      image: photo_tokyo,
+      subtitle: t("products.tags.display-light"),
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: -7, final: -3 },
       link: "",
     },
     {
       id: "sg2030",
       title: t("products.products.sg2030"),
-      description: t("products.tags.display"),
-      image: photo_tokyo,
+      subtitle: t("products.tags.display"),
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: 7, final: 3 },
       link: "www.google.com",
     },
     {
       id: "sf",
       title: t("products.products.sf"),
-      description: t("products.tags.display"),
-      image: photo_tokyo,
+      subtitle: t("products.tags.display"),
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: -6, final: -2 },
     },
     {
       id: "taiwan",
       title: t("products.products.taiwan"),
       stamp: t("products.tags.wip"),
-      image: photo_tokyo,
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: 5, final: 2 },
     },
     {
       id: "hokkaido",
       title: t("products.products.hokkaido"),
       stamp: t("products.tags.wip"),
-      image: photo_tokyo,
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: -5, final: -2 },
     },
     {
       id: "sapporo",
       title: t("products.products.sapporo"),
       stamp: t("products.tags.wip"),
-      image: photo_tokyo,
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: 6, final: 2 },
     },
     {
       id: "london",
       title: t("products.products.london"),
       stamp: t("products.tags.thinking"),
-      image: photo_tokyo,
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: -6, final: -3 },
     },
     {
       id: "paris",
       title: t("products.products.paris"),
       stamp: t("products.tags.thinking"),
-      image: photo_tokyo,
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: 7, final: 3 },
     },
   ];
 
-  const merchandise = [
+  const merchandise: Product[] = [
     {
       id: "pcb_lines",
       title: t("products.merch.pcb_lines.title"),
-      description: t("products.merch.pcb_lines.subtitle"),
-      image: photo_tokyo,
+      subtitle: t("products.merch.pcb_lines.subtitle"),
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: 5, final: 2 },
     },
     {
       id: "landmarks",
       title: t("products.merch.landmarks.title"),
-      description: t("products.merch.landmarks.subtitle"),
-      image: photo_tokyo,
+      subtitle: t("products.merch.landmarks.subtitle"),
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: -5, final: -2 },
     },
     {
       id: "postcards",
       title: t("products.merch.postcards.title"),
-      description: t("products.merch.postcards.subtitle"),
-      image: photo_tokyo,
+      subtitle: t("products.merch.postcards.subtitle"),
+      image_thumbnail: photo_tokyo,
+      image_full: photo_tokyo,
       angles: { start: 6, final: 2 },
     },
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [selectedProduct, setSelectedProduct] = useState();
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
     <>
@@ -126,10 +151,15 @@ const ProductsSection = () => {
           {products.map((product) => (
             <ProductCard
               key={product.id}
-              {...product}
-              description={product.description}
+              title={product.title}
+              angles={product.angles}
+              image={product.image_thumbnail}
+              subtitle={product.subtitle}
               stamp={product.stamp}
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => {
+                setSelectedProduct(product);
+                setIsModalOpen(true);
+              }}
             />
           ))}
         </Stack>
@@ -146,16 +176,24 @@ const ProductsSection = () => {
           {merchandise.map((item) => (
             <ProductCard
               key={item.id}
-              {...item}
-              description={item.description}
-              stamp={item.stamp}
-              onClick={() => setIsModalOpen(true)}
+              title={item.title}
+              angles={item.angles}
+              image={item.image_thumbnail}
+              subtitle={item.subtitle}
+              onClick={() => {
+                setSelectedProduct(item);
+                setIsModalOpen(true);
+              }}
             />
           ))}
         </Stack>
       </Box>
 
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Modal
+        isOpen={isModalOpen}
+        selectedProduct={selectedProduct}
+        onClose={() => setIsModalOpen(false)}
+      />
     </>
   );
 };
