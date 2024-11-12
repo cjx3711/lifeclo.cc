@@ -8,6 +8,7 @@ interface SkewedImageProps {
   imageUrl: string;
   text?: string;
   alt?: string;
+  borderRadius?: number;
 }
 
 const finalShadow = 6;
@@ -19,6 +20,7 @@ const SkewedImage: React.FC<SkewedImageProps> = ({
   imageUrl,
   text,
   alt = "",
+  borderRadius = 5,
 }) => {
   const [rotation, setRotation] = useState(startAngle);
   const [dropShadow, setDropShadow] = useState(0);
@@ -70,7 +72,7 @@ const SkewedImage: React.FC<SkewedImageProps> = ({
         transition: "transform 0.1s ease-out",
         filter: `drop-shadow(${dropShadow}px ${dropShadow}px 1px rgba(0, 0, 0, 0.8))`,
       }}>
-      <img src={imageUrl} alt={alt} style={{ width: "100%" }} />
+      <img src={imageUrl} alt={alt} style={{ width: "100%", borderRadius }} />
       {text && (
         <Stack
           style={{

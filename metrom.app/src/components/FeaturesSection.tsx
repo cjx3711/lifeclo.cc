@@ -1,7 +1,7 @@
 import { Stack, Box } from "@mui/system";
 import SkewedImage from "./SkewedImage";
 import { useTranslation } from "react-i18next";
-import tokyo from "../assets/tokyo.jpg";
+import jr from "../assets/hero-jr.jpg";
 
 const FeaturesSection = () => {
   const { t } = useTranslation();
@@ -16,13 +16,15 @@ const FeaturesSection = () => {
         flex={1}
         padding={4}
         maxWidth={{ xs: "500px", md: "100%" }}
+        flexGrow={{ sm: "1", md: "2" }}
         mx="auto">
         <SkewedImage
-          imageUrl={tokyo}
+          imageUrl={jr}
           alt="About"
-          startAngle={-15}
-          finalAngle={-10}
+          startAngle={-14}
+          finalAngle={-3}
           lock={false}
+          borderRadius={15}
         />
       </Box>
 
@@ -30,6 +32,7 @@ const FeaturesSection = () => {
         flex={1}
         padding={4}
         maxWidth={{ xs: "500px", md: "100%" }}
+        flexGrow={{ sm: "1", md: "1" }}
         mx="auto">
         <h1>{t("features.title")}</h1>
         <h2>{t("features.subtitle1")}</h2>

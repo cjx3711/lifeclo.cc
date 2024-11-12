@@ -1,7 +1,7 @@
 import { Box, Stack } from "@mui/system";
 import { useTranslation } from "react-i18next";
 import SkewedImage from "./SkewedImage";
-import tokyo from "../assets/tokyo.jpg";
+import metro from "../assets/hero-metro.jpg";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -17,6 +17,7 @@ const HeroSection = () => {
         flex={1}
         padding={4}
         maxWidth={{ sm: "500px", md: "100%" }}
+        flexGrow={{ sm: "1", md: "1" }}
         mx="auto"
         justifyContent="center"
         alignItems="center"
@@ -27,14 +28,16 @@ const HeroSection = () => {
       <Box
         flex={1}
         padding={4}
-        maxWidth={{ xs: "500px", md: "100%" }}
+        maxWidth={{ sm: "500px", md: "100%" }}
+        flexGrow={{ sm: "1", md: "2" }}
         mx="auto">
         <SkewedImage
-          imageUrl={tokyo}
+          imageUrl={metro}
           alt="Hero"
           startAngle={13}
-          finalAngle={10}
+          finalAngle={4}
           lock={false}
+          borderRadius={15}
         />
       </Box>
     </Stack>
