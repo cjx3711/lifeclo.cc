@@ -176,14 +176,14 @@ const Header = () => {
       {/* Mobile Menu */}
       <MobileMenu isOpen={isMobileMenuOpen}>
         <NavButtons isMobile={true} direction="column" spacing={2}>
-          <MobileNavButton onClick={() => scrollToSection("hero")}>
-            {t("header.home")}
-          </MobileNavButton>
           <MobileNavButton onClick={() => scrollToSection("about")}>
             {t("header.features")}
           </MobileNavButton>
           <MobileNavButton onClick={() => scrollToSection("products")}>
             {t("header.products")}
+          </MobileNavButton>
+          <MobileNavButton onClick={() => scrollToSection("contact")}>
+            {t("header.contact")}
           </MobileNavButton>
           <MobileNavButton
             onClick={() => {
