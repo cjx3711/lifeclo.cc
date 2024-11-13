@@ -9,6 +9,7 @@ interface ProductCardProps {
   image: string;
   angles: { start: number; final: number };
   onClick: () => void;
+  goldOutline?: boolean;
 }
 
 const Title = styled.h2`
@@ -30,6 +31,7 @@ const ProductCard = ({
   image,
   angles,
   onClick,
+  goldOutline = false,
 }: ProductCardProps) => {
   return (
     <>
@@ -56,6 +58,7 @@ const ProductCard = ({
           finalAngle={angles.final}
           lock={false}
           text={stamp}
+          goldOutline={goldOutline}
         />
         <Stack
           sx={{

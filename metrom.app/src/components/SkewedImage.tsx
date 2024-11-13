@@ -9,6 +9,7 @@ interface SkewedImageProps {
   text?: string;
   alt?: string;
   borderRadius?: number;
+  goldOutline?: boolean;
 }
 
 const finalShadow = 6;
@@ -21,6 +22,7 @@ const SkewedImage: React.FC<SkewedImageProps> = ({
   text,
   alt = "",
   borderRadius = 5,
+  goldOutline = false,
 }) => {
   const [rotation, setRotation] = useState(startAngle);
   const [dropShadow, setDropShadow] = useState(0);
@@ -62,6 +64,11 @@ const SkewedImage: React.FC<SkewedImageProps> = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, [startAngle, finalAngle, lock]);
 
+  const filter = `${
+    goldOutline
+      ? "drop-shadow(1px 1px 0 #B4924C) drop-shadow(-1px -1px 0 #B4924C) drop-shadow(1px -1px 0 #B4924C) drop-shadow(-1px 1px 0 #B4924C) "
+      : ""
+  }drop-shadow(${dropShadow}px ${dropShadow}px 1px rgba(0, 0, 0, 0.8))`;
   return (
     <Box
       className="skewed-image"
@@ -70,7 +77,7 @@ const SkewedImage: React.FC<SkewedImageProps> = ({
         position: "relative",
         transform: `rotate(${rotation}deg)`,
         transition: "transform 0.1s ease-out",
-        filter: `drop-shadow(${dropShadow}px ${dropShadow}px 1px rgba(0, 0, 0, 0.8))`,
+        filter,
       }}>
       <img src={imageUrl} alt={alt} style={{ width: "100%", borderRadius }} />
       {text && (

@@ -38,6 +38,10 @@ const Modal = ({ isOpen, onClose, selectedProduct }: ModalProps) => {
   const [isImageFullscreen, setIsImageFullscreen] = useState(false);
 
   useEffect(() => {
+    setIsImageFullscreen(false);
+  }, [isOpen]);
+
+  useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         onClose();
@@ -108,7 +112,7 @@ const Modal = ({ isOpen, onClose, selectedProduct }: ModalProps) => {
             borderRadius: "8px",
             border: "1px solid rgba(255, 255, 255, 0.1)",
             maxWidth: "90%",
-            width: { xs: "100%", md: "600px", lg: "900px" },
+            width: { xs: "100%", sm: "75%", md: "500px", lg: "650px" },
             maxHeight: "calc(85vh - 3rem)",
             marginTop: "3rem",
             overflowY: "auto",
