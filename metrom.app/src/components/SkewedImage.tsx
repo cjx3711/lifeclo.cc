@@ -76,7 +76,7 @@ const SkewedImage: React.FC<SkewedImageProps> = ({
       sx={{
         position: "relative",
         transform: `rotate(${rotation}deg)`,
-        transition: "transform 0.1s ease-out",
+        transition: "transform 0.4s ease-out",
         filter,
       }}>
       <img src={imageUrl} alt={alt} style={{ width: "100%", borderRadius }} />

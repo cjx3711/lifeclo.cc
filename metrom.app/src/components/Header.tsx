@@ -9,8 +9,9 @@ import { GOLD } from "../utils/colours";
 const NavButton = styled(Button)({
   padding: "8px 10px",
   borderRadius: "4px",
-  width: "100px",
+  width: "120px",
   height: "36px",
+  fontSize: "1rem",
   color: GOLD,
   backgroundColor: "transparent",
   border: "none",
@@ -59,14 +60,14 @@ const MobileMenu = styled(Box)(({ isOpen }: { isOpen: boolean }) => ({
   padding: "1rem",
   boxShadow: "-4px 0 8px rgba(0,0,0,0.2)",
   display: "none",
-  "@media (max-width: 700px)": {
+  "@media (max-width: 750px)": {
     display: "block",
   },
 }));
 
 const NavButtons = styled(Stack)(({ isMobile }: { isMobile: boolean }) => ({
   display: isMobile ? "none" : "flex",
-  "@media (max-width: 700px)": {
+  "@media (max-width: 750px)": {
     display: isMobile ? "flex" : "none",
   },
 }));
@@ -127,7 +128,9 @@ const Header = () => {
           style={{
             height: "40px",
             filter: "drop-shadow(0 0 1px rgba(255, 255, 255, 0.5))",
+            cursor: "pointer",
           }}
+          onClick={() => scrollToSection("hero")}
         />
 
         <Stack direction="row" spacing={2} alignItems="center">
@@ -142,16 +145,17 @@ const Header = () => {
             direction="row"
             spacing={{
               xs: 0,
+              sm: 0,
               md: 3,
             }}>
-            <NavButton onClick={() => scrollToSection("hero")}>
-              {t("header.home")}
-            </NavButton>
             <NavButton onClick={() => scrollToSection("about")}>
               {t("header.features")}
             </NavButton>
             <NavButton onClick={() => scrollToSection("products")}>
               {t("header.products")}
+            </NavButton>
+            <NavButton onClick={() => scrollToSection("contact")}>
+              {t("header.contact")}
             </NavButton>
             <NavButton
               onClick={() => {

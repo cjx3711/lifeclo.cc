@@ -4,6 +4,7 @@ import { Product } from "./ProductSection";
 import { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { GOLD } from "../utils/colours";
+import { openEmail } from "../utils/email";
 
 interface ModalProps {
   isOpen: boolean;
@@ -39,6 +40,18 @@ const Modal = ({ isOpen, onClose, selectedProduct }: ModalProps) => {
 
   useEffect(() => {
     setIsImageFullscreen(false);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, [isOpen]);
 
   useEffect(() => {
@@ -114,11 +127,10 @@ const Modal = ({ isOpen, onClose, selectedProduct }: ModalProps) => {
             maxWidth: "90%",
             width: { xs: "100%", sm: "75%", md: "500px", lg: "650px" },
             maxHeight: "calc(85vh - 3rem)",
-            marginTop: "3rem",
             overflowY: "auto",
           }}>
           <Stack spacing={4}>
-            <h2 style={{ margin: 0 }}>{title}</h2>
+            <h2 style={{ margin: 0 }}>{t(title)}</h2>
             {image_full && (
               <Box
                 onClick={() => setIsImageFullscreen(true)}
@@ -140,19 +152,30 @@ const Modal = ({ isOpen, onClose, selectedProduct }: ModalProps) => {
                 />
               </Box>
             )}
-            {long_description && (
-              <p style={{ marginTop: "1rem", lineHeight: 1.6 }}>
-                {long_description}
+
+            {stamp && (
+              <p style={{ marginTop: "1rem", opacity: 0.8 }}>
+                Status: {t(stamp)}
               </p>
             )}
 
-            {stamp && (
-              <p style={{ marginTop: "1rem", opacity: 0.8 }}>Status: {stamp}</p>
+            {subtitle && (
+              <p style={{ marginTop: "1rem", fontWeight: "bold" }}>
+                {t(subtitle)}
+              </p>
             )}
 
-            {subtitle && (
-              <p style={{ marginTop: "1rem", opacity: 0.8 }}>{subtitle}</p>
+            {long_description && (
+              <p
+                style={{
+                  marginTop: "1rem",
+                  lineHeight: 1.6,
+                  whiteSpace: "pre-wrap",
+                }}>
+                {t(long_description)}
+              </p>
             )}
+
             {price && (
               <p
                 style={{
@@ -160,7 +183,7 @@ const Modal = ({ isOpen, onClose, selectedProduct }: ModalProps) => {
                   fontSize: "1.2rem",
                   fontWeight: "bold",
                 }}>
-                {price}
+                {t(price)}
               </p>
             )}
             {link ? (
@@ -176,15 +199,23 @@ const Modal = ({ isOpen, onClose, selectedProduct }: ModalProps) => {
                 </Button>
               </a>
             ) : (
-              <Stack spacing={2}>
+              <Stack spacing={2} marginTop={2}>
                 <p
                   style={{
-                    margin: 0,
-                    opacity: 0.8,
+                    opacity: 0.7,
+                    fontSize: "1rem",
+                    fontStyle: "italic",
+                    textAlign: "center",
                   }}>
                   {t("modal.contact_interest")}
                 </p>
-                <Button onClick={onClose}>{t("modal.btn_contact")}</Button>
+                <Button
+                  onClick={() => {
+                    onClose();
+                    openEmail();
+                  }}>
+                  {t("modal.btn_contact")}
+                </Button>
               </Stack>
             )}
           </Stack>

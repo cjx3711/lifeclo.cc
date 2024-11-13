@@ -13,10 +13,9 @@ interface ProductCardProps {
 }
 
 const Title = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  margin: 0;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 `;
 
 const Subtitle = styled.p`

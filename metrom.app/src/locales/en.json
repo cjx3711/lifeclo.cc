@@ -1,12 +1,12 @@
 {
   "header": {
-    "home": "Home",
     "features": "Features",
     "products": "Products",
-    "old": "MetroM 2021"
+    "old": "MetroM 2021",
+    "contact": "Contact"
   },
   "hero": {
-    "description": "Well-planned printed circuit boards (PCB) are a thing of beauty.\n\nFunctional, community-serving train networks? Even more so.\n\nMetroM is an unholy amalgamation of the former with the latter conceived a couple of years ago in the mind of a serial procrastinator."
+    "description": "Well-planned printed circuit boards (PCB) are a thing of beauty.\nFunctional, community-serving train networks? Even more so.\nMetroM is an unholy amalgamation of the former with the latter conceived a couple of years ago in the mind of a serial procrastinator."
   },
   "features": {
     "title": "MetroM 2024 has a few new features:",
@@ -31,6 +31,13 @@
       "london": "London Underground",
       "paris": "Paris Metro"
     },
+    "product_description": {
+      "jr": "The big one that started it all.\nThis board maps out the sprawling JR lines across Tokyo and its neighbouring prefectures - it was actually part of the original MetroM Kickstarter that kicked this whole thing off.",
+      "metro": "A more focused take on Tokyo's rail system.\nI concentrated on the Tokyo Metro lines (plus the essential JR Yamanote and Chuo-Sobu), which let me really dig into all those fascinating connections in the city centre.",
+      "sg2030": "The future of Singapore's MRT, all mapped out.\nWhen LTA dropped their 2030 plan with the Cross Island and Jurong Region Lines, I knew I had to make a board showing the whole ambitious network.",
+      "sg2027": "Singapore MRT's compact cousin.\nA smaller, cosier version that includes all the confirmed lines up to 2027. Perfect when you want something more space-friendly.",
+      "sf": "Three networks, one beautiful mess.\nThe Bay Area's transit is wonderfully chaotic, with BART, VTA, and Caltrain all doing their own thing. This design brings them all together in one cohesive map."
+    },
     "tags": {
       "display-light": "Display & Light Up Versions",
       "display": "Display Version",
@@ -43,11 +50,11 @@
       "hoodie": "Hoodie",
       "pcb_lines": {
         "title": "PCB Train Lines",
-        "subtitle": "Washi Tape - ¥300"
+        "subtitle": "Washi Tape"
       },
       "landmarks": {
         "title": "Tokyo Landmarks",
-        "subtitle": "Washi Tape with Gold Foil - ¥500"
+        "subtitle": "Washi Tape with Gold Foil"
       },
       "postcards": {
         "title": "MetroM Postcards",
@@ -58,11 +65,11 @@
   "modal": {
     "contact_interest": "This product is currently in development. Please contact us to express your interest or for more information.",
     "btn_buy_now": "Buy Now",
-    "btn_contact": "Contact Us"
+    "btn_contact": "Send Me an Email!"
   },
   "contact": {
     "title": "Interested in Any Above?",
-    "description": "If any of them catches your eye, or if you have an idea for a future MetroM map, please send me a message with this form.\n\nI'll be in contact as soon as I figure out how to get the pieces to you.",
+    "description": "If any of them catches your eye, or if you have an idea for a future MetroM map, please feel free to contact me.\nI'll be in contact as soon as I figure out how to get the pieces to you.",
     "button": "Send Me an Email!"
   }
 }
