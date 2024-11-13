@@ -22,6 +22,10 @@ const ContactText = styled(Stack)`
 const ContactSection = () => {
   const { t } = useTranslation();
 
+  const openInstagram = () => {
+    window.open("https://www.instagram.com/cjx3711/", "_blank");
+  };
+
   return (
     <>
       <a id="contact" style={{ marginTop: "10rem", marginBottom: "2rem" }} />
@@ -29,7 +33,11 @@ const ContactSection = () => {
         <ContactText spacing={5} alignItems="center" textAlign="center">
           <h4>{t("contact.title")}</h4>
           <p style={{ maxWidth: "600px" }}>{t("contact.description")}</p>
-          <Button onClick={openEmail}>{t("contact.button")}</Button>
+
+          <Stack direction="row" spacing={2} justifyContent="center">
+            <Button onClick={openEmail}>{t("contact.button")}</Button>
+            <Button onClick={openInstagram}>{t("contact.instagram")}</Button>
+          </Stack>
         </ContactText>
       </Box>
     </>

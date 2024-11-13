@@ -69,7 +69,8 @@
   },
   "contact": {
     "title": "Interested in Any Above?",
-    "description": "If any of them catches your eye, or if you have an idea for a future MetroM map, please feel free to contact me.\nI'll be in contact as soon as I figure out how to get the pieces to you.",
-    "button": "Send Me an Email!"
+    "description": "If any of them catches your eye, or if you have an idea for a future MetroM map, please feel free to contact me via email or hit me up on Instagram.\nI'll be in contact as soon as I figure out how to get the pieces to you.",
+    "button": "Send Me an Email!",
+    "instagram": "Check out my Instagram!"
   }
 }
