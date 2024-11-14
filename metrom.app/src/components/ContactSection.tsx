@@ -35,7 +35,7 @@ const ContactSection = () => {
           <p style={{ maxWidth: "600px" }}>{t("contact.description")}</p>
 
           <Stack direction="row" spacing={2} justifyContent="center">
-            <Button onClick={openEmail}>{t("contact.button")}</Button>
+            <Button onClick={openEmail}>{t("contact.email")}</Button>
             <Button onClick={openInstagram}>{t("contact.instagram")}</Button>
           </Stack>
         </ContactText>

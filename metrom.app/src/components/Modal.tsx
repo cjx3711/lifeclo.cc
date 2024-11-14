@@ -214,7 +214,7 @@ const Modal = ({ isOpen, onClose, selectedProduct }: ModalProps) => {
                     onClose();
                     openEmail();
                   }}>
-                  {t("modal.btn_contact")}
+                  {t("contact.email")}
                 </Button>
               </Stack>
             )}

@@ -46,7 +46,6 @@
     },
     "merch_title": "MetroM Merchandise",
     "merch": {
-      "tshirt": "T-Shirt",
       "hoodie": "Hoodie",
       "pcb_lines": {
         "title": "PCB Train Lines",
@@ -64,13 +63,12 @@
   },
   "modal": {
     "contact_interest": "This product is currently in development. Please contact us to express your interest or for more information.",
-    "btn_buy_now": "Buy Now",
-    "btn_contact": "Send Me an Email!"
+    "btn_buy_now": "Buy Now"
   },
   "contact": {
     "title": "Interested in Any Above?",
     "description": "If any of them catches your eye, or if you have an idea for a future MetroM map, please feel free to contact me via email or hit me up on Instagram.\nI'll be in contact as soon as I figure out how to get the pieces to you.",
-    "button": "Send Me an Email!",
+    "email": "Drop me an email!",
     "instagram": "Check out my Instagram!"
   }
 }

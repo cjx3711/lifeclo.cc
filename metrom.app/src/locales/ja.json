@@ -6,23 +6,24 @@
     "contact": "お問い合わせ"
   },
   "hero": {
-    "description": "プリント基板（PCB）って美しいよね。\n機能的で地域社会に貢献する鉄道網はもっとすごい。\nMetroMは、怠け者の頭の中で数年前に生まれた、この2つを組み合わせた突飛なアイデアなんだ。"
+    "description": "よくデザインされたプリント基板（PCB）は美しい\n利便性の良い、人々のニーズに応えている鉄道網？尚更そう。\nMetroMは、怠け者の頭の中で数年前に生まれた、この2つを組み合わせた突飛なプロジェクト。"
   },
   "features": {
-    "title": "MetroM 2024の新機能：",
-    "subtitle1": "美しいディスプレイ作品",
-    "description1": "壁掛けや卓上など、好きな方法で飾れるよ",
-    "subtitle2": "より明るく鮮やかな光",
-    "description2": "USB-C電源で動くよ",
-    "subtitle3": "2つのバージョン",
-    "description3": "ニーズと予算に合わせて選べるよ"
+    "title": "MetroM 2024の新しい特徴",
+    "subtitle1": "美しいディスプレイ",
+    "description1": "壁掛けやテーブルに飾るオプションあり",
+    "subtitle2": "より明るく、より鮮やかな照明",
+    "description2": "USB-Cで給電",
+    "subtitle3": "２つのバージョン",
+    "description3": "ニーズと予算に合わせて選べる"
   },
   "products": {
-    "series_title": "MetroMシリーズ一覧",
+    "series_title": "今までの MetroMシリーズ",
     "products": {
-      "jr": "JR路線図",
+      "jr": "JR東京路線",
       "metro": "東京メトロ",
-      "sg2030": "シンガポールMRT 2030",
+      "sg2030": "シンガポールMRT 2030年",
+      "sg2027": "シンガポールMRT 2027年",
       "sf": "サンフランシスコ・ベイエリア",
       "taiwan": "台湾MRT",
       "hokkaido": "北海道JR",
@@ -38,38 +39,36 @@
       "sf": "3つのネットワーク、1つの美しい混沌。\nベイエリアの交通網は、BART、VTA、Caltrainがそれぞれ独自の展開をする素晴らしいカオス。このデザインは、それらすべてを1つの統一されたマップにまとめています。"
     },
     "tags": {
-      "display-light": "ディスプレイ＆発光バージョン",
+      "display-light": "ディスプレイ・ライトアップ版",
       "display": "ディスプレイバージョン",
-      "wip": "開発中",
-      "thinking": "企画検討中"
+      "wip": "制作中",
+      "thinking": "考え中"
     },
     "merch_title": "MetroMグッズ",
     "merch": {
-      "tshirt": "Tシャツ",
       "hoodie": "パーカー",
       "pcb_lines": {
-        "title": "PCB路線図",
-        "subtitle": "マスキングテープ"
+        "title": "PCB路線",
+        "subtitle": "デコテープ"
       },
       "landmarks": {
-        "title": "東京ランドマーク",
-        "subtitle": "箔押しマスキングテープ"
+        "title": "東京のアトラクション",
+        "subtitle": "デコテープ（金箔入り）"
       },
       "postcards": {
-        "title": "MetroMポストカード",
-        "subtitle": "ペーパー製品"
+        "title": "MetroM ポストカード",
+        "subtitle": "はがき"
       }
     }
   },
   "modal": {
     "contact_interest": "この製品は現在開発中です。ご興味がある方、詳細をお知りになりたい方はお問い合わせください。",
-    "btn_buy_now": "購入する",
-    "btn_contact": "メールを送信する"
+    "btn_buy_now": "購入する"
   },
   "contact": {
-    "title": "興味ある？",
-    "description": "もし上記の製品が気に入ったり、将来のMetroMマップのアイデアがあれば、気軽に連絡してね。\nすぐに返信するよ。",
-    "button": "メールを送る",
+    "title": "興味を持ってくれたら...",
+    "description": "気になる商品があれば、もしくは路線図の提案があれば、InstagramのDM またはメールでご連絡ください\nパーツの発送方法やアイデアを考えたら、返信します。",
+    "email": "メールを送る",
     "instagram": "Instagramをチェックする"
   }
 }
