@@ -1,0 +1,74 @@
+{
+  "header": {
+    "features": "Features",
+    "products": "Products",
+    "old": "MetroM 2021",
+    "contact": "Contact"
+  },
+  "hero": {
+    "description": "Well-planned printed circuit boards (PCB) are a thing of beauty.\nFunctional, community-serving train networks? Even more so.\nMetroM is an unholy amalgamation of the former with the latter conceived a couple of years ago in the mind of a serial procrastinator."
+  },
+  "features": {
+    "title": "MetroM 2024 has a few new features:",
+    "subtitle1": "Gorgeous display pieces",
+    "description1": "with options to hang on your wall or stand on your table",
+    "subtitle2": "Brighter & more vibrant lights",
+    "description2": "on a USB-C power supply",
+    "subtitle3": "Two versions available",
+    "description3": "depending on your needs & budget"
+  },
+  "products": {
+    "series_title": "The MetroM Series So Far",
+    "products": {
+      "jr": "Tokyo JR",
+      "metro": "Tokyo Metro",
+      "sg2030": "Singapore MRT 2030",
+      "sg2027": "Singapore MRT 2027",
+      "sf": "San Francisco Bay Area",
+      "taiwan": "Taiwan MRT",
+      "hokkaido": "Hokkaido JR",
+      "sapporo": "Sapporo Metro",
+      "london": "London Underground",
+      "paris": "Paris Metro"
+    },
+    "product_description": {
+      "jr": "The big one that started it all.\nThis board maps out the sprawling JR lines across Tokyo and its neighbouring prefectures - it was actually part of the original MetroM Kickstarter that kicked this whole thing off.",
+      "metro": "A more focused take on Tokyo's rail system.\nI concentrated on the Tokyo Metro lines (plus the essential JR Yamanote and Chuo-Sobu), which let me really dig into all those fascinating connections in the city centre.",
+      "sg2030": "The future of Singapore's MRT, all mapped out.\nWhen LTA dropped their 2030 plan with the Cross Island and Jurong Region Lines, I knew I had to make a board showing the whole ambitious network.",
+      "sg2027": "Singapore MRT's compact cousin.\nA smaller, cosier version that includes all the confirmed lines up to 2027. Perfect when you want something more space-friendly.",
+      "sf": "Three networks, one beautiful mess.\nThe Bay Area's transit is wonderfully chaotic, with BART, VTA, and Caltrain all doing their own thing. This design brings them all together in one cohesive map."
+    },
+    "tags": {
+      "display-light": "Display & Light Up Versions",
+      "display": "Display Version",
+      "wip": "Work in Progress",
+      "thinking": "Still Thinking About This"
+    },
+    "merch_title": "MetroM Merchandise",
+    "merch": {
+      "hoodie": "Hoodie",
+      "pcb_lines": {
+        "title": "PCB Train Lines",
+        "subtitle": "Washi Tape"
+      },
+      "landmarks": {
+        "title": "Tokyo Landmarks",
+        "subtitle": "Washi Tape with Gold Foil"
+      },
+      "postcards": {
+        "title": "MetroM Postcards",
+        "subtitle": "Paper Product"
+      }
+    }
+  },
+  "modal": {
+    "contact_interest": "This product is currently in development. Please contact us to express your interest or for more information.",
+    "btn_buy_now": "Buy Now"
+  },
+  "contact": {
+    "title": "Interested in Any Above?",
+    "description": "If any of them catches your eye, or if you have an idea for a future MetroM map, please feel free to contact me via email or hit me up on Instagram.\nI'll be in contact as soon as I figure out how to get the pieces to you.",
+    "email": "Drop me an email!",
+    "instagram": "Check out my Instagram!"
+  }
+}

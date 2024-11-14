@@ -1,14 +1,41 @@
-# Lifeclo.cc
+# Lifeclo.cc / MetroM.app
 
 This is a simple express app and the source code for these websites.
 
 - https://lifeclo.cc
 - https://manual.lifeclo.cc
 - https://app.lifeclo.cc
+- https://metrom.app
+- https://old.metrom.app
 
-You can find the rest of the source files over here:
+# Structure
 
-- https://manual.lifeclo.cc/source.html
+This repo has been built over time, so the structure is a bit messy.
+
+### `lifeclo.cc_site`
+
+- Source code for lifeclo.cc, and all the subdomains like manual.lifeclo.cc
+- Runs on port 2020 with the app.lifeclocc.js file
+- Served statically by the app.lifeclocc.js file
+
+### `lifeclo.cc_app`
+
+- Source code for app.lifeclo.cc
+- Runs on port 2020 with the app.lifeclocc.js file
+- Has a database and some basic code to serve the app
+
+### `old.metrom.app`
+
+- Source code for the old.metrom.app website.
+- Served statically by the app.metrom.js file
+
+### `metrom.app`
+
+- Source code for metrom.app
+- Runs vite, react and typescript
+- Runs on port 2031 with vite
+- Runs on port 2030 by proxy through app.metrom.js
+- In production, the build folder is served statically
 
 # Local Development
 
@@ -18,11 +45,15 @@ To run the lifeclo.cc site
 
 `npm run start:lifeclocc`
 
-To run the metrom.app site
+To run the new metrom.app vite site
 
 `npm run start:metro`
 
-To run both at the same time
+To run the old metrom.app site (necessary for the redirect)
+
+`npm run start:metro-old`
+
+To run all three at the same time
 
 `npm run dev`
 
