@@ -63,7 +63,7 @@ const ProductsSection = () => {
         image_thumbnail: thumb_jr,
         image_full: full_jr,
         angles: { start: 6, final: 3 },
-        link: "",
+        link: "https://ko-fi.com/s/c23ed1f831",
         goldOutline: true,
       },
       {
@@ -74,7 +74,7 @@ const ProductsSection = () => {
         image_thumbnail: thumb_metro,
         image_full: full_metro,
         angles: { start: -7, final: -3 },
-        link: "",
+        link: "https://ko-fi.com/s/e5abce76e4",
         goldOutline: true,
       },
       {
@@ -85,7 +85,7 @@ const ProductsSection = () => {
         image_thumbnail: thumb_sg2030,
         image_full: full_sg2030,
         angles: { start: 7, final: 1 },
-        link: "",
+        link: "https://ko-fi.com/s/b53abf1754",
         goldOutline: true,
       },
       {
@@ -96,7 +96,7 @@ const ProductsSection = () => {
         image_thumbnail: thumb_sg27,
         image_full: full_sg27,
         angles: { start: 7, final: 3 },
-        link: "",
+        link: "https://ko-fi.com/s/c89ea22745",
         goldOutline: true,
       },
       {
@@ -107,6 +107,7 @@ const ProductsSection = () => {
         image_thumbnail: thumb_sf,
         image_full: full_sf,
         angles: { start: -6, final: -2 },
+        link: "https://ko-fi.com/s/f51315c65b",
         goldOutline: true,
       },
 
@@ -156,6 +157,7 @@ const ProductsSection = () => {
         image_full: full_washi_lines,
         angles: { start: 5, final: 2 },
         goldOutline: true,
+        link: "https://ko-fi.com/s/617e16b581",
       },
       {
         id: "landmarks",
@@ -165,6 +167,7 @@ const ProductsSection = () => {
         image_full: full_washi_foil,
         angles: { start: -5, final: -2 },
         goldOutline: true,
+        link: "https://ko-fi.com/s/5f2c94c534",
       },
       {
         id: "postcards",
@@ -172,8 +175,8 @@ const ProductsSection = () => {
         subtitle: "products.merch.postcards.subtitle",
         image_thumbnail: thumb_cards,
         image_full: full_cards,
-
         angles: { start: 6, final: 2 },
+        link: "https://ko-fi.com/s/c0d2112bc7",
       },
     ],
     []

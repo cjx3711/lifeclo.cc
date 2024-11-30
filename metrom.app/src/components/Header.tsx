@@ -148,8 +148,11 @@ const Header = () => {
               sm: 0,
               md: 3,
             }}>
-            <NavButton onClick={() => scrollToSection("about")}>
-              {t("header.features")}
+            <NavButton
+              onClick={() => {
+                window.open("https://ko-fi.com/cjx3711/shop", "_blank");
+              }}>
+              {t("header.shop")}
             </NavButton>
             <NavButton onClick={() => scrollToSection("products")}>
               {t("header.products")}
@@ -176,8 +179,11 @@ const Header = () => {
       {/* Mobile Menu */}
       <MobileMenu isOpen={isMobileMenuOpen}>
         <NavButtons isMobile={true} direction="column" spacing={2}>
-          <MobileNavButton onClick={() => scrollToSection("about")}>
-            {t("header.features")}
+          <MobileNavButton
+            onClick={() => {
+              window.open("https://ko-fi.com/cjx3711/shop", "_blank");
+            }}>
+            {t("header.shop")}
           </MobileNavButton>
           <MobileNavButton onClick={() => scrollToSection("products")}>
             {t("header.products")}
